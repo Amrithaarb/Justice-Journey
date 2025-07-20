@@ -31,16 +31,16 @@ import {
   Eye
 } from "lucide-react";
 
-// Mock data for demonstration
+// Mock data for demonstration - beginner user
 const userProgress = {
-  totalScenarios: 6,
-  completedScenarios: 4,
-  correctDecisions: 15,
-  totalDecisions: 20,
-  learningStreak: 7,
-  totalLearningTime: 145, // minutes
-  knowledgeScore: 78,
-  lastActivity: "2 hours ago"
+  totalScenarios: 9,
+  completedScenarios: 1,
+  correctDecisions: 4,
+  totalDecisions: 5,
+  learningStreak: 1,
+  totalLearningTime: 12, // minutes
+  knowledgeScore: 85,
+  lastActivity: "Just now"
 };
 
 const completedScenarios = [
