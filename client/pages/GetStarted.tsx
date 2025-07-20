@@ -14,7 +14,8 @@ import {
   Star,
   Lightbulb,
   Award,
-  Play,
+    Play,
+  User,
   UserPlus,
   LogIn
 } from "lucide-react";
