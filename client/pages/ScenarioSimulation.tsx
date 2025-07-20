@@ -252,8 +252,8 @@ export function ScenarioSimulation() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-700 text-lg leading-relaxed">
-                {sampleScenario.situation}
+                            <p className="text-gray-700 text-lg leading-relaxed">
+                {currentScenario.situation}
               </p>
             </CardContent>
           </Card>
