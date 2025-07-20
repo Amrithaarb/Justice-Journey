@@ -263,8 +263,8 @@ export function ScenarioSimulation() {
             <CardHeader>
               <CardTitle>What would you do?</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
-              {sampleScenario.choices.map((choice) => (
+                        <CardContent className="space-y-4">
+              {currentScenario.choices.map((choice) => (
                 <div key={choice.id}>
                   <Button
                     variant={currentChoice === choice.id ? "default" : "outline"}
