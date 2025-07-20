@@ -409,34 +409,7 @@ export function ScenarioSimulation() {
           })}
         </div>
 
-        {/* Info Section */}
-        <div className="mt-16 text-center">
-          <Card className="max-w-2xl mx-auto">
-            <CardContent className="p-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                How Scenarios Work
-              </h2>
-              <div className="space-y-4 text-left">
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-justice-primary rounded-full flex items-center justify-center text-white text-sm font-bold mt-0.5">1</div>
-                  <p className="text-gray-700">Choose a scenario that interests you</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-justice-primary rounded-full flex items-center justify-center text-white text-sm font-bold mt-0.5">2</div>
-                  <p className="text-gray-700">Select your role (victim, witness, or authority)</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-justice-primary rounded-full flex items-center justify-center text-white text-sm font-bold mt-0.5">3</div>
-                  <p className="text-gray-700">Make decisions at key points in the story</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-justice-primary rounded-full flex items-center justify-center text-white text-sm font-bold mt-0.5">4</div>
-                  <p className="text-gray-700">Learn about legal consequences and your rights</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+        
       </div>
     </div>
   );
