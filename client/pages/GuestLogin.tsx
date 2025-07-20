@@ -43,6 +43,7 @@ const guestFeatures = [
 ];
 
 export function GuestLogin() {
+  const { loginAsGuest } = useAuth();
   const [guestName, setGuestName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
