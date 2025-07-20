@@ -47,7 +47,7 @@ const completedScenarios = [
   {
     id: "cyberbullying",
     title: "Cyberbullying Situation",
-    completedAt: "2024-01-15",
+        completedAt: "Just completed",
     role: "Witness/Friend",
     score: 85,
     correctChoices: 4,
