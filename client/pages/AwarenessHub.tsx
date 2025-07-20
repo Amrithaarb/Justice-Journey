@@ -296,7 +296,11 @@ export function AwarenessHub() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-600 mb-4">{article.summary}</p>
-                    <Button variant="outline" size="sm">
+                                        <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setSelectedArticle(article.id)}
+                    >
                       Read Article
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
