@@ -13,7 +13,7 @@ export default {
       },
     },
     extend: {
-      colors: {
+            colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -56,6 +56,14 @@ export default {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+        },
+        justice: {
+          primary: "hsl(var(--justice-primary))",
+          secondary: "hsl(var(--justice-secondary))",
+          success: "hsl(var(--justice-success))",
+          warning: "hsl(var(--justice-warning))",
+          "gradient-start": "hsl(var(--justice-gradient-start))",
+          "gradient-end": "hsl(var(--justice-gradient-end))",
         },
       },
       borderRadius: {
