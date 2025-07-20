@@ -151,32 +151,11 @@ const achievements = [
 
 const learningInsights = [
   {
-    category: "Constitutional Rights",
-    scenarios: 2,
-    averageScore: 88,
-    improvement: "+12%",
+    category: "Digital Rights",
+    scenarios: 1,
+    averageScore: 80,
+    improvement: "New!",
     status: "excellent"
-  },
-  {
-    category: "Cybercrime Law",
-    scenarios: 1,
-    averageScore: 85,
-    improvement: "+8%",
-    status: "excellent"
-  },
-  {
-    category: "Juvenile Justice",
-    scenarios: 1,
-    averageScore: 70,
-    improvement: "+5%",
-    status: "good"
-  },
-  {
-    category: "Traffic Law",
-    scenarios: 1,
-    averageScore: 65,
-    improvement: "-2%",
-    status: "needs-improvement"
   }
 ];
 
