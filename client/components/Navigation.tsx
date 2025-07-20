@@ -6,6 +6,7 @@ import { useAuth } from "../lib/auth";
 
 export function Navigation() {
   const location = useLocation();
+  const { isLoggedIn } = useAuth();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
