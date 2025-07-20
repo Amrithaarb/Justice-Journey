@@ -45,12 +45,14 @@ export function Navigation() {
                 {item.label}
               </Link>
             ))}
-            <Button 
-              size="sm" 
-              className="bg-gradient-to-r from-justice-primary to-justice-secondary hover:from-justice-primary/90 hover:to-justice-secondary/90"
-            >
-              Get Started
-            </Button>
+            <Link to="/get-started">
+              <Button 
+                size="sm" 
+                className="bg-gradient-to-r from-justice-primary to-justice-secondary hover:from-justice-primary/90 hover:to-justice-secondary/90"
+              >
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -88,12 +90,15 @@ export function Navigation() {
                   {item.label}
                 </Link>
               ))}
-              <Button 
-                size="sm" 
-                className="w-full mt-2 bg-gradient-to-r from-justice-primary to-justice-secondary hover:from-justice-primary/90 hover:to-justice-secondary/90"
-              >
-                Get Started
-              </Button>
+              <Link to="/get-started">
+                <Button 
+                  size="sm" 
+                  className="w-full mt-2 bg-gradient-to-r from-justice-primary to-justice-secondary hover:from-justice-primary/90 hover:to-justice-secondary/90"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </div>
         )}
