@@ -392,8 +392,10 @@ export function ScenarioSimulation() {
     }
   };
 
-    if (selectedScenario && selectedRole && !showResult) {
+      if (selectedScenario && selectedRole && !showResult) {
+    console.log("Selected scenario:", selectedScenario);
     const currentScenario = sampleScenarios[selectedScenario as keyof typeof sampleScenarios] || sampleScenarios.cyberbullying;
+    console.log("Current scenario data:", currentScenario);
     const choice = currentChoice ? currentScenario.choices.find(c => c.id === currentChoice) : null;
 
     return (
