@@ -14,6 +14,7 @@ import { Results } from "./pages/Results";
 import { GetStarted } from "./pages/GetStarted";
 import { CreateAccount } from "./pages/CreateAccount";
 import { Login } from "./pages/Login";
+import { Profile } from "./pages/Profile";
 
 const queryClient = new QueryClient();
 
