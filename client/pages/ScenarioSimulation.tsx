@@ -63,7 +63,7 @@ const scenarios = [
     duration: "25 min",
     category: "Family Law"
   },
-  {
+    {
     id: "workplace-rights",
     title: "Workplace Harassment",
     description: "Know your rights as an employee",
@@ -71,6 +71,33 @@ const scenarios = [
     difficulty: "Medium",
     duration: "12 min",
     category: "Employment Law"
+  },
+  {
+    id: "underage-drinking",
+    title: "Underage Drinking Party",
+    description: "Navigate legal consequences of underage alcohol consumption",
+    icon: AlertTriangle,
+    difficulty: "Easy",
+    duration: "10 min",
+    category: "Juvenile Law"
+  },
+  {
+    id: "free-speech",
+    title: "Campus Free Speech",
+    description: "Learn about First Amendment rights and limitations",
+    icon: Users,
+    difficulty: "Hard",
+    duration: "18 min",
+    category: "Constitutional Law"
+  },
+  {
+    id: "search-seizure",
+    title: "School Locker Search",
+    description: "Fourth Amendment rights in educational settings",
+    icon: Shield,
+    difficulty: "Medium",
+    duration: "16 min",
+    category: "Civil Rights"
   }
 ];
 
