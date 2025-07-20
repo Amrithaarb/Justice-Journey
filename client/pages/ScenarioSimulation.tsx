@@ -162,7 +162,7 @@ const sampleScenarios = {
       }
     ]
   },
-  "underage-drinking": {
+    "underage-drinking": {
     title: "Underage Drinking Party",
     description: "You're at a party where underage drinking is occurring",
     currentStep: 1,
@@ -189,6 +189,186 @@ const sampleScenarios = {
         id: "call-parents",
         text: "Immediately call your parents for advice",
         consequence: "Good thinking! Having adult support is always wise in legal situations."
+      }
+    ]
+  },
+  "theft": {
+    title: "Shoplifting Incident",
+    description: "You witness a shoplifting incident at a store",
+    currentStep: 1,
+    totalSteps: 4,
+    progress: 25,
+    situation: "You're shopping when you see a classmate slip a candy bar into their pocket without paying. Store security hasn't noticed yet. What do you do?",
+    choices: [
+      {
+        id: "report-security",
+        text: "Immediately report it to store security",
+        consequence: "This stops the crime but could seriously affect your classmate's future."
+      },
+      {
+        id: "confront-friend",
+        text: "Approach your classmate and ask them to put it back",
+        consequence: "Good approach! Giving them a chance to correct the mistake is wise."
+      },
+      {
+        id: "ignore-situation",
+        text: "Pretend you didn't see anything and walk away",
+        consequence: "Avoiding involvement might seem easier but doesn't address the issue."
+      },
+      {
+        id: "wait-and-see",
+        text: "Wait to see if they pay for it at the register",
+        consequence: "Sometimes people put items in pockets temporarily while shopping."
+      }
+    ]
+  },
+  "traffic-violation": {
+    title: "Traffic Stop",
+    description: "You're pulled over for speeding",
+    currentStep: 1,
+    totalSteps: 4,
+    progress: 25,
+    situation: "You're running late to work and going 15 mph over the speed limit when you see police lights behind you. The officer approaches your window.",
+    choices: [
+      {
+        id: "be-respectful",
+        text: "Be polite, admit you were speeding, and apologize",
+        consequence: "Honesty and respect often lead to better outcomes with law enforcement."
+      },
+      {
+        id: "deny-speeding",
+        text: "Deny that you were speeding and argue about the speed limit",
+        consequence: "Arguing with police rarely helps and could make the situation worse."
+      },
+      {
+        id: "stay-silent",
+        text: "Exercise your right to remain silent and say nothing",
+        consequence: "You have this right, but in traffic stops, some cooperation is expected."
+      },
+      {
+        id: "ask-radar",
+        text: "Ask to see the radar reading and question the officer's methods",
+        consequence: "You can ask questions, but challenging the officer's procedures isn't recommended during the stop."
+      }
+    ]
+  },
+  "domestic-violence": {
+    title: "Domestic Violence",
+    description: "A friend confides in you about domestic abuse",
+    currentStep: 1,
+    totalSteps: 5,
+    progress: 20,
+    situation: "Your close friend shows you bruises and tearfully admits their partner has been hitting them. They're scared and don't know what to do. They beg you not to tell anyone.",
+    choices: [
+      {
+        id: "respect-wishes",
+        text: "Respect their wishes but provide resources and support",
+        consequence: "Supporting while respecting autonomy is important, but safety comes first."
+      },
+      {
+        id: "call-police",
+        text: "Convince them to call police and offer to go with them",
+        consequence: "Police involvement can provide immediate protection and legal options."
+      },
+      {
+        id: "seek-help-secretly",
+        text: "Contact domestic violence hotline for advice without telling your friend",
+        consequence: "Getting expert advice while maintaining trust can be a good strategy."
+      },
+      {
+        id: "confront-abuser",
+        text: "Confront the abusive partner directly",
+        consequence: "This could escalate the danger for your friend and yourself."
+      }
+    ]
+  },
+  "workplace-rights": {
+    title: "Workplace Harassment",
+    description: "You experience inappropriate behavior at your part-time job",
+    currentStep: 1,
+    totalSteps: 4,
+    progress: 25,
+    situation: "Your supervisor at your part-time job has been making inappropriate comments about your appearance and asking personal questions that make you uncomfortable.",
+    choices: [
+      {
+        id: "document-incidents",
+        text: "Start documenting all incidents with dates and details",
+        consequence: "Excellent! Documentation is crucial for any workplace harassment case."
+      },
+      {
+        id: "tell-supervisor-stop",
+        text: "Tell your supervisor directly that their behavior is inappropriate",
+        consequence: "Direct communication can be effective but may not always be safe."
+      },
+      {
+        id: "report-to-hr",
+        text: "Report the behavior to HR or the store manager",
+        consequence: "Good choice! Companies are legally required to address harassment complaints."
+      },
+      {
+        id: "quit-job",
+        text: "Just quit the job to avoid the situation",
+        consequence: "This might solve the immediate problem but doesn't address the harassment or protect others."
+      }
+    ]
+  },
+  "free-speech": {
+    title: "Campus Free Speech",
+    description: "Your controversial student organization faces restrictions",
+    currentStep: 1,
+    totalSteps: 4,
+    progress: 25,
+    situation: "You're president of a student political organization. The school administration wants to ban your upcoming speaker, claiming their views are 'too controversial' and might upset other students.",
+    choices: [
+      {
+        id: "fight-legally",
+        text: "Research First Amendment rights and challenge the restriction legally",
+        consequence: "Good approach! Public schools must respect constitutional free speech rights."
+      },
+      {
+        id: "find-compromise",
+        text: "Try to negotiate a compromise with the administration",
+        consequence: "Compromise can work, but be careful not to give up fundamental rights."
+      },
+      {
+        id: "cancel-speaker",
+        text: "Cancel the speaker to avoid conflict with the school",
+        consequence: "This avoids immediate conflict but may set a precedent of censorship."
+      },
+      {
+        id: "hold-off-campus",
+        text: "Move the event off-campus to avoid school restrictions",
+        consequence: "Creative solution! Off-campus events have different legal protections."
+      }
+    ]
+  },
+  "search-seizure": {
+    title: "School Locker Search",
+    description: "School officials want to search your locker",
+    currentStep: 1,
+    totalSteps: 4,
+    progress: 25,
+    situation: "The principal calls you to the office and says they received a tip that you have something illegal in your locker. They want to search it immediately.",
+    choices: [
+      {
+        id: "allow-search",
+        text: "Allow the search since you have nothing to hide",
+        consequence: "Cooperation often looks good, but you should know your rights first."
+      },
+      {
+        id: "ask-for-warrant",
+        text: "Ask if they have a warrant or probable cause for the search",
+        consequence: "Schools have different search standards than police, but it's good to ask."
+      },
+      {
+        id: "call-parents",
+        text: "Request that your parents be present during any search",
+        consequence: "Great idea! Having adult support during school discipline is wise."
+      },
+      {
+        id: "know-your-rights",
+        text: "Ask to speak with a counselor about your rights before deciding",
+        consequence: "Smart! Understanding your rights before making decisions is always better."
       }
     ]
   }
