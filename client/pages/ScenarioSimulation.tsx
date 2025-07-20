@@ -342,8 +342,29 @@ export function ScenarioSimulation() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Quick Start Banner */}
+        {quickStart === 'student' && (
+          <div className="mb-8">
+            <Card className="bg-gradient-to-r from-justice-primary to-justice-secondary text-white">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h2 className="text-xl font-bold mb-2">Welcome to Quick Start - Student Path!</h2>
+                    <p className="text-white/90">You're starting with scenarios designed specifically for students. Ready to learn about your legal rights?</p>
+                  </div>
+                  <Link to="/profile">
+                    <Button variant="secondary" className="bg-white text-justice-primary hover:bg-gray-100">
+                      View Profile
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        )}
+
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
