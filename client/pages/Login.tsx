@@ -19,6 +19,7 @@ import {
 
 export function Login() {
   const location = useLocation();
+  const { login } = useAuth();
   const selectedPath = location.state?.selectedPath;
   
   const [formData, setFormData] = useState({
