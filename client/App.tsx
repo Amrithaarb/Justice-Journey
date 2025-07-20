@@ -40,8 +40,9 @@ const App = () => (
         <Route path="/awareness" element={<AwarenessHub />} />
         <Route path="/results" element={<Results />} />
         <Route path="*" element={<NotFound />} />
-      </Routes>
+            </Routes>
     </BrowserRouter>
+    </AuthProvider>
   </QueryClientProvider>
 );
 
