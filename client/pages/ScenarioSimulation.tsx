@@ -106,6 +106,9 @@ const sampleScenario = {
 };
 
 export function ScenarioSimulation() {
+  const location = useLocation();
+  const quickStart = location.state?.quickStart;
+
   const [selectedScenario, setSelectedScenario] = useState<string | null>(null);
   const [selectedRole, setSelectedRole] = useState<string | null>(null);
   const [currentChoice, setCurrentChoice] = useState<string | null>(null);
