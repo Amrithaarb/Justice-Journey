@@ -45,6 +45,16 @@ export function Navigation() {
                 {item.label}
               </Link>
             ))}
+            <Link to="/profile">
+              <Button 
+                variant="ghost"
+                size="sm" 
+                className="text-gray-600 hover:text-justice-primary"
+              >
+                <User className="h-4 w-4 mr-1" />
+                Profile
+              </Button>
+            </Link>
             <Link to="/get-started">
               <Button 
                 size="sm" 
@@ -90,6 +100,17 @@ export function Navigation() {
                   {item.label}
                 </Link>
               ))}
+              <Link to="/profile">
+                <Button 
+                  variant="ghost"
+                  size="sm" 
+                  className="w-full mt-2 justify-start text-gray-600 hover:text-justice-primary"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <User className="h-4 w-4 mr-2" />
+                  Profile
+                </Button>
+              </Link>
               <Link to="/get-started">
                 <Button 
                   size="sm" 
