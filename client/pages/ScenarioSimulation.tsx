@@ -320,8 +320,9 @@ export function ScenarioSimulation() {
     );
   }
 
-  if (showResult) {
-    const choice = sampleScenario.choices.find(c => c.id === currentChoice);
+    if (showResult) {
+    const currentScenario = sampleScenarios[selectedScenario as keyof typeof sampleScenarios] || sampleScenarios.cyberbullying;
+    const choice = currentScenario.choices.find(c => c.id === currentChoice);
     
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
