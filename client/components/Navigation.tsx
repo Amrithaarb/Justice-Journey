@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
-import { Scale, Menu, X } from "lucide-react";
+import { Scale, Menu, X, User } from "lucide-react";
 import { useState } from "react";
 
 export function Navigation() {
