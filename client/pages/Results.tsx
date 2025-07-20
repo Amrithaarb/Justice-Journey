@@ -107,21 +107,21 @@ const achievements = [
     earned: true,
     earnedDate: "2024-01-10"
   },
-  {
+    {
     id: "perfect-score",
     title: "Perfect Justice",
     description: "Get 100% on a scenario",
     icon: "⭐",
-    earned: true,
-    earnedDate: "2024-01-14"
+    earned: false,
+    progress: 80
   },
   {
     id: "streak-master",
     title: "Streak Master",
     description: "Complete scenarios 7 days in a row",
     icon: "🔥",
-    earned: true,
-    earnedDate: "2024-01-15"
+    earned: false,
+    progress: 14
   },
   {
     id: "rights-expert",
