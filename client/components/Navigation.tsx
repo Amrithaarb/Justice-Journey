@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Scale, Menu, X, User } from "lucide-react";
 import { useState } from "react";
+import { useAuth } from "../lib/auth";
 
 export function Navigation() {
   const location = useLocation();
