@@ -212,8 +212,9 @@ export function ScenarioSimulation() {
     }
   };
 
-  if (selectedScenario && selectedRole && !showResult) {
-    const choice = currentChoice ? sampleScenario.choices.find(c => c.id === currentChoice) : null;
+    if (selectedScenario && selectedRole && !showResult) {
+    const currentScenario = sampleScenarios[selectedScenario as keyof typeof sampleScenarios] || sampleScenarios.cyberbullying;
+    const choice = currentChoice ? currentScenario.choices.find(c => c.id === currentChoice) : null;
 
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
