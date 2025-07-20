@@ -114,34 +114,47 @@ export function GetStarted() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+                    <div className="grid md:grid-cols-3 gap-6 mb-12">
             <Card className="text-center">
-              <CardContent className="p-8">
-                <UserPlus className="h-12 w-12 text-justice-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">New to Justice Journey?</h3>
-                <p className="text-gray-600 mb-6">
-                  Create a free account to access all scenarios, track your progress, and earn achievements.
+              <CardContent className="p-6">
+                <UserPlus className="h-10 w-10 text-justice-primary mx-auto mb-3" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Create Account</h3>
+                <p className="text-gray-600 mb-4 text-sm">
+                  Full access to all scenarios, progress tracking, and achievements.
                 </p>
                 <Link to="/create-account" state={{ selectedPath }}>
-                  <Button size="lg" className="w-full bg-gradient-to-r from-justice-primary to-justice-secondary hover:from-justice-primary/90 hover:to-justice-secondary/90">
+                  <Button size="sm" className="w-full bg-gradient-to-r from-justice-primary to-justice-secondary hover:from-justice-primary/90 hover:to-justice-secondary/90">
                     Create Free Account
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-2 border-justice-primary">
+              <CardContent className="p-6">
+                <User className="h-10 w-10 text-justice-primary mx-auto mb-3" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Try as Guest</h3>
+                <p className="text-gray-600 mb-4 text-sm">
+                  Quick access to limited scenarios - no account required.
+                </p>
+                <Link to="/guest-login" state={{ selectedPath }}>
+                  <Button size="sm" variant="outline" className="w-full border-justice-primary text-justice-primary hover:bg-justice-primary hover:text-white">
+                    Continue as Guest
                   </Button>
                 </Link>
               </CardContent>
             </Card>
 
             <Card className="text-center">
-              <CardContent className="p-8">
-                <LogIn className="h-12 w-12 text-gray-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Already Have an Account?</h3>
-                <p className="text-gray-600 mb-6">
-                  Welcome back! Sign in to continue your learning journey and access your progress.
+              <CardContent className="p-6">
+                <LogIn className="h-10 w-10 text-gray-600 mx-auto mb-3" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Sign In</h3>
+                <p className="text-gray-600 mb-4 text-sm">
+                  Welcome back! Continue your learning journey.
                 </p>
                 <Link to="/login" state={{ selectedPath }}>
-                  <Button size="lg" variant="outline" className="w-full border-justice-primary text-justice-primary hover:bg-justice-primary hover:text-white">
-                    Sign In
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                  <Button size="sm" variant="outline" className="w-full">
+                    Sign In to Account
                   </Button>
                 </Link>
               </CardContent>
