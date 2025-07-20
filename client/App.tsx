@@ -11,6 +11,9 @@ import NotFound from "./pages/NotFound";
 import { ScenarioSimulation } from "./pages/ScenarioSimulation";
 import { AwarenessHub } from "./pages/AwarenessHub";
 import { Results } from "./pages/Results";
+import { GetStarted } from "./pages/GetStarted";
+import { CreateAccount } from "./pages/CreateAccount";
+import { Login } from "./pages/Login";
 
 const queryClient = new QueryClient();
 
