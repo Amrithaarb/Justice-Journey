@@ -101,35 +101,97 @@ const scenarios = [
   }
 ];
 
-const sampleScenario = {
-  title: "Cyberbullying Situation",
-  description: "You witness a classmate being harassed online",
-  currentStep: 1,
-  totalSteps: 5,
-  progress: 20,
-  situation: "Your friend Sarah shows you mean messages and fake photos of her posted on social media by other students. She's really upset and doesn't know what to do.",
-  choices: [
-    {
-      id: "report",
-      text: "Advise Sarah to report it to school authorities and help her document the evidence",
-      consequence: "Good choice! Documentation is crucial for cyberbullying cases."
-    },
-    {
-      id: "confront",
-      text: "Confront the bullies directly on social media",
-      consequence: "This could escalate the situation and create more problems."
-    },
-    {
-      id: "ignore",
-      text: "Tell Sarah to ignore it and it will go away",
-      consequence: "Ignoring cyberbullying rarely makes it stop and can worsen."
-    },
-    {
-      id: "support",
-      text: "Support Sarah emotionally but take no action",
-      consequence: "Emotional support is important but action is also needed."
-    }
-  ]
+const sampleScenarios = {
+  "cyberbullying": {
+    title: "Cyberbullying Situation",
+    description: "You witness a classmate being harassed online",
+    currentStep: 1,
+    totalSteps: 5,
+    progress: 20,
+    situation: "Your friend Sarah shows you mean messages and fake photos of her posted on social media by other students. She's really upset and doesn't know what to do.",
+    choices: [
+      {
+        id: "report",
+        text: "Advise Sarah to report it to school authorities and help her document the evidence",
+        consequence: "Good choice! Documentation is crucial for cyberbullying cases."
+      },
+      {
+        id: "confront",
+        text: "Confront the bullies directly on social media",
+        consequence: "This could escalate the situation and create more problems."
+      },
+      {
+        id: "ignore",
+        text: "Tell Sarah to ignore it and it will go away",
+        consequence: "Ignoring cyberbullying rarely makes it stop and can worsen."
+      },
+      {
+        id: "support",
+        text: "Support Sarah emotionally but take no action",
+        consequence: "Emotional support is important but action is also needed."
+      }
+    ]
+  },
+  "police-interaction": {
+    title: "Police Traffic Stop",
+    description: "You are pulled over by police during a routine traffic stop",
+    currentStep: 1,
+    totalSteps: 4,
+    progress: 25,
+    situation: "You're driving home from work when you see police lights behind you. The officer approaches your vehicle and asks for your license and registration.",
+    choices: [
+      {
+        id: "comply",
+        text: "Calmly provide your license and registration as requested",
+        consequence: "Correct! Compliance during traffic stops is important for everyone's safety."
+      },
+      {
+        id: "question",
+        text: "Ask why you were pulled over before providing documents",
+        consequence: "While you have rights, it's better to comply first, then ask questions."
+      },
+      {
+        id: "refuse",
+        text: "Refuse to provide documents and demand to know the reason",
+        consequence: "This is not recommended and could escalate the situation unnecessarily."
+      },
+      {
+        id: "record",
+        text: "Start recording the interaction on your phone immediately",
+        consequence: "You have the right to record, but inform the officer respectfully."
+      }
+    ]
+  },
+  "underage-drinking": {
+    title: "Underage Drinking Party",
+    description: "You're at a party where underage drinking is occurring",
+    currentStep: 1,
+    totalSteps: 4,
+    progress: 25,
+    situation: "You're 17 and at a house party where alcohol is being served. The police arrive to investigate a noise complaint. What do you do?",
+    choices: [
+      {
+        id: "leave-quietly",
+        text: "Try to leave quietly through the back door",
+        consequence: "Leaving calmly is smart, but running might look suspicious."
+      },
+      {
+        id: "stay-honest",
+        text: "Stay put and be honest if questioned by police",
+        consequence: "Honesty is important, but you still have rights during questioning."
+      },
+      {
+        id: "hide",
+        text: "Hide in the bathroom until police leave",
+        consequence: "Hiding could make the situation worse if you're discovered."
+      },
+      {
+        id: "call-parents",
+        text: "Immediately call your parents for advice",
+        consequence: "Good thinking! Having adult support is always wise in legal situations."
+      }
+    ]
+  }
 };
 
 export function ScenarioSimulation() {
