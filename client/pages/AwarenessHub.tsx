@@ -839,47 +839,72 @@ export function AwarenessHub() {
         color: "red"
       };
 
-    // CATEGORY 3: SEXUAL OFFENSES
+    // CATEGORY 3: SEXUAL OFFENSES - CONSTITUTIONAL WOMEN'S RIGHTS FRAMEWORK
     } else if (input.includes("rape") || input.includes("sexual") || input.includes("molestation") ||
                input.includes("harassment") || input.includes("eve teasing") || input.includes("inappropriate touch")) {
       analysis = {
         riskLevel: "High",
         legalConsequences: [
-          "IPC Section 376 - Rape: Minimum 7 years to life imprisonment",
-          "IPC Section 354 - Sexual harassment: Up to 3 years imprisonment",
-          "IPC Section 509 - Insulting modesty: Up to 3 years imprisonment",
-          "POCSO Act 2012 (if minor involved) - Up to 20 years to life",
-          "Mandatory registration in sex offenders database",
-          "Permanent social stigma and employment restrictions"
+          "IPC Section 376 - Rape: Enhanced minimum 10 years to life/death (2018 Amendment)",
+          "IPC Section 376A - Rape causing death: Death penalty or life imprisonment",
+          "IPC Section 354A - Sexual harassment: Up to 3 years + fine",
+          "IPC Section 354B - Assault with intent to disrobe: 3-7 years",
+          "POCSO Act 2012 - Child sexual abuse: 7-20 years to life/death",
+          "Sex Offenders Registry maintenance and public disclosure"
         ],
         recommendations: [
-          "Report immediately to police or women helpline (181)",
-          "Seek immediate medical examination within 72 hours",
-          "Contact nearest hospital for medical evidence collection",
-          "Engage lawyer specializing in sexual offense cases",
-          "Contact NGOs for victim support and counseling",
-          "Preserve all evidence: clothing, messages, witnesses"
+          "Invoke constitutional right under Article 21 for immediate protection",
+          "Contact Women Helpline 181 or Childline 1098 (24x7)",
+          "Exercise Article 39A right to free legal aid through DLSA",
+          "Demand medical examination by female doctor (constitutional dignity)",
+          "Invoke Article 15(3) special provisions for women protection",
+          "Contact National Commission for Women for constitutional remedies"
         ],
         relatedLaws: [
-          "Indian Penal Code Sections 354-376 - Sexual offenses",
-          "POCSO Act 2012 - Protection of Children from Sexual Offences",
-          "Criminal Law Amendment Act 2013 - Enhanced penalties",
-          "Indecent Representation of Women Act 1986",
-          "Information Technology Act 2000 (online harassment)"
+          "Criminal Law Amendment Act 2013 - Post-Nirbhaya comprehensive reforms",
+          "Protection of Children from Sexual Offences Act 2012",
+          "Criminal Law Amendment Act 2018 - Death penalty for child rape",
+          "Supreme Court Guidelines in Vishaka v. State of Rajasthan (Workplace harassment)",
+          "Delhi Gang Rape case judgment - Mukesh v. State (2017)"
         ],
-        constitutionalRights: [
-          "Article 21 - Right to live with dignity and bodily autonomy",
-          "Article 15(3) - Special provisions for women and children",
-          "Article 39A - Equal justice and free legal aid",
-          "Article 51A(e) - Duty to respect dignity of women"
-        ],
+        constitutionalRights: getConstitutionalRights('equality').concat([
+          "Article 21 - Right to live with dignity, privacy, and bodily autonomy",
+          "Article 14 - Equal protection and special measures for women",
+          "Article 39A - Equal justice and free legal aid mandate",
+          "Article 51A(e) - Fundamental duty to respect dignity of women",
+          "Article 15(3) - Affirmative action for women's protection"
+        ]),
         legalProcedures: [
-          "FIR under relevant sections - No refusal by police",
-          "Medical examination by female doctor",
-          "Recording of statement under CrPC Section 164",
-          "Fast-track court trial within 60 days",
-          "Victim compensation scheme under Nirbhaya Fund"
+          "Zero FIR → Transfer to jurisdictional police → Medical exam → 164 statement",
+          "Fast-track court trial (target 60 days completion)",
+          "In-camera trial with identity protection measures",
+          "Victim compensation ₹3-10 lakhs under Section 357A CrPC",
+          "Appeal → High Court → Supreme Court (expedited hearings)"
         ],
+        courtHierarchy: [
+          "Special Fast Track Courts for sexual offenses",
+          "Sessions Court - Mandatory for rape cases",
+          "High Court appeal jurisdiction",
+          "Supreme Court final appellate authority"
+        ],
+        legalPrecedents: [
+          "Vishaka v. State of Rajasthan (1997) - Workplace sexual harassment guidelines",
+          "State of Punjab v. Gurmit Singh (1996) - Consent and evidence",
+          "Mukesh v. State (2017) - Delhi Gang Rape case confirmation",
+          "Lillu v. State of Haryana (2013) - Victim compensation rights"
+        ],
+        timeframes: {
+          investigation: "2 months for charge sheet filing",
+          trial: "60 days target for fast-track courts",
+          compensation: "30 days for interim relief",
+          appeal: "Expedited hearing within 6 months"
+        },
+        costs: {
+          legal_aid: "Free under Article 39A constitutional mandate",
+          medical: "Free medical examination and treatment",
+          compensation: "₹3-10 lakhs victim compensation available",
+          support: "Free counseling and rehabilitation services"
+        },
         color: "red"
       };
 
