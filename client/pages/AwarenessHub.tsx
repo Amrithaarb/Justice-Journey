@@ -1467,17 +1467,18 @@ export function AwarenessHub() {
                 <Button
                   onClick={analyzeScenario}
                   disabled={!scenarioInput.trim() || analyzingScenario}
-                  className="bg-justice-primary hover:bg-justice-primary/90"
+                  className="bg-gradient-to-r from-justice-primary to-justice-secondary hover:from-justice-primary/90 hover:to-justice-secondary/90 text-white font-semibold py-3 px-8 text-lg"
+                  size="lg"
                 >
                   {analyzingScenario ? (
                     <>
-                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                      Analyzing...
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>
+                      Analyzing Your Legal Situation...
                     </>
                   ) : (
                     <>
-                      <Send className="mr-2 h-4 w-4" />
-                      Analyze Scenario
+                      <Send className="mr-3 h-5 w-5" />
+                      Get Instant Legal Analysis
                     </>
                   )}
                 </Button>
