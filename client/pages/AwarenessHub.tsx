@@ -741,47 +741,56 @@ export function AwarenessHub() {
       };
     };
 
-    // CATEGORY 1: CRIMES AGAINST LIFE (MOST SEVERE)
+    // CATEGORY 1: CRIMES AGAINST LIFE (MOST SEVERE) - CONSTITUTIONAL FRAMEWORK
     if (input.includes("murder") || input.includes("kill") || input.includes("homicide") ||
         input.includes("assassination") || input.includes("poisoning") || input.includes("strangling")) {
       analysis = {
         riskLevel: "Critical",
         legalConsequences: [
-          "IPC Section 302 - Murder: Death penalty or life imprisonment",
-          "IPC Section 304 - Culpable homicide: Life imprisonment or 10 years",
+          "IPC Section 302 - Murder: Death penalty (rarest of rare) or life imprisonment",
+          "IPC Section 304 - Culpable homicide: Life imprisonment or 10 years + fine",
           "IPC Section 299 - Culpable homicide not amounting to murder",
-          "Forfeiture of all property under certain conditions",
-          "No bail possible without High Court approval",
-          "Permanent criminal record with serious social consequences"
+          "CrPC Section 432 - Property forfeiture in heinous crimes",
+          "No bail under CrPC Section 437 without High Court approval",
+          "Disqualification from contesting elections under RPA 1951"
         ],
         recommendations: [
-          "IMMEDIATELY seek psychiatric help if having violent thoughts",
-          "Contact suicide prevention helpline (9152987821)",
-          "Engage senior criminal lawyer immediately",
-          "Cooperate fully with police investigation",
-          "Do NOT make any statements without lawyer present",
-          "Inform family members and seek emotional support"
+          "CRITICAL: Engage Senior Advocate with Supreme Court practice immediately",
+          "Exercise Article 22(1) right to be informed of arrest grounds",
+          "Invoke Article 20(3) - Refuse to make self-incriminating statements",
+          "Apply for legal aid under Article 39A if financially unable",
+          "Seek psychiatric evaluation under Mental Healthcare Act 2017",
+          "Request family/friend notification under CrPC Section 50A"
         ],
         relatedLaws: [
-          "Indian Penal Code Sections 299-311 - Culpable Homicide and Murder",
-          "Code of Criminal Procedure 1973 - Non-bailable offense procedures",
-          "Indian Evidence Act 1872 - Burden of proof in murder cases",
-          "Juvenile Justice Act 2015 (if under 18)",
-          "Mental Healthcare Act 2017 (if mental health issues)"
+          "Indian Penal Code Chapter XVI (Sections 299-311) - Of Offences Affecting Life",
+          "CrPC Sections 173, 207, 208 - Investigation and charge sheet procedures",
+          "Evidence Act Sections 25-27 - Confession admissibility rules",
+          "Supreme Court Guidelines in Bachan Singh v. State of Punjab (Death penalty)",
+          "Constitution Bench ruling in Mithu v. State of Punjab (Section 303 struck down)"
         ],
-        constitutionalRights: [
-          "Article 21 - Right to life and personal liberty (even for accused)",
-          "Article 22 - Protection against arrest and detention",
-          "Article 20(3) - Protection against self-incrimination",
-          "Article 14 - Right to fair trial and legal representation"
-        ],
+        constitutionalRights: getConstitutionalRights('fundamental').concat([
+          "Article 21 - Right to life includes right to dignity even during trial",
+          "Article 72 - Presidential clemency power for death sentence",
+          "Article 161 - Governor's clemency power",
+          "Article 134 - Appeal as of right to Supreme Court in death cases"
+        ]),
         legalProcedures: [
-          "FIR under IPC Section 302/304 - Immediate police investigation",
-          "Sessions Court trial (mandatory for murder cases)",
-          "High Court appeal within 30 days of conviction",
-          "Supreme Court special leave petition if needed",
-          "Legal aid appointment if unable to afford counsel"
+          "FIR → Investigation (90-180 days) → Charge sheet → Committal → Sessions Trial",
+          "Sessions Court mandatory trial with jury recommendation (death cases)",
+          "High Court confirmation required for death sentence (CrPC 366)",
+          "Supreme Court appeal as matter of right in capital cases",
+          "Presidential clemency petition under Article 72 (final remedy)"
         ],
+        courtHierarchy: getCourtHierarchy('murder'),
+        legalPrecedents: [
+          "Bachan Singh v. State of Punjab (1980) - Rarest of rare doctrine",
+          "Machhi Singh v. State of Punjab (1983) - Death penalty guidelines",
+          "Santosh Kumar Bariyar v. State of MP (2009) - Mental illness consideration",
+          "Shatrughan Chauhan v. Union of India (2014) - Death row rights"
+        ],
+        timeframes: getLegalTimeframes('capital_offense'),
+        costs: getEstimatedCosts('capital_case'),
         color: "red"
       };
 
