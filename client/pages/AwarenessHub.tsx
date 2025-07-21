@@ -897,9 +897,52 @@ export function AwarenessHub() {
         ],
         color: "yellow"
       };
+    } else if (input.includes("contract") || input.includes("agreement") || input.includes("business") ||
+               input.includes("employment") || input.includes("salary") || input.includes("work") ||
+               input.includes("job") || input.includes("consumer") || input.includes("refund")) {
+      analysis = {
+        riskLevel: "Low",
+        legalConsequences: [
+          "Breach of contract liability",
+          "Monetary damages to other party",
+          "Loss of business reputation",
+          "Potential civil lawsuit",
+          "Consumer forum complaints",
+          "Employment tribunal issues"
+        ],
+        recommendations: [
+          "Review contract terms carefully before signing",
+          "Seek legal advice for complex agreements",
+          "Maintain proper documentation",
+          "Follow dispute resolution clauses",
+          "Consider consumer protection laws",
+          "Negotiate in good faith"
+        ],
+        relatedLaws: [
+          "Indian Contract Act 1872",
+          "Consumer Protection Act 2019",
+          "Industrial Disputes Act 1947",
+          "Payment of Wages Act 1936",
+          "Sale of Goods Act 1930"
+        ],
+        constitutionalRights: [
+          "Article 19(1)(g) - Right to practice profession",
+          "Article 21 - Right to livelihood",
+          "Article 14 - Equality in contractual dealings",
+          "Article 32 - Constitutional remedy for violations"
+        ],
+        legalProcedures: [
+          "Legal notice for breach of contract",
+          "Consumer forum complaint filing",
+          "Civil court suit for damages",
+          "Arbitration under Arbitration Act",
+          "Mediation through Lok Adalat"
+        ],
+        color: "green"
+      };
     } else {
       analysis = {
-        riskLevel: "Low to Medium",
+        riskLevel: "Medium",
         legalConsequences: [
           "Potential civil liability under Indian Contract Act 1872",
           "Possible tort liability for damages",
