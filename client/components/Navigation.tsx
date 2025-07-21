@@ -28,7 +28,7 @@ export function Navigation() {
               <Scale className="h-6 w-6 text-white" />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-justice-primary to-justice-secondary bg-clip-text text-transparent">
-              Justice Journey
+              <p>Justice Journey</p>
             </span>
           </Link>
 
