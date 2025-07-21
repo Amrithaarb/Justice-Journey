@@ -644,7 +644,10 @@ export function AwarenessHub() {
 
     const input = scenarioInput.toLowerCase();
 
-    if (input.includes("threat") || input.includes("violence") || input.includes("hurt") || input.includes("attack")) {
+    // Check for high-risk violent scenarios
+    if (input.includes("threat") || input.includes("violence") || input.includes("hurt") || input.includes("attack") ||
+        input.includes("kill") || input.includes("murder") || input.includes("hit") || input.includes("fight") ||
+        input.includes("assault") || input.includes("harm") || input.includes("beat") || input.includes("weapon")) {
       analysis = {
         riskLevel: "High",
         legalConsequences: [
