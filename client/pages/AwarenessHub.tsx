@@ -2395,6 +2395,95 @@ export function AwarenessHub() {
                       </CardContent>
                     </Card>
 
+                    {/* Enhanced Constitutional Training Sections */}
+                    {scenarioAnalysis.courtHierarchy && scenarioAnalysis.courtHierarchy.length > 0 && (
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="text-lg flex items-center text-indigo-700">
+                              <Users className="h-5 w-5 mr-2" />
+                              Court Hierarchy & Jurisdiction
+                            </CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <ul className="space-y-2">
+                              {scenarioAnalysis.courtHierarchy.map((court: string, index: number) => (
+                                <li key={index} className="flex items-start space-x-2">
+                                  <Scale className="h-4 w-4 text-indigo-500 mt-0.5 flex-shrink-0" />
+                                  <span className="text-sm text-gray-700">{court}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </CardContent>
+                        </Card>
+
+                        {scenarioAnalysis.legalPrecedents && scenarioAnalysis.legalPrecedents.length > 0 && (
+                          <Card>
+                            <CardHeader>
+                              <CardTitle className="text-lg flex items-center text-violet-700">
+                                <Award className="h-5 w-5 mr-2" />
+                                Key Legal Precedents
+                              </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                              <ul className="space-y-2">
+                                {scenarioAnalysis.legalPrecedents.map((precedent: string, index: number) => (
+                                  <li key={index} className="flex items-start space-x-2">
+                                    <Award className="h-4 w-4 text-violet-500 mt-0.5 flex-shrink-0" />
+                                    <span className="text-sm text-gray-700">{precedent}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </CardContent>
+                          </Card>
+                        )}
+                      </div>
+                    )}
+
+                    {scenarioAnalysis.timeframes && (
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="text-lg flex items-center text-teal-700">
+                              <Clock className="h-5 w-5 mr-2" />
+                              Legal Timeline & Deadlines
+                            </CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <div className="space-y-3">
+                              {Object.entries(scenarioAnalysis.timeframes).map(([stage, duration], index) => (
+                                <div key={index} className="flex justify-between items-center p-2 bg-teal-50 rounded">
+                                  <span className="text-sm font-medium text-teal-800 capitalize">{stage.replace('_', ' ')}:</span>
+                                  <span className="text-sm text-teal-700">{duration}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </CardContent>
+                        </Card>
+
+                        {scenarioAnalysis.costs && (
+                          <Card>
+                            <CardHeader>
+                              <CardTitle className="text-lg flex items-center text-green-700">
+                                <TrendingUp className="h-5 w-5 mr-2" />
+                                Estimated Legal Costs
+                              </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                              <div className="space-y-3">
+                                {Object.entries(scenarioAnalysis.costs).map(([category, amount], index) => (
+                                  <div key={index} className="flex justify-between items-start p-2 bg-green-50 rounded">
+                                    <span className="text-sm font-medium text-green-800 capitalize">{category.replace('_', ' ')}:</span>
+                                    <span className="text-sm text-green-700 text-right">{amount}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            </CardContent>
+                          </Card>
+                        )}
+                      </div>
+                    )}
+
                     <div className="p-6 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border border-gray-200">
                       <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
                         <AlertTriangle className="h-5 w-5 text-amber-600 mr-2" />
