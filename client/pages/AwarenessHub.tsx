@@ -625,89 +625,270 @@ export function AwarenessHub() {
 
   const analyzeScenario = async () => {
     if (!scenarioInput.trim()) return;
-    
+
     setAnalyzingScenario(true);
-    
+
     // Simulate AI analysis - in real app this would call an AI service
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Mock analysis based on keywords
+
+    // Enhanced analysis based on Indian legal framework
     let analysis = {
       riskLevel: "Medium",
       legalConsequences: [],
       recommendations: [],
       relatedLaws: [],
+      constitutionalRights: [],
+      legalProcedures: [],
       color: "yellow"
     };
-    
+
     const input = scenarioInput.toLowerCase();
-    
-    if (input.includes("threat") || input.includes("violence") || input.includes("hurt")) {
+
+    if (input.includes("threat") || input.includes("violence") || input.includes("hurt") || input.includes("attack")) {
       analysis = {
         riskLevel: "High",
         legalConsequences: [
-          "Criminal charges for making threats",
-          "Possible restraining order",
-          "Potential expulsion from school/workplace",
-          "Civil liability for emotional distress"
+          "Criminal charges under IPC Section 506 (Criminal Intimidation)",
+          "IPC Section 503 (Criminal Intimidation) - Up to 2 years imprisonment",
+          "Possible charges under IPC Section 351 (Assault) if physical threat",
+          "Cyberbullying charges under IT Act 2000 Section 66A (if online)",
+          "Possible restraining order under CrPC Section 107/108",
+          "Civil liability for damages under tort law"
         ],
         recommendations: [
-          "Do NOT proceed with any threatening behavior",
-          "Seek anger management counseling",
-          "Consider mediation for conflict resolution",
-          "Consult with a lawyer if already involved"
+          "IMMEDIATELY cease any threatening behavior - it's a criminal offense",
+          "Seek mediation through Lok Adalat for dispute resolution",
+          "Consult a criminal lawyer if already charged",
+          "File counter-complaint if you're being threatened",
+          "Preserve evidence of threats (screenshots, recordings)",
+          "Report to local police station under CrPC Section 154 (FIR)"
         ],
         relatedLaws: [
-          "Criminal threatening statutes",
-          "Harassment laws",
-          "Assault and battery definitions",
-          "Anti-bullying regulations"
+          "Indian Penal Code (IPC) Sections 503, 504, 506 - Criminal Intimidation",
+          "IPC Section 351 - Assault",
+          "IT Act 2000 Section 66A, 67 - Cyberbullying",
+          "Criminal Procedure Code (CrPC) Section 107, 108 - Preventive Orders",
+          "Protection of Women from Domestic Violence Act 2005 (if applicable)"
+        ],
+        constitutionalRights: [
+          "Article 21 - Right to Life and Personal Liberty (protection from threats)",
+          "Article 19(1)(a) - Freedom of Speech doesn't protect threatening speech",
+          "Article 14 - Right to Equality before law",
+          "Article 22 - Protection against arrest and detention (if arrested)"
+        ],
+        legalProcedures: [
+          "File FIR at nearest police station (mandatory registration)",
+          "Collect evidence: messages, witnesses, medical reports",
+          "Apply for anticipatory bail under CrPC Section 438 if charges likely",
+          "Seek legal aid if unable to afford lawyer (Legal Services Authority)",
+          "Court procedure: Magistrate trial under CrPC Chapter XX"
         ],
         color: "red"
       };
-    } else if (input.includes("steal") || input.includes("theft") || input.includes("take")) {
+    } else if (input.includes("steal") || input.includes("theft") || input.includes("take") || input.includes("rob")) {
       analysis = {
         riskLevel: "High",
         legalConsequences: [
-          "Theft charges (misdemeanor or felony depending on value)",
-          "Fines and possible jail time",
-          "Restitution to victim",
-          "Criminal record affecting future opportunities"
+          "IPC Section 378 - Theft: Up to 3 years imprisonment + fine",
+          "IPC Section 379 - Punishment for theft",
+          "IPC Section 380 - Theft in dwelling house: Up to 7 years",
+          "IPC Section 392 - Robbery: Up to 10 years imprisonment",
+          "Juvenile Justice Act 2015 if under 18 years",
+          "Permanent criminal record affecting employment"
         ],
         recommendations: [
-          "Do NOT take anything that doesn't belong to you",
-          "Return any stolen items immediately",
-          "Seek legal counsel if already charged",
-          "Consider community service as alternative"
+          "DO NOT proceed - theft is a serious criminal offense",
+          "Return stolen property immediately to reduce charges",
+          "Engage lawyer specializing in criminal law",
+          "Apply for bail under CrPC Section 436/437",
+          "Consider plea bargaining under CrPC Section 265A",
+          "Seek rehabilitation programs if addiction-related"
         ],
         relatedLaws: [
-          "Theft and larceny statutes",
-          "Grand theft vs petty theft distinctions",
-          "Shoplifting laws",
-          "Juvenile vs adult penalties"
+          "Indian Penal Code Sections 378-382 - Theft provisions",
+          "IPC Sections 392-402 - Robbery and Dacoity",
+          "Juvenile Justice (Care and Protection) Act 2015",
+          "Probation of Offenders Act 1958 (first-time offenders)",
+          "Code of Criminal Procedure 1973 - Trial procedures"
+        ],
+        constitutionalRights: [
+          "Article 20(3) - Protection against self-incrimination",
+          "Article 22(1) - Right to be informed of arrest grounds",
+          "Article 22(2) - Right to legal representation",
+          "Article 21 - Right to fair trial"
+        ],
+        legalProcedures: [
+          "Police investigation under CrPC Section 156",
+          "Arrest procedures under CrPC Section 41",
+          "Bail application within 24 hours of arrest",
+          "Charge sheet filing within 60/90 days",
+          "Trial in Sessions Court (if punishment > 3 years)"
         ],
         color: "red"
       };
-    } else if (input.includes("drink") || input.includes("alcohol") || input.includes("party")) {
+    } else if (input.includes("bribe") || input.includes("corruption") || input.includes("payment")) {
+      analysis = {
+        riskLevel: "High",
+        legalConsequences: [
+          "Prevention of Corruption Act 1988 - Up to 7 years imprisonment",
+          "IPC Section 171B - Bribery (electoral): Up to 1 year",
+          "Disqualification from holding public office",
+          "Attachment of assets under Benami Transactions Act",
+          "Income Tax proceedings for unexplained wealth",
+          "Social boycott and reputation damage"
+        ],
+        recommendations: [
+          "Report corruption to Anti-Corruption Bureau immediately",
+          "Document evidence with timestamps and witnesses",
+          "Use RTI Act 2005 to expose corrupt practices",
+          "Contact Central Vigilance Commission (CVC)",
+          "File complaint with Lokpal/Lokayukta",
+          "Seek protection under Whistleblowers Act 2014"
+        ],
+        relatedLaws: [
+          "Prevention of Corruption Act 1988",
+          "Indian Penal Code Sections 161-165 - Public servant corruption",
+          "Right to Information Act 2005",
+          "Lokpal and Lokayuktas Act 2013",
+          "Whistleblowers Protection Act 2014"
+        ],
+        constitutionalRights: [
+          "Article 14 - Equality before law (anti-corruption principle)",
+          "Article 19(1)(a) - Right to information and expose corruption",
+          "Article 21 - Right to corruption-free governance",
+          "DPSP Article 39(b) - Distribution of material resources"
+        ],
+        legalProcedures: [
+          "File complaint with Special Judge (PC Act court)",
+          "CBI/ACB investigation procedures",
+          "Asset recovery under PMLA 2002",
+          "Fast-track trial procedures",
+          "Appeal to High Court under CrPC Section 374"
+        ],
+        color: "red"
+      };
+    } else if (input.includes("discrimination") || input.includes("caste") || input.includes("religion") || input.includes("untouchability")) {
+      analysis = {
+        riskLevel: "High",
+        legalConsequences: [
+          "Protection of Civil Rights Act 1955 - Up to 6 months imprisonment",
+          "SC/ST (Prevention of Atrocities) Act 1989 - Up to 5 years",
+          "IPC Section 153A - Promoting enmity: Up to 3 years",
+          "Constitutional violation liable for compensation",
+          "Employment consequences under Equal Opportunity laws",
+          "Social sanctions and public condemnation"
+        ],
+        recommendations: [
+          "Report to National/State Human Rights Commission",
+          "File complaint under relevant anti-discrimination laws",
+          "Approach District Collector for immediate relief",
+          "Contact SC/ST Commission if applicable",
+          "Seek legal aid from Human Rights organizations",
+          "Document incidents with evidence and witnesses"
+        ],
+        relatedLaws: [
+          "Protection of Civil Rights Act 1955",
+          "SC/ST (Prevention of Atrocities) Act 1989",
+          "Equal Remuneration Act 1976",
+          "Rights of Persons with Disabilities Act 2016",
+          "Indian Penal Code Section 153A, 295A"
+        ],
+        constitutionalRights: [
+          "Article 15 - Prohibition of discrimination",
+          "Article 16 - Equality of opportunity in employment",
+          "Article 17 - Abolition of untouchability",
+          "Article 25 - Freedom of religion",
+          "Article 29 - Cultural and educational rights"
+        ],
+        legalProcedures: [
+          "Complaint to Police under relevant sections",
+          "Approach Special Court under SC/ST Act",
+          "Human Rights Commission inquiry",
+          "Constitutional remedy under Article 32",
+          "Civil suit for damages under tort law"
+        ],
+        color: "red"
+      };
+    } else if (input.includes("property") || input.includes("land") || input.includes("house") || input.includes("dispute")) {
       analysis = {
         riskLevel: "Medium",
         legalConsequences: [
-          "Minor in Possession (MIP) charges",
-          "Fines ranging from $100-500",
-          "Mandatory alcohol education classes",
-          "Possible driver's license suspension"
+          "Civil suit for possession/title under CPC",
+          "Criminal trespass under IPC Section 441",
+          "Registration Act violations if documents forged",
+          "Stamp duty and registration fee penalties",
+          "Limitation Act 1963 - time-barred claims",
+          "Court costs and legal fees"
         ],
         recommendations: [
-          "Avoid underage drinking entirely",
-          "Have a designated driver plan",
-          "Know your legal rights during police encounters",
-          "Contact parents or lawyer if arrested"
+          "Verify property documents at Sub-Registrar office",
+          "Conduct title search for clear ownership",
+          "Engage property lawyer for legal opinion",
+          "Consider mediation/arbitration for faster resolution",
+          "File civil suit within limitation period",
+          "Seek interim injunction to prevent alienation"
         ],
         relatedLaws: [
-          "Underage drinking laws",
-          "Zero tolerance policies",
-          "Social host liability",
-          "DUI/DWI statutes"
+          "Transfer of Property Act 1882",
+          "Registration Act 1908",
+          "Indian Stamp Act 1899",
+          "Real Estate (Regulation and Development) Act 2016",
+          "Code of Civil Procedure 1908"
+        ],
+        constitutionalRights: [
+          "Article 300A - Right to property (limited protection)",
+          "Article 19(1)(f) - Right to acquire property (historical)",
+          "Article 31 - Compensation for property acquisition",
+          "Article 32/226 - Constitutional remedy for rights violation"
+        ],
+        legalProcedures: [
+          "Civil suit filing in appropriate court",
+          "Property document verification",
+          "Survey and settlement procedures",
+          "Appeal to High Court under CPC Order 43",
+          "Execution of decree under CPC Order 21"
+        ],
+        color: "yellow"
+      };
+    } else if (input.includes("marriage") || input.includes("divorce") || input.includes("dowry") || input.includes("domestic")) {
+      analysis = {
+        riskLevel: "Medium to High",
+        legalConsequences: [
+          "Dowry Prohibition Act 1961 - Up to 5 years imprisonment",
+          "IPC Section 498A - Domestic violence: Up to 3 years",
+          "Protection of Women from Domestic Violence Act 2005",
+          "Hindu Marriage Act/Special Marriage Act violations",
+          "Child marriage under Prohibition of Child Marriage Act",
+          "Maintenance obligations under CrPC Section 125"
+        ],
+        recommendations: [
+          "Report domestic violence to police immediately",
+          "Approach Protection Officer under PWDVA 2005",
+          "File for maintenance under CrPC Section 125",
+          "Seek protection order from Magistrate",
+          "Contact National Commission for Women",
+          "Engage family court lawyer for divorce proceedings"
+        ],
+        relatedLaws: [
+          "Protection of Women from Domestic Violence Act 2005",
+          "Dowry Prohibition Act 1961",
+          "Hindu Marriage Act 1955",
+          "Indian Christian Marriage Act 1872",
+          "Muslim Personal Law (Shariat) Application Act 1937"
+        ],
+        constitutionalRights: [
+          "Article 14 - Gender equality",
+          "Article 15(3) - Special provision for women",
+          "Article 21 - Right to live with dignity",
+          "Article 25 - Freedom of religion in marriage",
+          "Article 44 - Uniform Civil Code (directive principle)"
+        ],
+        legalProcedures: [
+          "FIR under IPC Section 498A for domestic violence",
+          "Family Court proceedings for divorce/maintenance",
+          "Magistrate Court for protection orders",
+          "Appeal to High Court under family laws",
+          "Alternative Dispute Resolution in family matters"
         ],
         color: "yellow"
       };
@@ -715,27 +896,45 @@ export function AwarenessHub() {
       analysis = {
         riskLevel: "Low to Medium",
         legalConsequences: [
-          "Potential civil liability",
-          "Possible disciplinary action",
-          "Damage to reputation",
-          "Relationship consequences"
+          "Potential civil liability under Indian Contract Act 1872",
+          "Possible tort liability for damages",
+          "Professional/educational disciplinary action",
+          "Reputation and social consequences",
+          "Administrative penalties if applicable",
+          "Future legal complications"
         ],
         recommendations: [
-          "Consider all potential consequences",
-          "Seek advice from trusted adults",
-          "Explore legal alternatives",
-          "Think about long-term impact"
+          "Consult legal expert for specific advice",
+          "Review applicable laws and regulations",
+          "Consider Alternative Dispute Resolution (ADR)",
+          "Document all relevant facts and evidence",
+          "Seek mediation through Lok Adalat",
+          "Understand long-term implications"
         ],
         relatedLaws: [
-          "General civil liability",
-          "Contract law",
-          "Negligence standards",
-          "Local ordinances"
+          "Indian Contract Act 1872",
+          "Indian Evidence Act 1872",
+          "Limitation Act 1963",
+          "Consumer Protection Act 2019 (if applicable)",
+          "Information Technology Act 2000 (if digital)"
+        ],
+        constitutionalRights: [
+          "Article 21 - Right to life and personal liberty",
+          "Article 19 - Fundamental freedoms",
+          "Article 32 - Right to constitutional remedies",
+          "Article 226 - Writ jurisdiction of High Courts"
+        ],
+        legalProcedures: [
+          "Consultation with appropriate legal counsel",
+          "Fact-finding and evidence collection",
+          "Legal notice before filing suit",
+          "Court jurisdiction determination",
+          "Limitation period assessment"
         ],
         color: "green"
       };
     }
-    
+
     setScenarioAnalysis(analysis);
     setAnalyzingScenario(false);
   };
@@ -1220,23 +1419,28 @@ export function AwarenessHub() {
                   <span>Real-Time Scenario Analyzer</span>
                 </CardTitle>
                 <p className="text-gray-600">
-                  Describe a situation you're considering and get instant analysis of potential legal consequences
+                  Get comprehensive legal analysis according to Indian Constitution, applicable acts, and legal procedures. Understand your rights and proper legal steps to take.
                 </p>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div>
                   <Label htmlFor="scenario" className="text-base font-medium text-gray-900">
-                    Describe your scenario:
+                    Describe your legal situation or planned action:
                   </Label>
                   <Textarea
                     id="scenario"
                     value={scenarioInput}
                     onChange={(e) => setScenarioInput(e.target.value)}
-                    placeholder="Example: 'I'm thinking about confronting someone who has been spreading rumors about me on social media. I want to threaten them to make them stop.'"
-                    className="mt-2 min-h-[120px]"
+                    placeholder="Examples:
+• 'My employer is discriminating against me based on my caste and refusing promotion'
+• 'Someone is demanding dowry from my family for marriage'
+• 'I want to file a complaint against police harassment'
+• 'My landlord is forcibly evicting me without notice'
+• 'I witnessed corruption in a government office'"
+                    className="mt-2 min-h-[140px]"
                   />
                   <p className="text-sm text-gray-500 mt-2">
-                    Be specific about actions you're considering. This analysis is for educational purposes only.
+                    <strong>Confidential & Educational:</strong> Describe your situation clearly. Analysis covers Indian constitutional rights, applicable laws, and legal procedures. This is for educational awareness only - not professional legal advice.
                   </p>
                 </div>
                 
@@ -1274,13 +1478,13 @@ export function AwarenessHub() {
                         Risk Level: {scenarioAnalysis.riskLevel}
                       </h3>
                     </div>
-                    
+
                     <div className="grid md:grid-cols-2 gap-6">
                       <Card>
                         <CardHeader>
                           <CardTitle className="text-lg flex items-center text-red-700">
                             <Scale className="h-5 w-5 mr-2" />
-                            Potential Legal Consequences
+                            Legal Consequences Under Indian Law
                           </CardTitle>
                         </CardHeader>
                         <CardContent>
@@ -1294,12 +1498,12 @@ export function AwarenessHub() {
                           </ul>
                         </CardContent>
                       </Card>
-                      
+
                       <Card>
                         <CardHeader>
                           <CardTitle className="text-lg flex items-center text-green-700">
                             <Lightbulb className="h-5 w-5 mr-2" />
-                            Recommendations
+                            Recommended Legal Steps
                           </CardTitle>
                         </CardHeader>
                         <CardContent>
@@ -1314,30 +1518,84 @@ export function AwarenessHub() {
                         </CardContent>
                       </Card>
                     </div>
-                    
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <Card>
+                        <CardHeader>
+                          <CardTitle className="text-lg flex items-center text-orange-700">
+                            <Shield className="h-5 w-5 mr-2" />
+                            Constitutional Rights & Protections
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <ul className="space-y-2">
+                            {scenarioAnalysis.constitutionalRights.map((right: string, index: number) => (
+                              <li key={index} className="flex items-start space-x-2">
+                                <Shield className="h-4 w-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                <span className="text-sm text-gray-700">{right}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </CardContent>
+                      </Card>
+
+                      <Card>
+                        <CardHeader>
+                          <CardTitle className="text-lg flex items-center text-purple-700">
+                            <FileText className="h-5 w-5 mr-2" />
+                            Legal Procedures to Follow
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <ul className="space-y-2">
+                            {scenarioAnalysis.legalProcedures.map((procedure: string, index: number) => (
+                              <li key={index} className="flex items-start space-x-2">
+                                <FileText className="h-4 w-4 text-purple-500 mt-0.5 flex-shrink-0" />
+                                <span className="text-sm text-gray-700">{procedure}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </CardContent>
+                      </Card>
+                    </div>
+
                     <Card>
                       <CardHeader>
                         <CardTitle className="text-lg flex items-center text-blue-700">
                           <BookOpen className="h-5 w-5 mr-2" />
-                          Related Laws & Regulations
+                          Applicable Indian Laws & Acts
                         </CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <div className="grid md:grid-cols-2 gap-3">
+                        <div className="grid md:grid-cols-1 gap-3">
                           {scenarioAnalysis.relatedLaws.map((law: string, index: number) => (
-                            <div key={index} className="p-3 bg-blue-50 rounded-lg">
+                            <div key={index} className="p-3 bg-blue-50 rounded-lg border border-blue-200">
                               <span className="text-sm text-blue-800 font-medium">{law}</span>
                             </div>
                           ))}
                         </div>
                       </CardContent>
                     </Card>
-                    
-                    <div className="p-4 bg-gray-50 rounded-lg">
-                      <p className="text-sm text-gray-600">
-                        <strong>Disclaimer:</strong> This analysis is for educational purposes only and does not constitute legal advice. 
-                        For specific legal matters, consult with a qualified attorney in your jurisdiction.
-                      </p>
+
+                    <div className="p-6 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+                        <AlertTriangle className="h-5 w-5 text-amber-600 mr-2" />
+                        Important Legal Disclaimer
+                      </h4>
+                      <div className="space-y-2 text-sm text-gray-700">
+                        <p>
+                          <strong>Educational Purpose Only:</strong> This analysis is based on general provisions of Indian law and is intended for educational awareness only.
+                        </p>
+                        <p>
+                          <strong>Not Legal Advice:</strong> This does not constitute professional legal advice. Laws vary by state, and specific circumstances matter significantly.
+                        </p>
+                        <p>
+                          <strong>Consult Legal Expert:</strong> For any legal situation, immediately consult with a qualified advocate or legal expert familiar with local laws and recent amendments.
+                        </p>
+                        <p>
+                          <strong>Emergency Situations:</strong> In case of immediate legal emergency, contact local police (100) or legal aid services (1098 for child helpline).
+                        </p>
+                      </div>
                     </div>
                   </div>
                 )}
