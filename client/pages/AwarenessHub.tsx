@@ -953,48 +953,73 @@ export function AwarenessHub() {
         color: "red"
       };
 
-    // CATEGORY 5: CYBERCRIME & DIGITAL OFFENSES
+    // CATEGORY 5: CYBERCRIME & DIGITAL OFFENSES - DIGITAL CONSTITUTIONAL RIGHTS
     } else if (input.includes("cybercrime") || input.includes("hacking") || input.includes("phishing") ||
                input.includes("identity theft") || input.includes("online fraud") || input.includes("cyberbullying") ||
                input.includes("fake website") || input.includes("digital forgery") || input.includes("cyber stalking")) {
       analysis = {
         riskLevel: "High",
         legalConsequences: [
-          "IT Act 2000 Section 66 - Computer fraud: Up to 3 years + ₹5 lakh fine",
-          "IT Act Section 66C - Identity theft: Up to 3 years + ₹1 lakh fine",
-          "IT Act Section 66D - Cheating using computer: Up to 3 years",
-          "IPC Section 420 - Cheating: Up to 7 years imprisonment",
-          "Banking fraud penalties under various banking laws",
-          "Asset freezing and recovery under PMLA 2002"
+          "IT Act 2000 Section 66 - Computer related offenses: 3 years + ₹5 lakh",
+          "IT Act Section 66C - Identity theft/impersonation: 3 years + ₹1 lakh",
+          "IT Act Section 66F - Cyber terrorism: Life imprisonment",
+          "IT Act Section 43A - Data protection violations: Compensation liability",
+          "IPC Section 420 with IT Act - Cyber fraud: Up to 7 years",
+          "Banking Regulation Act violations - ₹1 crore fine + imprisonment"
         ],
         recommendations: [
-          "Report to National Cyber Crime Reporting Portal immediately",
-          "Contact Cyber Crime Police Station in your area",
-          "Preserve all digital evidence: screenshots, logs, emails",
-          "Change all compromised passwords and secure accounts",
-          "Engage cyber law specialist attorney",
-          "Cooperate with Cyber Crime investigation agencies"
+          "Exercise Article 21 digital privacy rights - Report to cybercrime.gov.in",
+          "Invoke constitutional remedy under Article 32 for digital rights",
+          "Contact I4C (Indian Cyber Crime Coordination Centre) immediately",
+          "Preserve evidence under Section 65B Indian Evidence Act",
+          "Engage certified cyber forensics expert and IT law specialist",
+          "File complaint with Data Protection Authority if data breach"
         ],
         relatedLaws: [
-          "Information Technology Act 2000 - Comprehensive cyber law",
-          "Indian Penal Code Sections 420, 468, 471 - Fraud and Forgery",
-          "Prevention of Money Laundering Act 2002",
-          "Credit Card fraud provisions under RBI guidelines",
-          "Aadhaar Act 2016 (identity-related crimes)"
+          "Information Technology Act 2000 (amended 2008) - Complete digital law framework",
+          "Personal Data Protection Bill 2022 - Comprehensive privacy protection",
+          "Indian Evidence Act Section 65B - Electronic evidence admissibility",
+          "RBI Guidelines on Cyber Security Framework for banks",
+          "CERT-In directions under IT Act Section 70B"
         ],
-        constitutionalRights: [
-          "Article 21 - Right to privacy and digital security",
-          "Article 19(1)(a) - Freedom of speech (protection from cyber harassment)",
-          "Article 300A - Protection of digital property rights",
-          "Article 32 - Constitutional remedy for digital rights violations"
-        ],
+        constitutionalRights: getConstitutionalRights('liberty').concat([
+          "Article 21 - Right to privacy (K.S. Puttaswamy judgment 2017)",
+          "Article 19(1)(a) - Freedom of expression in digital space",
+          "Article 19(1)(g) - Right to digital business and e-commerce",
+          "Article 300A - Protection of digital assets and cryptocurrency",
+          "Article 14 - Equal protection in digital transactions"
+        ]),
         legalProcedures: [
-          "Online complaint filing at cybercrime.gov.in",
-          "FIR at specialized Cyber Crime Police Station",
-          "Digital forensics examination by experts",
-          "Trial in designated Cyber Crime Courts",
-          "International cooperation for cross-border crimes"
+          "Online FIR → Cyber Cell → Digital Forensics → Charge Sheet",
+          "Section 65B Evidence Act compliance for digital evidence",
+          "Designated Cyber Crime Court trial",
+          "International cooperation through Budapest Convention",
+          "Victim compensation under IT Act Section 43A"
         ],
+        courtHierarchy: [
+          "Designated Cyber Crime Courts under IT Act",
+          "Sessions Court for serious cyber crimes",
+          "High Court cyber crime benches",
+          "Supreme Court for constitutional cyber rights"
+        ],
+        legalPrecedents: [
+          "K.S. Puttaswamy v. Union of India (2017) - Right to privacy",
+          "Shreya Singhal v. Union of India (2015) - Section 66A struck down",
+          "ASCI v. Reckitt Benckiser (2014) - Online advertising regulation",
+          "State of Tamil Nadu v. Suhas Katti (2004) - First cybercrime conviction"
+        ],
+        timeframes: {
+          investigation: "90 days under IT Act provisions",
+          digital_forensics: "30-60 days for evidence examination",
+          trial: "6-12 months in cyber courts",
+          compensation: "60 days for data breach compensation"
+        },
+        costs: {
+          cyber_forensics: "₹25,000-₹1,00,000 for expert examination",
+          legal_fees: "₹50,000-₹5,00,000 for specialized cyber lawyers",
+          data_recovery: "₹10,000-₹50,000 for professional data recovery",
+          compensation: "Actual damages + punitive damages under IT Act"
+        },
         color: "red"
       };
 
@@ -2227,7 +2252,7 @@ export function AwarenessHub() {
 • 'My employer is discriminating against me based on my caste and refusing promotion'
 • 'Someone is demanding dowry from my family for marriage'
 • 'I want to file a complaint against police harassment'
-• 'My landlord is forcibly evicting me without notice'
+��� 'My landlord is forcibly evicting me without notice'
 • 'I witnessed corruption in a government office'"
                     className="mt-2 min-h-[140px]"
                   />
