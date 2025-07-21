@@ -11,8 +11,8 @@ export function Navigation() {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/scenarios", label: "Scenario Simulation" },
     { href: "/awareness", label: "Awareness Hub" },
+    { href: "/scenarios", label: "Scenario Simulation" },
     { href: "/results", label: "Results" },
   ];
 
