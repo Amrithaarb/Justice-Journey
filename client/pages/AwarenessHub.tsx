@@ -631,7 +631,7 @@ export function AwarenessHub() {
     // Simulate AI analysis - in real app this would call an AI service
     await new Promise(resolve => setTimeout(resolve, 2000));
 
-    // Enhanced analysis based on Indian legal framework
+    // Comprehensive Indian Criminal Law Analysis System
     let analysis = {
       riskLevel: "Medium",
       legalConsequences: [],
@@ -644,10 +644,277 @@ export function AwarenessHub() {
 
     const input = scenarioInput.toLowerCase();
 
-    // Check for high-risk violent scenarios
-    if (input.includes("threat") || input.includes("violence") || input.includes("hurt") || input.includes("attack") ||
-        input.includes("kill") || input.includes("murder") || input.includes("hit") || input.includes("fight") ||
-        input.includes("assault") || input.includes("harm") || input.includes("beat") || input.includes("weapon")) {
+    // CATEGORY 1: CRIMES AGAINST LIFE (MOST SEVERE)
+    if (input.includes("murder") || input.includes("kill") || input.includes("homicide") ||
+        input.includes("assassination") || input.includes("poisoning") || input.includes("strangling")) {
+      analysis = {
+        riskLevel: "Critical",
+        legalConsequences: [
+          "IPC Section 302 - Murder: Death penalty or life imprisonment",
+          "IPC Section 304 - Culpable homicide: Life imprisonment or 10 years",
+          "IPC Section 299 - Culpable homicide not amounting to murder",
+          "Forfeiture of all property under certain conditions",
+          "No bail possible without High Court approval",
+          "Permanent criminal record with serious social consequences"
+        ],
+        recommendations: [
+          "IMMEDIATELY seek psychiatric help if having violent thoughts",
+          "Contact suicide prevention helpline (9152987821)",
+          "Engage senior criminal lawyer immediately",
+          "Cooperate fully with police investigation",
+          "Do NOT make any statements without lawyer present",
+          "Inform family members and seek emotional support"
+        ],
+        relatedLaws: [
+          "Indian Penal Code Sections 299-311 - Culpable Homicide and Murder",
+          "Code of Criminal Procedure 1973 - Non-bailable offense procedures",
+          "Indian Evidence Act 1872 - Burden of proof in murder cases",
+          "Juvenile Justice Act 2015 (if under 18)",
+          "Mental Healthcare Act 2017 (if mental health issues)"
+        ],
+        constitutionalRights: [
+          "Article 21 - Right to life and personal liberty (even for accused)",
+          "Article 22 - Protection against arrest and detention",
+          "Article 20(3) - Protection against self-incrimination",
+          "Article 14 - Right to fair trial and legal representation"
+        ],
+        legalProcedures: [
+          "FIR under IPC Section 302/304 - Immediate police investigation",
+          "Sessions Court trial (mandatory for murder cases)",
+          "High Court appeal within 30 days of conviction",
+          "Supreme Court special leave petition if needed",
+          "Legal aid appointment if unable to afford counsel"
+        ],
+        color: "red"
+      };
+
+    // CATEGORY 2: VIOLENT CRIMES & ASSAULT
+    } else if (input.includes("assault") || input.includes("attack") || input.includes("beat") ||
+               input.includes("violence") || input.includes("hurt") || input.includes("harm") ||
+               input.includes("weapon") || input.includes("knife") || input.includes("gun")) {
+      analysis = {
+        riskLevel: "High",
+        legalConsequences: [
+          "IPC Section 322 - Voluntarily causing hurt: Up to 1 year imprisonment",
+          "IPC Section 326 - Grievous hurt: Up to 7 years imprisonment",
+          "IPC Section 351 - Assault: Up to 3 months imprisonment",
+          "IPC Section 324 - Hurt by dangerous weapons: Up to 3 years",
+          "Arms Act 1959 violations if weapons involved",
+          "Civil compensation for medical expenses and damages"
+        ],
+        recommendations: [
+          "Immediately cease any violent behavior",
+          "Seek medical attention if injured or injured someone",
+          "Report to police station within 24 hours",
+          "Preserve evidence: medical reports, witness statements",
+          "Engage criminal defense lawyer",
+          "Consider anger management counseling"
+        ],
+        relatedLaws: [
+          "Indian Penal Code Sections 319-338 - Hurt and Assault",
+          "Arms Act 1959 - Illegal weapons possession",
+          "Criminal Procedure Code Section 154 - FIR procedures",
+          "Motor Vehicle Act (if road rage involved)",
+          "Domestic Violence Act 2005 (if family related)"
+        ],
+        constitutionalRights: [
+          "Article 21 - Right to personal security and dignity",
+          "Article 19(1)(d) - Freedom of movement (protection from assault)",
+          "Article 22 - Rights during arrest and detention",
+          "Article 20 - Protection from double jeopardy and self-incrimination"
+        ],
+        legalProcedures: [
+          "Medical examination under CrPC Section 164A",
+          "Police investigation under CrPC Section 156",
+          "Magistrate Court trial for simple hurt",
+          "Sessions Court for grievous hurt cases",
+          "Victim compensation under Section 357A CrPC"
+        ],
+        color: "red"
+      };
+
+    // CATEGORY 3: SEXUAL OFFENSES
+    } else if (input.includes("rape") || input.includes("sexual") || input.includes("molestation") ||
+               input.includes("harassment") || input.includes("eve teasing") || input.includes("inappropriate touch")) {
+      analysis = {
+        riskLevel: "High",
+        legalConsequences: [
+          "IPC Section 376 - Rape: Minimum 7 years to life imprisonment",
+          "IPC Section 354 - Sexual harassment: Up to 3 years imprisonment",
+          "IPC Section 509 - Insulting modesty: Up to 3 years imprisonment",
+          "POCSO Act 2012 (if minor involved) - Up to 20 years to life",
+          "Mandatory registration in sex offenders database",
+          "Permanent social stigma and employment restrictions"
+        ],
+        recommendations: [
+          "Report immediately to police or women helpline (181)",
+          "Seek immediate medical examination within 72 hours",
+          "Contact nearest hospital for medical evidence collection",
+          "Engage lawyer specializing in sexual offense cases",
+          "Contact NGOs for victim support and counseling",
+          "Preserve all evidence: clothing, messages, witnesses"
+        ],
+        relatedLaws: [
+          "Indian Penal Code Sections 354-376 - Sexual offenses",
+          "POCSO Act 2012 - Protection of Children from Sexual Offences",
+          "Criminal Law Amendment Act 2013 - Enhanced penalties",
+          "Indecent Representation of Women Act 1986",
+          "Information Technology Act 2000 (online harassment)"
+        ],
+        constitutionalRights: [
+          "Article 21 - Right to live with dignity and bodily autonomy",
+          "Article 15(3) - Special provisions for women and children",
+          "Article 39A - Equal justice and free legal aid",
+          "Article 51A(e) - Duty to respect dignity of women"
+        ],
+        legalProcedures: [
+          "FIR under relevant sections - No refusal by police",
+          "Medical examination by female doctor",
+          "Recording of statement under CrPC Section 164",
+          "Fast-track court trial within 60 days",
+          "Victim compensation scheme under Nirbhaya Fund"
+        ],
+        color: "red"
+      };
+
+    // CATEGORY 4: PROPERTY CRIMES & THEFT
+    } else if (input.includes("steal") || input.includes("theft") || input.includes("robbery") ||
+               input.includes("burglary") || input.includes("shoplifting") || input.includes("pickpocket") ||
+               input.includes("snatch") || input.includes("loot") || input.includes("without paying")) {
+      analysis = {
+        riskLevel: "High",
+        legalConsequences: [
+          "IPC Section 378 - Theft: Up to 3 years imprisonment + fine",
+          "IPC Section 392 - Robbery: Up to 10 years imprisonment",
+          "IPC Section 380 - Theft in dwelling: Up to 7 years imprisonment",
+          "IPC Section 457 - Burglary: Up to 14 years imprisonment",
+          "Restitution of stolen property to victim",
+          "Permanent criminal record affecting future employment"
+        ],
+        recommendations: [
+          "Return stolen property immediately to reduce charges",
+          "Surrender to police voluntarily for leniency",
+          "Engage criminal defense lawyer immediately",
+          "Seek legal aid if unable to afford counsel",
+          "Consider plea bargaining under CrPC Section 265A",
+          "Participate in rehabilitation programs if available"
+        ],
+        relatedLaws: [
+          "Indian Penal Code Sections 378-462 - Theft, Robbery, Burglary",
+          "Juvenile Justice Act 2015 (if under 18 years)",
+          "Probation of Offenders Act 1958 (first-time offenders)",
+          "Code of Criminal Procedure 1973 - Bail and trial procedures",
+          "Prevention of Theft Act (state-specific laws)"
+        ],
+        constitutionalRights: [
+          "Article 20(3) - Protection against self-incrimination",
+          "Article 22 - Right to legal representation and bail",
+          "Article 21 - Right to fair and speedy trial",
+          "Article 39A - Right to free legal aid"
+        ],
+        legalProcedures: [
+          "Police investigation under CrPC Section 156",
+          "Recovery of stolen property under CrPC Section 457",
+          "Bail application under CrPC Section 437",
+          "Trial in Sessions Court (if punishment > 3 years)",
+          "Appeal to High Court within 30 days"
+        ],
+        color: "red"
+      };
+
+    // CATEGORY 5: CYBERCRIME & DIGITAL OFFENSES
+    } else if (input.includes("cybercrime") || input.includes("hacking") || input.includes("phishing") ||
+               input.includes("identity theft") || input.includes("online fraud") || input.includes("cyberbullying") ||
+               input.includes("fake website") || input.includes("digital forgery") || input.includes("cyber stalking")) {
+      analysis = {
+        riskLevel: "High",
+        legalConsequences: [
+          "IT Act 2000 Section 66 - Computer fraud: Up to 3 years + ₹5 lakh fine",
+          "IT Act Section 66C - Identity theft: Up to 3 years + ₹1 lakh fine",
+          "IT Act Section 66D - Cheating using computer: Up to 3 years",
+          "IPC Section 420 - Cheating: Up to 7 years imprisonment",
+          "Banking fraud penalties under various banking laws",
+          "Asset freezing and recovery under PMLA 2002"
+        ],
+        recommendations: [
+          "Report to National Cyber Crime Reporting Portal immediately",
+          "Contact Cyber Crime Police Station in your area",
+          "Preserve all digital evidence: screenshots, logs, emails",
+          "Change all compromised passwords and secure accounts",
+          "Engage cyber law specialist attorney",
+          "Cooperate with Cyber Crime investigation agencies"
+        ],
+        relatedLaws: [
+          "Information Technology Act 2000 - Comprehensive cyber law",
+          "Indian Penal Code Sections 420, 468, 471 - Fraud and Forgery",
+          "Prevention of Money Laundering Act 2002",
+          "Credit Card fraud provisions under RBI guidelines",
+          "Aadhaar Act 2016 (identity-related crimes)"
+        ],
+        constitutionalRights: [
+          "Article 21 - Right to privacy and digital security",
+          "Article 19(1)(a) - Freedom of speech (protection from cyber harassment)",
+          "Article 300A - Protection of digital property rights",
+          "Article 32 - Constitutional remedy for digital rights violations"
+        ],
+        legalProcedures: [
+          "Online complaint filing at cybercrime.gov.in",
+          "FIR at specialized Cyber Crime Police Station",
+          "Digital forensics examination by experts",
+          "Trial in designated Cyber Crime Courts",
+          "International cooperation for cross-border crimes"
+        ],
+        color: "red"
+      };
+
+    // CATEGORY 6: DRUG-RELATED CRIMES
+    } else if (input.includes("drugs") || input.includes("narcotics") || input.includes("ganja") ||
+               input.includes("charas") || input.includes("cocaine") || input.includes("heroin") ||
+               input.includes("smuggling") || input.includes("trafficking") || input.includes("substance abuse")) {
+      analysis = {
+        riskLevel: "High",
+        legalConsequences: [
+          "NDPS Act 1985 - Possession: Up to 1 year (small quantity)",
+          "NDPS Act - Commercial quantity: 10-20 years imprisonment",
+          "NDPS Act - Trafficking: Minimum 10 years to death penalty",
+          "Asset forfeiture under NDPS Act and PMLA",
+          "International travel restrictions",
+          "Mandatory drug de-addiction treatment"
+        ],
+        recommendations: [
+          "Immediately cease all drug-related activities",
+          "Seek rehabilitation at de-addiction centers",
+          "Engage lawyer specializing in NDPS cases",
+          "Cooperate with authorities for reduced sentences",
+          "Inform about drug suppliers for leniency",
+          "Attend counseling and support group sessions"
+        ],
+        relatedLaws: [
+          "Narcotic Drugs and Psychotropic Substances Act 1985",
+          "Prevention of Money Laundering Act 2002",
+          "Customs Act 1962 (for smuggling cases)",
+          "Indian Penal Code relevant sections",
+          "Juvenile Justice Act 2015 (for minors)"
+        ],
+        constitutionalRights: [
+          "Article 21 - Right to health and rehabilitation",
+          "Article 47 - Duty of state to prohibit harmful drugs",
+          "Article 22 - Protection during arrest and detention",
+          "Article 39A - Right to legal aid and fair trial"
+        ],
+        legalProcedures: [
+          "Special NDPS Court trial procedures",
+          "Mandatory drug testing and medical examination",
+          "Bail restrictions under NDPS Act Section 37",
+          "Appeal to High Court within specified time",
+          "Rehabilitation program enrollment"
+        ],
+        color: "red"
+      };
+
+    // CATEGORY 7: CORRUPTION & BRIBERY
+    } else if (input.includes("bribe") || input.includes("corruption") || input.includes("kickback") ||
+               input.includes("illegal payment") || input.includes("under table") || input.includes("speed money")) {
       analysis = {
         riskLevel: "High",
         legalConsequences: [
