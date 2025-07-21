@@ -897,6 +897,49 @@ export function AwarenessHub() {
         ],
         color: "yellow"
       };
+    } else if (input.includes("fraud") || input.includes("cheat") || input.includes("scam") ||
+               input.includes("fake") || input.includes("cybercrime") || input.includes("hacking") ||
+               input.includes("phishing") || input.includes("identity theft") || input.includes("fake documents")) {
+      analysis = {
+        riskLevel: "High",
+        legalConsequences: [
+          "IPC Section 420 - Cheating: Up to 7 years imprisonment",
+          "IT Act 2000 Section 66C - Identity theft: Up to 3 years",
+          "IPC Section 468 - Forgery: Up to 7 years imprisonment",
+          "Banking fraud under Prevention of Money Laundering Act",
+          "Cybercrime charges under IT Act various sections",
+          "Civil liability for damages to victims"
+        ],
+        recommendations: [
+          "Immediately stop any fraudulent activity",
+          "Report cybercrime to Cyber Crime Police Station",
+          "Contact National Cyber Crime Reporting Portal",
+          "Preserve digital evidence properly",
+          "Seek legal counsel specializing in cyber law",
+          "Cooperate with investigation agencies"
+        ],
+        relatedLaws: [
+          "Indian Penal Code Sections 420, 468, 471 - Fraud and Forgery",
+          "Information Technology Act 2000 - Cyber crimes",
+          "Prevention of Money Laundering Act 2002",
+          "Credit Card fraud under various banking laws",
+          "Consumer Protection Act 2019"
+        ],
+        constitutionalRights: [
+          "Article 21 - Right to privacy and security",
+          "Article 19(1)(a) - Freedom from fraudulent speech",
+          "Article 300A - Protection of property rights",
+          "Article 32 - Constitutional remedy"
+        ],
+        legalProcedures: [
+          "FIR filing at Cyber Crime Police Station",
+          "Complaint to National Cyber Crime Portal",
+          "Banking Ombudsman complaint (if banking fraud)",
+          "Special Court trial under IT Act",
+          "Asset recovery proceedings"
+        ],
+        color: "red"
+      };
     } else if (input.includes("contract") || input.includes("agreement") || input.includes("business") ||
                input.includes("employment") || input.includes("salary") || input.includes("work") ||
                input.includes("job") || input.includes("consumer") || input.includes("refund")) {
