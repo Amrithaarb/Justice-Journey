@@ -953,7 +953,7 @@ export function AwarenessHub() {
           </p>
         </div>
 
-        <Tabs defaultValue="articles" className="space-y-8">
+        <Tabs defaultValue="analyzer" className="space-y-8">
           <TabsList className="grid w-full grid-cols-6 lg:w-auto lg:grid-cols-6">
             <TabsTrigger value="articles" className="flex items-center gap-2">
               <BookOpen className="h-4 w-4" />
