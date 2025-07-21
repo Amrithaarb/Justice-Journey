@@ -1039,6 +1039,101 @@ export function AwarenessHub() {
         ],
         color: "red"
       };
+
+    // CATEGORY 8: TRAFFIC & VEHICULAR CRIMES
+    } else if (input.includes("drunk driving") || input.includes("rash driving") || input.includes("accident") ||
+               input.includes("hit and run") || input.includes("overspeeding") || input.includes("traffic violation") ||
+               input.includes("license") || input.includes("vehicle") || input.includes("road rage")) {
+      analysis = {
+        riskLevel: "Medium to High",
+        legalConsequences: [
+          "Motor Vehicle Act 2019 - Enhanced penalties up to ₹25,000",
+          "IPC Section 279 - Rash driving: Up to 6 months imprisonment",
+          "IPC Section 304A - Death by negligence: Up to 2 years",
+          "IPC Section 338 - Grievous hurt by rash act: Up to 2 years",
+          "License suspension/cancellation for serious violations",
+          "Civil compensation for accident victims"
+        ],
+        recommendations: [
+          "Immediately stop vehicle and call emergency services",
+          "Report accident to police within 24 hours",
+          "Get medical examination done for all parties",
+          "Contact insurance company immediately",
+          "Engage traffic law specialist if serious charges",
+          "Cooperate with police investigation fully"
+        ],
+        relatedLaws: [
+          "Motor Vehicle Act 2019 - Traffic rules and penalties",
+          "Indian Penal Code Sections 279, 304A, 338 - Traffic crimes",
+          "Motor Vehicle Insurance regulations",
+          "Good Samaritan guidelines by Supreme Court",
+          "State-specific traffic rules and regulations"
+        ],
+        constitutionalRights: [
+          "Article 21 - Right to safe road travel and emergency medical care",
+          "Article 19(1)(d) - Freedom of movement with responsibility",
+          "Article 22 - Rights during arrest for traffic violations",
+          "Article 300A - Protection of property (vehicle rights)"
+        ],
+        legalProcedures: [
+          "FIR under Motor Vehicle Act and IPC sections",
+          "Medical examination of driver and victims",
+          "Traffic Police investigation and challan",
+          "Motor Accident Claims Tribunal for compensation",
+          "Criminal Court trial for serious violations"
+        ],
+        color: "yellow"
+      };
+
+    // CATEGORY 9: FINANCIAL CRIMES & FRAUD
+    } else if (input.includes("fraud") || input.includes("cheat") || input.includes("scam") ||
+               input.includes("fake") || input.includes("forgery") || input.includes("money laundering") ||
+               input.includes("ponzi") || input.includes("pyramid scheme") || input.includes("embezzlement")) {
+      analysis = {
+        riskLevel: "High",
+        legalConsequences: [
+          "IPC Section 420 - Cheating: Up to 7 years imprisonment + fine",
+          "IPC Section 468 - Forgery: Up to 7 years imprisonment",
+          "Prevention of Money Laundering Act - Up to 7 years imprisonment",
+          "Benami Transactions Act - Asset forfeiture and imprisonment",
+          "Securities fraud under SEBI regulations",
+          "Banking fraud penalties under Banking Regulation Act"
+        ],
+        recommendations: [
+          "Immediately stop fraudulent activities",
+          "Voluntarily return defrauded amounts to reduce penalty",
+          "Report to Economic Offences Wing of Police",
+          "Engage white-collar crime specialist lawyer",
+          "Cooperate with Enforcement Directorate investigation",
+          "Seek financial rehabilitation counseling"
+        ],
+        relatedLaws: [
+          "Indian Penal Code Sections 420, 463-477A - Fraud and Forgery",
+          "Prevention of Money Laundering Act 2002",
+          "Benami Transactions (Prohibition) Act 1988",
+          "Securities and Exchange Board of India Act",
+          "Banking Regulation Act 1949"
+        ],
+        constitutionalRights: [
+          "Article 300A - Protection of legitimate property rights",
+          "Article 19(1)(g) - Right to legitimate business practices",
+          "Article 21 - Right to fair trial and legal representation",
+          "Article 22 - Protection during arrest and investigation"
+        ],
+        legalProcedures: [
+          "FIR with Economic Offences Wing",
+          "Enforcement Directorate investigation (money laundering)",
+          "Asset attachment and recovery proceedings",
+          "Special Economic Offences Court trial",
+          "Victim compensation through court orders"
+        ],
+        color: "red"
+      };
+
+    // CATEGORY 10: DISCRIMINATION & HATE CRIMES
+    } else if (input.includes("discrimination") || input.includes("caste") || input.includes("religion") ||
+               input.includes("untouchability") || input.includes("hate speech") || input.includes("communal") ||
+               input.includes("minority") || input.includes("SC/ST") || input.includes("dalits")) {
     } else if (input.includes("discrimination") || input.includes("caste") || input.includes("religion") || input.includes("untouchability")) {
       analysis = {
         riskLevel: "High",
