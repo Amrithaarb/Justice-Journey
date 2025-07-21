@@ -1411,18 +1411,38 @@ export function AwarenessHub() {
           </TabsContent>
 
           {/* Real-Time Scenario Analyzer */}
-          <TabsContent value="analyzer" className="space-y-6">
-            <Card className="bg-gradient-to-br from-justice-primary/5 to-justice-secondary/5">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <Brain className="h-6 w-6 text-justice-primary" />
-                  <span>Real-Time Scenario Analyzer</span>
+          <TabsContent value="analyzer" className="space-y-8">
+            <Card className="bg-gradient-to-br from-justice-primary/10 to-justice-secondary/10 border-2 border-justice-primary/20">
+              <CardHeader className="pb-6">
+                <CardTitle className="flex items-center space-x-3 text-2xl">
+                  <div className="p-3 bg-justice-primary/10 rounded-xl">
+                    <Brain className="h-8 w-8 text-justice-primary" />
+                  </div>
+                  <span className="bg-gradient-to-r from-justice-primary to-justice-secondary bg-clip-text text-transparent">
+                    AI Legal Scenario Analyzer
+                  </span>
                 </CardTitle>
-                <p className="text-gray-600">
-                  Get comprehensive legal analysis according to Indian Constitution, applicable acts, and legal procedures. Understand your rights and proper legal steps to take.
-                </p>
+                <div className="space-y-3">
+                  <p className="text-lg text-gray-700 font-medium">
+                    Comprehensive legal analysis according to Indian Constitution, applicable acts, and legal procedures.
+                  </p>
+                  <div className="grid md:grid-cols-3 gap-4 mt-4">
+                    <div className="flex items-center space-x-2 text-sm text-gray-600">
+                      <CheckCircle className="h-4 w-4 text-green-500" />
+                      <span>Constitutional Rights Analysis</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-sm text-gray-600">
+                      <CheckCircle className="h-4 w-4 text-green-500" />
+                      <span>IPC & Legal Procedures</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-sm text-gray-600">
+                      <CheckCircle className="h-4 w-4 text-green-500" />
+                      <span>Step-by-Step Guidance</span>
+                    </div>
+                  </div>
+                </div>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-8 pt-0">
                 <div>
                   <Label htmlFor="scenario" className="text-base font-medium text-gray-900">
                     Describe your legal situation or planned action:
