@@ -981,9 +981,13 @@ export function AwarenessHub() {
             </TabsTrigger>
           </TabsList>
 
-          {/* Enhanced Law Articles */}
-          <TabsContent value="articles" className="space-y-6">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Law Articles - Secondary */}
+          <TabsContent value="articles" className="space-y-4">
+            <div className="text-center mb-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Legal Articles & Guides</h3>
+              <p className="text-sm text-gray-600">Supplementary reading materials for deeper understanding</p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {lawArticles.map((article) => (
                 <Card 
                   key={article.id}
@@ -1456,7 +1460,7 @@ export function AwarenessHub() {
 • 'Someone is demanding dowry from my family for marriage'
 • 'I want to file a complaint against police harassment'
 • 'My landlord is forcibly evicting me without notice'
-• 'I witnessed corruption in a government office'"
+�� 'I witnessed corruption in a government office'"
                     className="mt-2 min-h-[140px]"
                   />
                   <p className="text-sm text-gray-500 mt-2">
