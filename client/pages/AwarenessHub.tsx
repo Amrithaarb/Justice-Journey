@@ -955,29 +955,29 @@ export function AwarenessHub() {
 
         <Tabs defaultValue="analyzer" className="space-y-8">
           <TabsList className="grid w-full grid-cols-6 lg:w-auto lg:grid-cols-6">
-            <TabsTrigger value="articles" className="flex items-center gap-2">
-              <BookOpen className="h-4 w-4" />
-              <span className="hidden sm:inline">Articles</span>
+            <TabsTrigger value="analyzer" className="flex items-center gap-2 bg-justice-primary/10 text-justice-primary font-semibold">
+              <Brain className="h-5 w-5" />
+              <span className="hidden sm:inline">Legal Analyzer</span>
             </TabsTrigger>
-            <TabsTrigger value="rights" className="flex items-center gap-2">
-              <Shield className="h-4 w-4" />
-              <span className="hidden sm:inline">Your Rights</span>
+            <TabsTrigger value="articles" className="flex items-center gap-2 opacity-70">
+              <BookOpen className="h-3 w-3" />
+              <span className="hidden sm:inline text-xs">Articles</span>
             </TabsTrigger>
-            <TabsTrigger value="stories" className="flex items-center gap-2">
-              <Eye className="h-4 w-4" />
-              <span className="hidden sm:inline">Stories</span>
+            <TabsTrigger value="rights" className="flex items-center gap-2 opacity-70">
+              <Shield className="h-3 w-3" />
+              <span className="hidden sm:inline text-xs">Rights</span>
             </TabsTrigger>
-            <TabsTrigger value="myths" className="flex items-center gap-2">
-              <HelpCircle className="h-4 w-4" />
-              <span className="hidden sm:inline">Myths</span>
+            <TabsTrigger value="stories" className="flex items-center gap-2 opacity-70">
+              <Eye className="h-3 w-3" />
+              <span className="hidden sm:inline text-xs">Cases</span>
             </TabsTrigger>
-            <TabsTrigger value="analyzer" className="flex items-center gap-2">
-              <Brain className="h-4 w-4" />
-              <span className="hidden sm:inline">Analyzer</span>
+            <TabsTrigger value="myths" className="flex items-center gap-2 opacity-70">
+              <HelpCircle className="h-3 w-3" />
+              <span className="hidden sm:inline text-xs">Quiz</span>
             </TabsTrigger>
-            <TabsTrigger value="resources" className="flex items-center gap-2">
-              <Phone className="h-4 w-4" />
-              <span className="hidden sm:inline">Resources</span>
+            <TabsTrigger value="resources" className="flex items-center gap-2 opacity-70">
+              <Phone className="h-3 w-3" />
+              <span className="hidden sm:inline text-xs">Help</span>
             </TabsTrigger>
           </TabsList>
 
