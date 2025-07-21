@@ -943,13 +943,13 @@ export function AwarenessHub() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Legal Awareness Hub
+            AI-Powered Legal Analyzer
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Your comprehensive resource for understanding legal rights, debunking myths, 
-            and building practical knowledge for real-world situations.
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            Get instant legal analysis according to Indian Constitution and laws.
+            Understand your rights, legal consequences, and proper procedures for any situation.
           </p>
         </div>
 
