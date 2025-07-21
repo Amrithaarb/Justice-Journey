@@ -1511,25 +1511,6 @@ export function AwarenessHub() {
                     <div className="grid md:grid-cols-2 gap-6">
                       <Card>
                         <CardHeader>
-                          <CardTitle className="text-lg flex items-center text-red-700">
-                            <Scale className="h-5 w-5 mr-2" />
-                            Legal Consequences Under Indian Law
-                          </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                          <ul className="space-y-2">
-                            {scenarioAnalysis.legalConsequences.map((consequence: string, index: number) => (
-                              <li key={index} className="flex items-start space-x-2">
-                                <AlertTriangle className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
-                                <span className="text-sm text-gray-700">{consequence}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </CardContent>
-                      </Card>
-
-                      <Card>
-                        <CardHeader>
                           <CardTitle className="text-lg flex items-center text-green-700">
                             <Lightbulb className="h-5 w-5 mr-2" />
                             Recommended Legal Steps
@@ -1541,6 +1522,25 @@ export function AwarenessHub() {
                               <li key={index} className="flex items-start space-x-2">
                                 <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                                 <span className="text-sm text-gray-700">{rec}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </CardContent>
+                      </Card>
+
+                      <Card>
+                        <CardHeader>
+                          <CardTitle className="text-lg flex items-center text-red-700">
+                            <Scale className="h-5 w-5 mr-2" />
+                            Legal Consequences Under Indian Law
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <ul className="space-y-2">
+                            {scenarioAnalysis.legalConsequences.map((consequence: string, index: number) => (
+                              <li key={index} className="flex items-start space-x-2">
+                                <AlertTriangle className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
+                                <span className="text-sm text-gray-700">{consequence}</span>
                               </li>
                             ))}
                           </ul>
