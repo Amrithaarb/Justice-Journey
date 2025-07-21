@@ -1734,12 +1734,30 @@ export function AwarenessHub() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            AI-Powered Legal Analyzer
+            Constitutional AI Legal Analyzer
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            Get instant legal analysis according to Indian Constitution and laws.
-            Understand your rights, legal consequences, and proper procedures for any situation.
+            Advanced AI trained on complete Indian Constitutional law, IPC, CrPC, and legal precedents.
+            Get comprehensive legal analysis with constitutional rights, court procedures, and expert guidance.
           </p>
+          <div className="grid md:grid-cols-4 gap-4 mt-6 max-w-4xl mx-auto">
+            <div className="flex items-center justify-center space-x-2 text-sm text-gray-600">
+              <CheckCircle className="h-4 w-4 text-green-500" />
+              <span>Complete Constitutional Framework</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2 text-sm text-gray-600">
+              <CheckCircle className="h-4 w-4 text-green-500" />
+              <span>Supreme Court Precedents</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2 text-sm text-gray-600">
+              <CheckCircle className="h-4 w-4 text-green-500" />
+              <span>Court Hierarchy Analysis</span>
+            </div>
+            <div className="flex items-center justify-center space-x-2 text-sm text-gray-600">
+              <CheckCircle className="h-4 w-4 text-green-500" />
+              <span>Timeline & Cost Estimation</span>
+            </div>
+          </div>
         </div>
 
         <Tabs defaultValue="analyzer" className="space-y-8">
