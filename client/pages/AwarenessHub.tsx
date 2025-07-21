@@ -1089,8 +1089,12 @@ export function AwarenessHub() {
             )}
           </TabsContent>
 
-          {/* Enhanced Your Rights */}
-          <TabsContent value="rights" className="space-y-6">
+          {/* Your Rights - Secondary */}
+          <TabsContent value="rights" className="space-y-4">
+            <div className="text-center mb-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Know Your Rights</h3>
+              <p className="text-sm text-gray-600">Reference guide for constitutional and legal rights</p>
+            </div>
             <div className="space-y-8">
               {detailedRightsGuides.map((guide) => {
                 const IconComponent = guide.icon;
@@ -1460,7 +1464,7 @@ export function AwarenessHub() {
 • 'Someone is demanding dowry from my family for marriage'
 • 'I want to file a complaint against police harassment'
 • 'My landlord is forcibly evicting me without notice'
-�� 'I witnessed corruption in a government office'"
+• 'I witnessed corruption in a government office'"
                     className="mt-2 min-h-[140px]"
                   />
                   <p className="text-sm text-gray-500 mt-2">
