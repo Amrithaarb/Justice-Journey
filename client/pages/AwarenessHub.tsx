@@ -1176,6 +1176,186 @@ export function AwarenessHub() {
         ],
         color: "red"
       };
+
+    // CATEGORY 11: TERRORISM & NATIONAL SECURITY
+    } else if (input.includes("terrorism") || input.includes("bomb") || input.includes("explosive") ||
+               input.includes("sedition") || input.includes("anti-national") || input.includes("insurgency") ||
+               input.includes("espionage") || input.includes("treason") || input.includes("national security")) {
+      analysis = {
+        riskLevel: "Critical",
+        legalConsequences: [
+          "UAPA 2019 - Unlawful Activities: Up to life imprisonment or death",
+          "IPC Section 124A - Sedition: Life imprisonment or 3 years",
+          "Explosive Substances Act 1908 - Up to life imprisonment",
+          "Official Secrets Act 1923 - Up to 14 years imprisonment",
+          "National Investigation Agency investigation",
+          "Asset freezing and complete surveillance"
+        ],
+        recommendations: [
+          "Immediately contact senior advocate specializing in terrorism cases",
+          "Do NOT make any statements without legal counsel",
+          "Cooperate fully with investigation agencies",
+          "Inform family and human rights organizations",
+          "Seek protection from any threat to life",
+          "Maintain detailed records of all interactions"
+        ],
+        relatedLaws: [
+          "Unlawful Activities (Prevention) Act 2019",
+          "National Investigation Agency Act 2008",
+          "Explosive Substances Act 1908",
+          "Official Secrets Act 1923",
+          "Indian Penal Code Sections 121-124A - Against the State"
+        ],
+        constitutionalRights: [
+          "Article 22 - Protection against arbitrary arrest (subject to restrictions)",
+          "Article 21 - Right to life and fair trial",
+          "Article 20 - Protection against self-incrimination",
+          "Article 32 - Constitutional remedies (subject to security laws)"
+        ],
+        legalProcedures: [
+          "Special NIA Court trial procedures",
+          "No bail for certain UAPA offenses",
+          "Enhanced investigation periods",
+          "Special public prosecutor appointment",
+          "High Court and Supreme Court appeals"
+        ],
+        color: "red"
+      };
+
+    // CATEGORY 12: CHILD-RELATED CRIMES
+    } else if (input.includes("child abuse") || input.includes("minor") || input.includes("underage") ||
+               input.includes("child labour") || input.includes("trafficking") || input.includes("child marriage") ||
+               input.includes("POCSO") || input.includes("juvenile")) {
+      analysis = {
+        riskLevel: "High",
+        legalConsequences: [
+          "POCSO Act 2012 - Child sexual abuse: Up to 20 years to life",
+          "Child Labour Act violations: Up to 2 years imprisonment",
+          "Juvenile Justice Act 2015 - Child trafficking: Up to 5 years",
+          "Prohibition of Child Marriage Act - Up to 2 years",
+          "IPC Section 370 - Human trafficking: Up to 10 years",
+          "Mandatory registration in child offender database"
+        ],
+        recommendations: [
+          "Report immediately to Childline (1098)",
+          "Contact District Child Protection Officer",
+          "Seek immediate medical and psychological care for child",
+          "Engage lawyer specializing in child protection laws",
+          "Contact NGOs working for child rights",
+          "Ensure child's safety and rehabilitation"
+        ],
+        relatedLaws: [
+          "Protection of Children from Sexual Offences Act 2012",
+          "Juvenile Justice (Care and Protection) Act 2015",
+          "Child Labour (Prohibition and Regulation) Act 1986",
+          "Prohibition of Child Marriage Act 2006",
+          "Immoral Traffic (Prevention) Act 1956"
+        ],
+        constitutionalRights: [
+          "Article 15(3) - Special provision for children",
+          "Article 21A - Right to free and compulsory education",
+          "Article 23 - Prohibition of traffic in human beings",
+          "Article 24 - Prohibition of child employment in hazardous work"
+        ],
+        legalProcedures: [
+          "Immediate FIR and child protection measures",
+          "Special POCSO Court fast-track trial",
+          "Child-friendly court procedures",
+          "Victim compensation under Nirbhaya Fund",
+          "Rehabilitation and counseling services"
+        ],
+        color: "red"
+      };
+
+    // CATEGORY 13: WHITE COLLAR CRIMES
+    } else if (input.includes("insider trading") || input.includes("tax evasion") || input.includes("corporate fraud") ||
+               input.includes("securities fraud") || input.includes("bank fraud") || input.includes("customs duty") ||
+               input.includes("GST fraud") || input.includes("shell company") || input.includes("hawala")) {
+      analysis = {
+        riskLevel: "High",
+        legalConsequences: [
+          "Income Tax Act - Tax evasion: Up to 7 years + heavy penalties",
+          "SEBI Act - Securities fraud: Up to 10 years + ₹25 crore fine",
+          "Companies Act 2013 - Corporate fraud: Up to 10 years",
+          "Customs Act - Duty evasion: Up to 7 years",
+          "FEMA violations - Up to 3 years + penalty up to thrice the amount",
+          "Asset attachment and recovery proceedings"
+        ],
+        recommendations: [
+          "Immediately seek compliance and rectify violations",
+          "Engage chartered accountant and tax lawyer",
+          "File voluntary disclosure with appropriate authorities",
+          "Cooperate with investigation agencies",
+          "Maintain all financial records and documents",
+          "Seek settlement under relevant schemes if available"
+        ],
+        relatedLaws: [
+          "Income Tax Act 1961 - Tax crimes",
+          "Securities and Exchange Board of India Act",
+          "Companies Act 2013 - Corporate governance",
+          "Customs Act 1962 - Import/export violations",
+          "Foreign Exchange Management Act 1999"
+        ],
+        constitutionalRights: [
+          "Article 19(1)(g) - Right to legitimate business practice",
+          "Article 300A - Protection of legitimate property",
+          "Article 21 - Right to fair investigation and trial",
+          "Article 22 - Protection during arrest and questioning"
+        ],
+        legalProcedures: [
+          "Investigation by specialized agencies (ED, CBI, IT Dept)",
+          "Special Economic Offences Court trial",
+          "Asset attachment under PMLA",
+          "Settlement through voluntary disclosure schemes",
+          "Appeal to High Court and Supreme Court"
+        ],
+        color: "red"
+      };
+
+    // CATEGORY 14: ENVIRONMENTAL CRIMES
+    } else if (input.includes("pollution") || input.includes("environmental") || input.includes("forest") ||
+               input.includes("wildlife") || input.includes("illegal mining") || input.includes("dumping") ||
+               input.includes("air pollution") || input.includes("water pollution") || input.includes("noise pollution")) {
+      analysis = {
+        riskLevel: "Medium to High",
+        legalConsequences: [
+          "Environment Protection Act 1986 - Up to 5 years + ₹1 lakh fine",
+          "Water Act 1974 - Up to 6 years imprisonment",
+          "Air Act 1981 - Up to 5 years imprisonment",
+          "Wildlife Protection Act 1972 - Up to 7 years",
+          "Forest Conservation Act 1980 - Imprisonment + heavy fines",
+          "NGT penalties and environmental compensation"
+        ],
+        recommendations: [
+          "Immediately stop environmentally harmful activities",
+          "Contact Pollution Control Board for compliance",
+          "Seek environmental clearances if required",
+          "Engage environmental law specialist",
+          "Undertake restoration and mitigation measures",
+          "Apply for environmental impact assessment"
+        ],
+        relatedLaws: [
+          "Environment (Protection) Act 1986",
+          "Water (Prevention and Control of Pollution) Act 1974",
+          "Air (Prevention and Control of Pollution) Act 1981",
+          "Wildlife Protection Act 1972",
+          "National Green Tribunal Act 2010"
+        ],
+        constitutionalRights: [
+          "Article 21 - Right to clean and healthy environment",
+          "Article 48A - Protection and improvement of environment",
+          "Article 51A(g) - Duty to protect environment",
+          "Article 32 - Constitutional remedy for environmental rights"
+        ],
+        legalProcedures: [
+          "FIR under environmental protection laws",
+          "Pollution Control Board investigation",
+          "National Green Tribunal proceedings",
+          "Environmental impact assessment",
+          "Restoration and compensation orders"
+        ],
+        color: "yellow"
+      };
     } else if (input.includes("property") || input.includes("land") || input.includes("house") || input.includes("dispute")) {
       analysis = {
         riskLevel: "Medium",
