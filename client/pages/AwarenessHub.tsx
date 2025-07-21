@@ -688,7 +688,9 @@ export function AwarenessHub() {
         ],
         color: "red"
       };
-    } else if (input.includes("steal") || input.includes("theft") || input.includes("take") || input.includes("rob")) {
+    } else if (input.includes("steal") || input.includes("theft") || input.includes("take") || input.includes("rob") ||
+               input.includes("shoplifting") || input.includes("pickpocket") || input.includes("burglary") ||
+               input.includes("loot") || input.includes("snatch") || input.includes("without paying")) {
       analysis = {
         riskLevel: "High",
         legalConsequences: [
