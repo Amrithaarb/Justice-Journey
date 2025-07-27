@@ -53,19 +53,20 @@ const legalKnowledgeBase = {
     keywords: ["constitutional rights", "fundamental rights", "article 14", "article 19", "article 21", "article 22", "rights"],
     response: `<strong>Your Fundamental Rights under Indian Constitution:</strong>
 
-🛡️ <strong>Article 14</strong> - Right to Equality before law
-🗣️ <strong>Article 19</strong> - Six fundamental freedoms (speech, assembly, movement, etc.)
-❤️ <strong>Article 21</strong> - Right to Life and Personal Liberty (most important)
-🔒 <strong>Article 22</strong> - Protection against arrest and detention
-⚖️ <strong>Article 20</strong> - Protection against double jeopardy
+<strong>Article 14</strong> - Right to Equality before law and equal protection of laws
+<strong>Article 19</strong> - Six fundamental freedoms including speech, assembly, movement, occupation, residence, and property
+<strong>Article 21</strong> - Right to Life and Personal Liberty (most expansive right in Indian Constitution)
+<strong>Article 22</strong> - Protection against arrest and detention in custody
+<strong>Article 20</strong> - Protection against double jeopardy and self-incrimination
 
 <strong>Key Points:</strong>
-• These rights are enforceable in courts
-• You can approach High Court (Article 226) or Supreme Court (Article 32)
-• Emergency can suspend some rights temporarily
-• These rights apply to all citizens and some to non-citizens too
+• These rights are enforceable in courts through writ petitions
+• You can approach High Court under Article 226 or Supreme Court under Article 32
+• During Emergency, some fundamental rights can be suspended temporarily
+• These rights apply to all citizens and some rights extend to non-citizens as well
+• Violation of fundamental rights can be challenged in constitutional courts
 
-Would you like details about any specific right?`,
+Would you like detailed information about any specific fundamental right?`,
     suggestions: ["Article 21 details", "How to enforce rights?", "Emergency provisions", "Article 32 remedies"]
   },
 
@@ -163,7 +164,7 @@ You're not alone - help is available!`,
 • <strong>I4C helpline: 155260</strong> for assistance
 
 ⚖️ <strong>IT Act 2000 Protections:</strong>
-• <strong>Section 66</strong> - Computer fraud (3 years + ₹5 lakh)
+�� <strong>Section 66</strong> - Computer fraud (3 years + ₹5 lakh)
 • <strong>Section 66C</strong> - Identity theft (3 years + ₹1 lakh)
 • <strong>Section 66D</strong> - Cheating using computer
 • <strong>Section 43A</strong> - Data protection compensation
