@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button } from "../components/ui/button";
 import { VoiceTextarea } from "../lib/voice";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import { useLanguage } from "../lib/i18n";
+import { VoiceReader } from "../components/VoiceReader";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
 import { Textarea } from "../components/ui/textarea";
@@ -576,6 +578,7 @@ const helplines = [
 ];
 
 export function AwarenessHub() {
+  const { t, language } = useLanguage();
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [selectedStory, setSelectedStory] = useState<string | null>(null);
   const [quizStarted, setQuizStarted] = useState(false);
