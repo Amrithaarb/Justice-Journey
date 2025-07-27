@@ -2287,9 +2287,12 @@ export function AwarenessHub() {
 • 'I witnessed corruption in a government office'"
                     className="mt-2 min-h-[140px]"
                   />
-                  <p className="text-sm text-gray-500 mt-2">
-                    <strong>Confidential & Educational:</strong> Describe your situation clearly. Analysis covers Indian constitutional rights, applicable laws, and legal procedures. This is for educational awareness only - not professional legal advice.
-                  </p>
+                  <div className="flex items-center gap-2 mt-2">
+                    <p className="text-sm text-gray-500">
+                      {t('awareness.analyzer.disclaimer')}
+                    </p>
+                    <VoiceReader text={t('awareness.analyzer.disclaimer')} variant="compact" />
+                  </div>
                 </div>
                 
                 <Button
