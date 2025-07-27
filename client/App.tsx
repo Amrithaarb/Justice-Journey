@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./lib/auth";
 import { Navigation } from "./components/Navigation";
+import { LegalChatbot } from "./components/LegalChatbot";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { ScenarioSimulation } from "./pages/ScenarioSimulation";
