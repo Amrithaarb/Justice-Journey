@@ -1737,13 +1737,18 @@ export function AwarenessHub() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Constitutional AI Legal Analyzer
-          </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            Advanced AI trained on complete Indian Constitutional law, IPC, CrPC, and legal precedents.
-            Get comprehensive legal analysis with constitutional rights, court procedures, and expert guidance.
-          </p>
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <h1 className="text-4xl font-bold text-gray-900">
+              {t('awareness.title')}
+            </h1>
+            <VoiceReader text={t('awareness.title')} variant="icon" />
+          </div>
+          <div className="flex items-center justify-center gap-2">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              {t('awareness.subtitle')}
+            </p>
+            <VoiceReader text={t('awareness.subtitle')} variant="compact" />
+          </div>
           <div className="grid md:grid-cols-4 gap-4 mt-6 max-w-4xl mx-auto">
             <div className="flex items-center justify-center space-x-2 text-sm text-gray-600">
               <CheckCircle className="h-4 w-4 text-green-500" />
