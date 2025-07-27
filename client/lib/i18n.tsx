@@ -146,7 +146,7 @@ const translations = {
     'voice.startListening': 'आवाज़ इनपुट शुरू करें',
     'voice.stopListening': 'सुनना बंद करें',
     'voice.listening': 'सुन रहे हैं...',
-    'voice.speak': 'जोर से पढ़ें',
+    'voice.speak': 'जोर ���े पढ़ें',
     'voice.stopSpeaking': 'पढ़ना बंद करें',
     'voice.notSupported': 'इस ब्राउज़र में वॉइस सुविधाएं समर्थित नहीं हैं',
     'voice.permissionDenied': 'माइक्रोफोन की अनुमति अस्वीकृत',
@@ -160,9 +160,24 @@ const translations = {
     'chat.quickNav': 'त्वरित नेविगेशन:',
     'chat.currentPage': 'वर्तमान में:',
     'chat.analyzer': 'विश्लेषक',
-    'chat.scenarios': 'परिदृश्य',
+    'chat.scenarios': 'परि���ृश्य',
     'chat.results': 'परिणाम',
-    
+
+    // Awareness Hub
+    'awareness.title': 'संवैधानिक AI कानूनी विश्लेषक',
+    'awareness.subtitle': 'संपूर्ण भारतीय संवैधानिक कानून, IPC, CrPC, और कानूनी मिसालों पर प्रशिक्षित उन्नत AI।',
+    'awareness.analyzer.title': 'AI कानूनी परिदृश्य विश्लेषक',
+    'awareness.analyzer.description': 'भारतीय संविधान के अनुसार व्यापक कानूनी विश्लेषण।',
+    'awareness.analyzer.inputLabel': 'अपनी कानूनी स्थिति का वर्णन करें:',
+    'awareness.analyzer.analyze': 'तत्काल कानूनी विश्लेषण प्राप्त करें',
+    'awareness.analyzer.analyzing': 'आपकी कानूनी स्थिति का विश्लेषण हो रहा है...',
+    'awareness.tabs.analyzer': 'कानूनी विश्लेषक',
+    'awareness.tabs.articles': 'लेख',
+    'awareness.tabs.rights': 'अधिकार',
+    'awareness.tabs.cases': 'मामले',
+    'awareness.tabs.quiz': 'प्रश्नोत्तरी',
+    'awareness.tabs.help': 'सहायता',
+
     // Common
     'common.loading': 'लोड हो रहा है...',
     'common.error': 'त्रुटि हुई',
@@ -186,7 +201,7 @@ const translations = {
     
     // Homepage
     'home.title': 'మీ చట్టపరమైన హక్కులను తెలుసుకోండి',
-    'home.subtitle': 'జస్టిస్ జర్నీ యువకులను మరియు కమ్యూనిటీలను ఇంటరాక్టివ్ చట్టపరమైన విద్యతో శక్తివంతం చేస్తుంది. మీ హక్కుల గురించి తెలుసుకోండి, పరిణామాలను అర్��ం చేసుకోండి, మరియు ఆకర్షణీయ దృశ్యాలు మరియు నిపుణుల మార్గదర్శనం ద��వారా చట్టపరమైన పరిస్థితులను విశ్వాసంతో నావిగేట్ చేయండి.',
+    'home.subtitle': 'జస్టిస్ జర్నీ యువకులను మరియు కమ్యూనిటీలను ఇంటరాక్టివ్ చట్టపరమైన విద్యతో శక్తివంతం చేస్తుంది. మీ హక్కుల గురించి తెలుసుకోండి, పరిణామాలను అర్��ం చేసుకోండి, మరియు ఆకర్షణీయ దృశ్���ాలు మరియు నిపుణుల మార్గదర్శనం ద��వారా చట్టపరమైన పరిస్థితులను విశ్వాసంతో నావిగేట్ చేయండి.',
     'home.startJourney': 'మీ ప్రయాణాన్ని ప్రారంభించండి',
     'home.exploreResources': 'వనరులను అన్వేషించండి',
     
