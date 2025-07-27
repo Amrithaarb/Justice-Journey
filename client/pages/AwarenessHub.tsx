@@ -2304,12 +2304,12 @@ export function AwarenessHub() {
                   {analyzingScenario ? (
                     <>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>
-                      Analyzing Your Legal Situation...
+                      {t('awareness.analyzer.analyzing')}
                     </>
                   ) : (
                     <>
                       <Send className="mr-3 h-5 w-5" />
-                      Get Instant Legal Analysis
+                      {t('awareness.analyzer.analyze')}
                     </>
                   )}
                 </Button>
