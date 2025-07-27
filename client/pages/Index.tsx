@@ -27,9 +27,8 @@ export default function Index() {
           <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
             <div className="sm:text-center lg:text-left lg:col-span-6">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-                <span className="block">Know Your</span>
                 <span className="block bg-gradient-to-r from-justice-primary to-justice-secondary bg-clip-text text-transparent">
-                  Legal Rights
+                  {t('home.title')}
                 </span>
               </h1>
               <p className="mt-6 text-xl text-gray-600 max-w-3xl">
