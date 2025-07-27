@@ -692,6 +692,55 @@ Click the chat button anytime to continue our conversation while using the platf
               </div>
             </ScrollArea>
 
+            {/* Quick Navigation Panel */}
+            <div className="border-t bg-gray-50 p-3">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-medium text-gray-700">Quick Navigation:</span>
+                <span className="text-xs text-gray-500">Currently on: {getPageContext().pageName}</span>
+              </div>
+              <div className="grid grid-cols-3 gap-2">
+                <Button
+                  onClick={() => {
+                    navigate('/awareness');
+                    setIsMinimized(true);
+                  }}
+                  variant="outline"
+                  size="sm"
+                  className="text-xs h-8"
+                  disabled={location.pathname === '/awareness'}
+                >
+                  <Brain className="h-3 w-3 mr-1" />
+                  Analyzer
+                </Button>
+                <Button
+                  onClick={() => {
+                    navigate('/scenarios');
+                    setIsMinimized(true);
+                  }}
+                  variant="outline"
+                  size="sm"
+                  className="text-xs h-8"
+                  disabled={location.pathname === '/scenarios'}
+                >
+                  <Eye className="h-3 w-3 mr-1" />
+                  Scenarios
+                </Button>
+                <Button
+                  onClick={() => {
+                    navigate('/results');
+                    setIsMinimized(true);
+                  }}
+                  variant="outline"
+                  size="sm"
+                  className="text-xs h-8"
+                  disabled={location.pathname === '/results'}
+                >
+                  <TrendingUp className="h-3 w-3 mr-1" />
+                  Results
+                </Button>
+              </div>
+            </div>
+
             {/* Input Area */}
             <div className="border-t p-4">
               <div className="flex space-x-2">
@@ -699,7 +748,7 @@ Click the chat button anytime to continue our conversation while using the platf
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={handleKeyPress}
-                  placeholder="Ask me about your legal rights..."
+                  placeholder="Ask me anything or say 'take me to scenarios'..."
                   className="flex-1"
                   disabled={isTyping}
                 />
@@ -712,7 +761,7 @@ Click the chat button anytime to continue our conversation while using the platf
                 </Button>
               </div>
               <p className="text-xs text-gray-500 mt-2 text-center">
-                For specific legal advice, consult a qualified lawyer
+                Try: "Take me to Legal Analyzer" or ask legal questions • For specific advice, consult a lawyer
               </p>
             </div>
           </CardContent>
