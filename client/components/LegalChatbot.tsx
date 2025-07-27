@@ -71,28 +71,28 @@ Would you like details about any specific right?`,
 
   fir_process: {
     keywords: ["fir", "file fir", "police complaint", "first information report", "crime report"],
-    response: `**How to File an FIR (First Information Report):**
+    response: `<strong>How to File an FIR (First Information Report):</strong>
 
-📋 **Step-by-Step Process:**
-1. **Visit nearest police station** to crime location
-2. **Oral/Written complaint** - Police must register
-3. **Free copy** of FIR with registration number
-4. **No fee** required for filing FIR
+📋 <strong>Step-by-Step Process:</strong>
+1. <strong>Visit nearest police station</strong> to crime location
+2. <strong>Oral/Written complaint</strong> - Police must register
+3. <strong>Free copy</strong> of FIR with registration number
+4. <strong>No fee</strong> required for filing FIR
 
-🔍 **What to Include:**
+🔍 <strong>What to Include:</strong>
 • Date, time, location of incident
 • Detailed description of events
 • Names/descriptions of accused
 • Witness information
 • Evidence details
 
-⚖️ **Your Rights:**
+⚖️ <strong>Your Rights:</strong>
 • Police CANNOT refuse cognizable offenses
 • FIR copy is your legal right
 • You can file in any language
 • Zero FIR for jurisdiction issues
 
-**Important:** Keep FIR copy safe - it's crucial for legal proceedings!`,
+<strong>Important:</strong> Keep FIR copy safe - it's crucial for legal proceedings!`,
     suggestions: ["What if police refuse FIR?", "Cognizable vs non-cognizable", "Zero FIR explained", "After filing FIR"]
   },
 
