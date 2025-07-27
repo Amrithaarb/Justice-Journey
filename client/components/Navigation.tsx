@@ -3,6 +3,8 @@ import { Button } from "./ui/button";
 import { Scale, Menu, X, User } from "lucide-react";
 import { useState } from "react";
 import { useAuth } from "../lib/auth";
+import { useLanguage } from "../lib/i18n";
+import { LanguageSelector, LanguageSelectorMobile } from "./LanguageSelector";
 
 export function Navigation() {
   const location = useLocation();
