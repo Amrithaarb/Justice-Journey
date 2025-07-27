@@ -304,6 +304,14 @@ export function LegalChatbot() {
     scrollToBottom();
   }, [messages]);
 
+  // Handle voice transcript
+  useEffect(() => {
+    if (transcript) {
+      setInputValue(transcript);
+      resetTranscript();
+    }
+  }, [transcript, resetTranscript]);
+
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       const pageContext = getPageContext();
