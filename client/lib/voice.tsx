@@ -205,38 +205,43 @@ function getLanguageCode(language: string): string {
 }
 
 // Voice-enabled textarea component
-export function VoiceTextarea({ 
-  value, 
-  onChange, 
+export function VoiceTextarea({
+  value,
+  onChange,
   placeholder,
   className = '',
-  ...props 
+  ...props
 }: {
   value: string;
-  onChange: (value: string) => void;
+  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
   placeholder?: string;
   className?: string;
   [key: string]: any;
 }) {
   const { t } = useLanguage();
   const { speak, stop, isSpeaking } = useSpeechSynthesis();
-  const { 
-    isListening, 
-    transcript, 
-    interimTranscript, 
-    error, 
+  const {
+    isListening,
+    transcript,
+    interimTranscript,
+    error,
     isSupported: speechSupported,
-    startListening, 
+    startListening,
     stopListening,
-    resetTranscript 
+    resetTranscript
   } = useSpeechRecognition();
 
   useEffect(() => {
     if (transcript) {
-      onChange(value + transcript);
+      // Create a synthetic event object that matches textarea onChange signature
+      const syntheticEvent = {
+        target: { value: value + transcript },
+        currentTarget: { value: value + transcript }
+      } as React.ChangeEvent<HTMLTextAreaElement>;
+      onChange(syntheticEvent);
       resetTranscript();
     }
-  }, [transcript, resetTranscript]);
+  }, [transcript, resetTranscript, value, onChange]);
 
   const handleVoiceInput = () => {
     if (isListening) {
