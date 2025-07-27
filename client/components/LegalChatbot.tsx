@@ -51,15 +51,15 @@ const legalKnowledgeBase = {
   
   constitutional_rights: {
     keywords: ["constitutional rights", "fundamental rights", "article 14", "article 19", "article 21", "article 22", "rights"],
-    response: `**Your Fundamental Rights under Indian Constitution:**
+    response: `<strong>Your Fundamental Rights under Indian Constitution:</strong>
 
-🛡️ **Article 14** - Right to Equality before law
-🗣️ **Article 19** - Six fundamental freedoms (speech, assembly, movement, etc.)
-❤️ **Article 21** - Right to Life and Personal Liberty (most important)
-🔒 **Article 22** - Protection against arrest and detention
-⚖️ **Article 20** - Protection against double jeopardy
+🛡️ <strong>Article 14</strong> - Right to Equality before law
+🗣️ <strong>Article 19</strong> - Six fundamental freedoms (speech, assembly, movement, etc.)
+❤️ <strong>Article 21</strong> - Right to Life and Personal Liberty (most important)
+🔒 <strong>Article 22</strong> - Protection against arrest and detention
+⚖️ <strong>Article 20</strong> - Protection against double jeopardy
 
-**Key Points:**
+<strong>Key Points:</strong>
 • These rights are enforceable in courts
 • You can approach High Court (Article 226) or Supreme Court (Article 32)
 • Emergency can suspend some rights temporarily
