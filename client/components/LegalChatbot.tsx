@@ -190,32 +190,35 @@ Remember: You have constitutional right to live with dignity. Legal help and pro
 
   legal_aid: {
     keywords: ["legal aid", "free lawyer", "legal services", "poor person", "unable to afford"],
-    response: `<strong>Free Legal Aid Services:</strong>
+    response: `<strong>Free Legal Aid Services Under Indian Constitution:</strong>
 
-🆓 <strong>Constitutional Right (Article 39A):</strong>
-Everyone has right to free legal aid if unable to afford
+<strong>Constitutional Right (Article 39A):</strong>
+Every person has fundamental right to free legal aid if financially unable to afford legal representation. This is essential for ensuring equal justice under law.
 
-🏛️ <strong>Where to Get Free Legal Aid:</strong>
-• <strong>District Legal Services Authority (DLSA)</strong>
-• <strong>State Legal Services Authority (SLSA)</strong>
-• <strong>National Legal Services Authority (NALSA)</strong>
-• <strong>Lok Adalat</strong> - Alternative dispute resolution
+<strong>Where to Access Free Legal Aid:</strong>
+• <strong>District Legal Services Authority (DLSA)</strong> - Primary contact point in each district
+• <strong>State Legal Services Authority (SLSA)</strong> - State level coordination and oversight
+• <strong>National Legal Services Authority (NALSA)</strong> - National apex body for legal services
+• <strong>Lok Adalat</strong> - Alternative dispute resolution mechanism with free services
 
-👥 <strong>Eligibility Criteria:</strong>
-• Income below ₹9,000/month (rural: ₹6,000)
-• SC/ST/Women automatically eligible
-• Children and disabled persons
-• Victims of trafficking/acid attacks
-• Senior citizens above 65
+<strong>Eligibility Criteria for Free Legal Aid:</strong>
+• Annual income below ₹9,000 in urban areas (₹6,000 in rural areas)
+• Members of Scheduled Castes, Scheduled Tribes automatically eligible regardless of income
+• Women and children in all cases
+• Persons with disabilities and mental illness
+• Victims of human trafficking and acid attacks
+• Senior citizens above 65 years of age
 
-📋 <strong>Services Provided:</strong>
-• Free lawyer representation
-• Court fee exemption
-• Legal advice and consultation
-• Mediation and arbitration
-• Legal literacy programs
+<strong>Legal Services Provided Free of Cost:</strong>
+• Complete legal representation by qualified advocates
+• Court fees and legal documentation exemption
+• Legal advice and consultation at all stages
+• Mediation and arbitration services
+• Legal literacy and awareness programs
+• Assistance in drafting legal documents
 
-<strong>Contact your nearest DLSA - legal aid is your right!</strong>`,
+<strong>How to Apply:</strong>
+Contact your nearest District Legal Services Authority office with income certificate and identity proof. Legal aid is your constitutional right under Article 39A.`,
     suggestions: ["Find nearest DLSA", "Lok Adalat process", "Legal aid documents", "Women's legal aid"]
   }
 };
