@@ -280,10 +280,15 @@ export function LegalChatbot() {
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       const pageContext = getPageContext();
-      // Simplified welcome message
+      // Formatted welcome message with paragraphs
       const welcomeMessage: Message = {
         id: Date.now().toString(),
-        text: `Hello! I'm LegalBot, your AI legal assistant. Welcome to Justice Journey! This is your starting point for legal education. I can help you with: • Legal questions and constitutional rights • Navigation and platform features • Legal procedures and documentation • Emergency legal contacts and guidance What would you like to know?`,
+        text: `<p>Hello! I'm JJBot, your AI legal assistant. Welcome to Justice Journey! This is your starting point for legal education. I can help you with: </p>
+<p>• Legal questions and constitutional rights </p>
+<p>• Navigation and platform features </p>
+<p>• Legal procedures and documentation </p>
+<p>• Emergency legal contacts and guidance</p>
+<p>What would you like to know?</p>`,
         sender: 'bot',
         timestamp: new Date(),
         suggestions: pageContext.suggestions
