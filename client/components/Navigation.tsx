@@ -36,7 +36,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -52,9 +52,9 @@ export function Navigation() {
             ))}
             {isLoggedIn && (
               <Link to="/profile">
-                <Button 
+                <Button
                   variant="ghost"
-                  size="sm" 
+                  size="sm"
                   className="text-gray-600 hover:text-justice-primary"
                 >
                   <User className="h-4 w-4 mr-1" />
@@ -62,12 +62,13 @@ export function Navigation() {
                 </Button>
               </Link>
             )}
+            <LanguageSelector />
             <Link to="/get-started">
-              <Button 
-                size="sm" 
+              <Button
+                size="sm"
                 className="bg-gradient-to-r from-justice-primary to-justice-secondary hover:from-justice-primary/90 hover:to-justice-secondary/90"
               >
-                Get Started
+                {t('nav.getStarted')}
               </Button>
             </Link>
           </div>
