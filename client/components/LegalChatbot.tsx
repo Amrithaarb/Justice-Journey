@@ -74,26 +74,27 @@ Would you like detailed information about any specific fundamental right?`,
     keywords: ["fir", "file fir", "police complaint", "first information report", "crime report"],
     response: `<strong>How to File an FIR (First Information Report):</strong>
 
-📋 <strong>Step-by-Step Process:</strong>
-1. <strong>Visit nearest police station</strong> to crime location
-2. <strong>Oral/Written complaint</strong> - Police must register
-3. <strong>Free copy</strong> of FIR with registration number
-4. <strong>No fee</strong> required for filing FIR
+<strong>Step-by-Step Process:</strong>
+1. <strong>Visit the nearest police station</strong> that has jurisdiction over the area where crime occurred
+2. <strong>Give oral or written complaint</strong> - Police are legally bound to register FIR for cognizable offenses
+3. <strong>Obtain free copy</strong> of FIR with unique registration number
+4. <strong>No fee required</strong> - Filing FIR is completely free under Indian law
 
-🔍 <strong>What to Include:</strong>
-• Date, time, location of incident
-• Detailed description of events
-• Names/descriptions of accused
-• Witness information
-• Evidence details
+<strong>Essential Information to Include:</strong>
+• Exact date, time, and location of incident
+• Detailed chronological description of events
+• Names and physical descriptions of accused persons
+• Complete witness information with contact details
+• List of evidence available or collected
 
-⚖️ <strong>Your Rights:</strong>
-• Police CANNOT refuse cognizable offenses
-• FIR copy is your legal right
-• You can file in any language
-• Zero FIR for jurisdiction issues
+<strong>Your Legal Rights During FIR Filing:</strong>
+• Police cannot refuse to register FIR for cognizable offenses under CrPC Section 154
+• You have absolute right to receive free copy of FIR immediately
+• FIR can be filed in any language you are comfortable with
+• Zero FIR can be filed if crime occurred outside station jurisdiction
+• If police refuse, you can approach Superintendent of Police or Magistrate
 
-<strong>Important:</strong> Keep FIR copy safe - it's crucial for legal proceedings!`,
+<strong>Important Legal Point:</strong> Keep your FIR copy safe as it serves as primary legal document for all future proceedings in your case.`,
     suggestions: ["What if police refuse FIR?", "Cognizable vs non-cognizable", "Zero FIR explained", "After filing FIR"]
   },
 
@@ -164,7 +165,7 @@ You're not alone - help is available!`,
 • <strong>I4C helpline: 155260</strong> for assistance
 
 ⚖️ <strong>IT Act 2000 Protections:</strong>
-�� <strong>Section 66</strong> - Computer fraud (3 years + ₹5 lakh)
+• <strong>Section 66</strong> - Computer fraud (3 years + ₹5 lakh)
 • <strong>Section 66C</strong> - Identity theft (3 years + ₹1 lakh)
 • <strong>Section 66D</strong> - Cheating using computer
 • <strong>Section 43A</strong> - Data protection compensation
