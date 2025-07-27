@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button } from "../components/ui/button";
 import { VoiceTextarea } from "../lib/voice";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import { useLanguage } from "../lib/i18n";
+import { VoiceReader } from "../components/VoiceReader";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
 import { Textarea } from "../components/ui/textarea";
@@ -576,6 +578,7 @@ const helplines = [
 ];
 
 export function AwarenessHub() {
+  const { t, language } = useLanguage();
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [selectedStory, setSelectedStory] = useState<string | null>(null);
   const [quizStarted, setQuizStarted] = useState(false);
@@ -1734,29 +1737,34 @@ export function AwarenessHub() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Constitutional AI Legal Analyzer
-          </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            Advanced AI trained on complete Indian Constitutional law, IPC, CrPC, and legal precedents.
-            Get comprehensive legal analysis with constitutional rights, court procedures, and expert guidance.
-          </p>
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <h1 className="text-4xl font-bold text-gray-900">
+              {t('awareness.title')}
+            </h1>
+            <VoiceReader text={t('awareness.title')} variant="icon" />
+          </div>
+          <div className="flex items-center justify-center gap-2">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              {t('awareness.subtitle')}
+            </p>
+            <VoiceReader text={t('awareness.subtitle')} variant="compact" />
+          </div>
           <div className="grid md:grid-cols-4 gap-4 mt-6 max-w-4xl mx-auto">
             <div className="flex items-center justify-center space-x-2 text-sm text-gray-600">
               <CheckCircle className="h-4 w-4 text-green-500" />
-              <span>Complete Constitutional Framework</span>
+              <span>{t('awareness.features.constitutional')}</span>
             </div>
             <div className="flex items-center justify-center space-x-2 text-sm text-gray-600">
               <CheckCircle className="h-4 w-4 text-green-500" />
-              <span>Supreme Court Precedents</span>
+              <span>{t('awareness.features.precedents')}</span>
             </div>
             <div className="flex items-center justify-center space-x-2 text-sm text-gray-600">
               <CheckCircle className="h-4 w-4 text-green-500" />
-              <span>Court Hierarchy Analysis</span>
+              <span>{t('awareness.features.hierarchy')}</span>
             </div>
             <div className="flex items-center justify-center space-x-2 text-sm text-gray-600">
               <CheckCircle className="h-4 w-4 text-green-500" />
-              <span>Timeline & Cost Estimation</span>
+              <span>{t('awareness.features.timeline')}</span>
             </div>
           </div>
         </div>
@@ -1765,27 +1773,27 @@ export function AwarenessHub() {
           <TabsList className="grid w-full grid-cols-6 lg:w-auto lg:grid-cols-6">
             <TabsTrigger value="analyzer" className="flex items-center gap-2 bg-justice-primary/10 text-justice-primary font-semibold">
               <Brain className="h-5 w-5" />
-              <span className="hidden sm:inline">Legal Analyzer</span>
+              <span className="hidden sm:inline">{t('awareness.tabs.analyzer')}</span>
             </TabsTrigger>
             <TabsTrigger value="articles" className="flex items-center gap-2 opacity-70">
               <BookOpen className="h-3 w-3" />
-              <span className="hidden sm:inline text-xs">Articles</span>
+              <span className="hidden sm:inline text-xs">{t('awareness.tabs.articles')}</span>
             </TabsTrigger>
             <TabsTrigger value="rights" className="flex items-center gap-2 opacity-70">
               <Shield className="h-3 w-3" />
-              <span className="hidden sm:inline text-xs">Rights</span>
+              <span className="hidden sm:inline text-xs">{t('awareness.tabs.rights')}</span>
             </TabsTrigger>
             <TabsTrigger value="stories" className="flex items-center gap-2 opacity-70">
               <Eye className="h-3 w-3" />
-              <span className="hidden sm:inline text-xs">Cases</span>
+              <span className="hidden sm:inline text-xs">{t('awareness.tabs.cases')}</span>
             </TabsTrigger>
             <TabsTrigger value="myths" className="flex items-center gap-2 opacity-70">
               <HelpCircle className="h-3 w-3" />
-              <span className="hidden sm:inline text-xs">Quiz</span>
+              <span className="hidden sm:inline text-xs">{t('awareness.tabs.quiz')}</span>
             </TabsTrigger>
             <TabsTrigger value="resources" className="flex items-center gap-2 opacity-70">
               <Phone className="h-3 w-3" />
-              <span className="hidden sm:inline text-xs">Help</span>
+              <span className="hidden sm:inline text-xs">{t('awareness.tabs.help')}</span>
             </TabsTrigger>
           </TabsList>
 
