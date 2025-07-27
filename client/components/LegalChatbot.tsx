@@ -188,32 +188,32 @@ You're not alone - help is available!`,
 
   legal_aid: {
     keywords: ["legal aid", "free lawyer", "legal services", "poor person", "unable to afford"],
-    response: `**Free Legal Aid Services:**
+    response: `<strong>Free Legal Aid Services:</strong>
 
-🆓 **Constitutional Right (Article 39A):**
+🆓 <strong>Constitutional Right (Article 39A):</strong>
 Everyone has right to free legal aid if unable to afford
 
-🏛️ **Where to Get Free Legal Aid:**
-• **District Legal Services Authority (DLSA)**
-• **State Legal Services Authority (SLSA)**
-• **National Legal Services Authority (NALSA)**
-• **Lok Adalat** - Alternative dispute resolution
+🏛️ <strong>Where to Get Free Legal Aid:</strong>
+• <strong>District Legal Services Authority (DLSA)</strong>
+• <strong>State Legal Services Authority (SLSA)</strong>
+• <strong>National Legal Services Authority (NALSA)</strong>
+• <strong>Lok Adalat</strong> - Alternative dispute resolution
 
-👥 **Eligibility Criteria:**
+👥 <strong>Eligibility Criteria:</strong>
 • Income below ₹9,000/month (rural: ₹6,000)
 • SC/ST/Women automatically eligible
 • Children and disabled persons
 • Victims of trafficking/acid attacks
 • Senior citizens above 65
 
-📋 **Services Provided:**
+📋 <strong>Services Provided:</strong>
 • Free lawyer representation
 • Court fee exemption
 • Legal advice and consultation
 • Mediation and arbitration
 • Legal literacy programs
 
-**Contact your nearest DLSA - legal aid is your right!**`,
+<strong>Contact your nearest DLSA - legal aid is your right!</strong>`,
     suggestions: ["Find nearest DLSA", "Lok Adalat process", "Legal aid documents", "Women's legal aid"]
   }
 };
