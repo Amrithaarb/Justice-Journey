@@ -31,29 +31,34 @@ export default function Index() {
                   {t('home.title')}
                 </span>
               </h1>
-              <p className="mt-6 text-xl text-gray-600 max-w-3xl">
-                Justice Journey empowers youth and communities with interactive legal education. 
-                Learn about your rights, understand consequences, and navigate legal situations 
-                with confidence through engaging scenarios and expert guidance.
-              </p>
+              <div className="relative">
+                <p className="mt-6 text-xl text-gray-600 max-w-3xl">
+                  {t('home.subtitle')}
+                </p>
+                <VoiceReader
+                  text={t('home.subtitle')}
+                  variant="icon-only"
+                  className="absolute -top-2 -right-2 bg-white/80 backdrop-blur-sm shadow-sm border border-gray-200"
+                />
+              </div>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:justify-center lg:justify-start">
                 <Link to="/scenarios">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="w-full sm:w-auto bg-gradient-to-r from-justice-primary to-justice-secondary hover:from-justice-primary/90 hover:to-justice-secondary/90 text-lg px-8 py-3"
                   >
-                    Start Your Journey
+                    {t('home.startJourney')}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
                 <Link to="/awareness">
-                  <Button 
-                    variant="outline" 
+                  <Button
+                    variant="outline"
                     size="lg"
                     className="w-full sm:w-auto border-justice-primary text-justice-primary hover:bg-justice-primary hover:text-white text-lg px-8 py-3"
                   >
                     <Play className="mr-2 h-5 w-5" />
-                    Explore Resources
+                    {t('home.exploreResources')}
                   </Button>
                 </Link>
               </div>
