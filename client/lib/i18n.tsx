@@ -74,6 +74,28 @@ const translations = {
     'chat.scenarios': 'Scenarios',
     'chat.results': 'Results',
     
+    // Awareness Hub
+    'awareness.title': 'Constitutional AI Legal Analyzer',
+    'awareness.subtitle': 'Advanced AI trained on complete Indian Constitutional law, IPC, CrPC, and legal precedents. Get comprehensive legal analysis with constitutional rights, court procedures, and expert guidance.',
+    'awareness.features.constitutional': 'Complete Constitutional Framework',
+    'awareness.features.precedents': 'Supreme Court Precedents',
+    'awareness.features.hierarchy': 'Court Hierarchy Analysis',
+    'awareness.features.timeline': 'Timeline & Cost Estimation',
+    'awareness.tabs.analyzer': 'Legal Analyzer',
+    'awareness.tabs.articles': 'Articles',
+    'awareness.tabs.rights': 'Rights',
+    'awareness.tabs.cases': 'Cases',
+    'awareness.tabs.quiz': 'Quiz',
+    'awareness.tabs.help': 'Help',
+    'awareness.analyzer.title': 'AI Legal Scenario Analyzer',
+    'awareness.analyzer.description': 'Comprehensive legal analysis according to Indian Constitution, applicable acts, and legal procedures.',
+    'awareness.analyzer.poweredBy': 'Powered by Constitutional AI',
+    'awareness.analyzer.inputLabel': 'Describe your legal situation or planned action:',
+    'awareness.analyzer.placeholder': 'Examples:\n• \'My employer is discriminating against me based on my caste and refusing promotion\'\n• \'Someone is demanding dowry from my family for marriage\'\n• \'I want to file a complaint against police harassment\'\n• \'My landlord is forcibly evicting me without notice\'\n• \'I witnessed corruption in a government office\'',
+    'awareness.analyzer.analyzing': 'Analyzing Your Legal Situation...',
+    'awareness.analyzer.analyze': 'Get Instant Legal Analysis',
+    'awareness.analyzer.disclaimer': 'Confidential & Educational: Describe your situation clearly. Analysis covers Indian constitutional rights, applicable laws, and legal procedures. This is for educational awareness only - not professional legal advice.',
+
     // Common
     'common.loading': 'Loading...',
     'common.error': 'Error occurred',
@@ -123,7 +145,7 @@ const translations = {
     'home.rightsDesc': 'लोगों को अपने कानूनी अधिकारों को जानने और उनका प्रयोग करने के लिए सशक्त बनाना',
     'home.quote': 'कानून का ज्ञान न्याय के लिए आवश्यक है। जब लोग अपने अधिकारों को समझते हैं, ���ो वे अपनी और अपने समुदायों की बेहतर सुरक्षा कर सकते हैं।',
     'home.ctaTitle': 'अपनी कानूनी शिक्षा यात्रा शुरू करने के लिए तैयार हैं?',
-    'home.ctaSubtitle': 'हजारों शिक्षार्थियों से जुड़ें जो जस्टिस जर्नी के माध्यम से अपना कानूनी ज्ञान बना रहे हैं और अपने अधिकारों की रक्षा कर रहे हैं।',
+    'home.ctaSubtitle': 'हजारों शिक्षार्थियों से जुड़ें जो जस्टिस जर्नी के माध्यम से अपना का���ूनी ज्ञान बना रहे हैं और अपने अधिकारों की रक्षा कर रहे हैं।',
     'home.exploreScenarios': 'परिदृश्य देखें',
     'home.learnRights': 'अपने अधिकार सीखें',
     
@@ -140,7 +162,7 @@ const translations = {
     
     // Chatbot
     'chat.assistant': 'कानूनी सहायक',
-    'chat.placeholder': 'मुझसे कुछ भी पूछें या कहें "मुझे परिदृश्यों में ले जाएं"...',
+    'chat.placeholder': 'मुझसे कुछ भी पूछें या कहें "मुझे परिदृश्य��ं में ले जाएं"...',
     'chat.disclaimer': 'कोशिश करें: "मुझे कानूनी विश्लेषक के पास ले जाएं" या कानूनी प्रश्न पूछें • विशिष्ट सलाह के लिए, किसी वकील से संपर्क करें',
     'chat.quickNav': 'त्वरित नेविगेशन:',
     'chat.currentPage': 'वर्तमान में:',
