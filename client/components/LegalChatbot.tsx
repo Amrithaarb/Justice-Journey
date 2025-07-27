@@ -100,27 +100,27 @@ Would you like detailed information about any specific fundamental right?`,
 
   arrest_rights: {
     keywords: ["arrested", "arrest rights", "police arrest", "custody", "detention", "miranda rights"],
-    response: `<strong>Your Rights During Arrest (Article 22):</strong>
+    response: `<strong>Your Constitutional Rights During Arrest (Article 22):</strong>
 
-🚨 <strong>Immediate Rights:</strong>
-• <strong>Right to know</strong> grounds of arrest
-• <strong>Right to remain silent</strong> - don't self-incriminate
-• <strong>Right to lawyer</strong> - demand immediately
-• <strong>Right to inform</strong> family/friends within 24 hours
+<strong>Immediate Fundamental Rights:</strong>
+• <strong>Right to know grounds of arrest</strong> - Police must inform you why you are being arrested
+• <strong>Right to remain silent</strong> - You cannot be compelled to be a witness against yourself
+• <strong>Right to legal representation</strong> - You can demand a lawyer immediately
+• <strong>Right to inform family/friends</strong> - Must be allowed within 24 hours of arrest
 
-⏰ <strong>Time Limits:</strong>
-• <strong>24 hours</strong> maximum without Magistrate
-• <strong>15 days</strong> police custody maximum (in parts)
-• <strong>90 days</strong> total investigation period
+<strong>Legal Time Limits Under CrPC:</strong>
+• <strong>24 hours maximum</strong> in police custody without being presented before Magistrate
+• <strong>15 days maximum</strong> total police custody (can be given in parts during investigation)
+• <strong>90 days total</strong> for investigation period before filing charge sheet
 
-📞 <strong>Essential Actions:</strong>
-1. Ask "Why am I being arrested?"
-2. Say "I want my lawyer present"
-3. Don't sign anything without lawyer
-4. Request family notification
-5. Stay calm and don't resist
+<strong>Essential Actions to Take:</strong>
+1. Clearly ask "What are the specific charges and grounds for my arrest?"
+2. State firmly "I want my legal counsel present before any questioning"
+3. Do not sign any document without your lawyer reviewing it
+4. Request immediate notification of family members or friends
+5. Remain calm and do not physically resist even if arrest seems unlawful
 
-<strong>Remember:</strong> Even if arrested wrongly, never resist physically. Fight legally!`,
+<strong>Important Legal Principle:</strong> Even if you believe the arrest is completely wrong or illegal, never resist physically. Challenge the arrest through proper legal channels with help of a competent lawyer.`,
     suggestions: ["What is bail?", "False arrest remedies", "Police harassment", "Legal aid options"]
   },
 
