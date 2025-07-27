@@ -337,26 +337,26 @@ export function LegalChatbot() {
       const pageContext = getPageContext();
       return {
         id: Date.now().toString(),
-        text: `<strong>How to Use Justice Journey:</strong>
+        text: `<strong>How to Use Justice Journey Platform:</strong>
 
-📍 <strong>Currently on:</strong> ${pageContext.pageName}
+<strong>Currently on:</strong> ${pageContext.pageName}
 
-🎯 <strong>Available Features:</strong>
-• <strong>Awareness Hub</strong> - AI legal analyzer & constitutional rights education
-• <strong>Scenario Simulation</strong> - Interactive legal decision-making practice
-• <strong>Results Dashboard</strong> - Track learning progress and achievements
-• <strong>Legal Resources</strong> - Emergency contacts and legal aid information
+<strong>Available Platform Features:</strong>
+• <strong>Awareness Hub</strong> - Advanced AI legal analyzer with constitutional rights education
+• <strong>Scenario Simulation</strong> - Interactive legal decision-making practice modules
+• <strong>Results Dashboard</strong> - Comprehensive learning progress tracking and achievements
+• <strong>Legal Resources</strong> - Emergency contacts, legal aid information, and helplines
 
-<strong>Navigation Tips:</strong>
-• Use the top menu to switch between sections
-• Try the AI Legal Analyzer for instant legal analysis
-• Complete scenarios to build practical knowledge
-• Check Results to monitor your progress
+<strong>Navigation and Usage Tips:</strong>
+• Use the main navigation menu to switch between different platform sections
+• Try the AI Legal Analyzer for detailed analysis of specific legal situations
+• Complete scenario simulations to build practical legal knowledge and decision-making skills
+• Regularly check Results dashboard to monitor your learning progress and areas for improvement
 
-<strong>Current Page Help:</strong>
+<strong>Current Page Context:</strong>
 ${pageContext.context}
 
-Which feature would you like to explore?`,
+Which specific feature or section would you like to explore in detail?`,
         suggestions: pageContext.suggestions,
         links: [
           { title: "Go to Legal Analyzer", url: "/awareness" },
