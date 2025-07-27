@@ -193,7 +193,7 @@ You're not alone - help is available!`,
 🆓 <strong>Constitutional Right (Article 39A):</strong>
 Everyone has right to free legal aid if unable to afford
 
-����️ <strong>Where to Get Free Legal Aid:</strong>
+🏛️ <strong>Where to Get Free Legal Aid:</strong>
 • <strong>District Legal Services Authority (DLSA)</strong>
 • <strong>State Legal Services Authority (SLSA)</strong>
 • <strong>National Legal Services Authority (NALSA)</strong>
@@ -365,25 +365,25 @@ Which feature would you like to explore?`,
     if (lowercaseMessage.includes('emergency') || lowercaseMessage.includes('urgent') || lowercaseMessage.includes('help immediately')) {
       return {
         id: Date.now().toString(),
-        text: `🚨 **Emergency Legal Contacts:**
+        text: `🚨 <strong>Emergency Legal Contacts:</strong>
 
-**Immediate Danger:**
-• **Police: 100**
-• **Women Helpline: 181**
-• **Child Helpline: 1098**
+<strong>Immediate Danger:</strong>
+• <strong>Police: 100</strong>
+• <strong>Women Helpline: 181</strong>
+• <strong>Child Helpline: 1098</strong>
 
-**Legal Emergency:**
-• **Legal Aid: Contact nearest DLSA**
-• **Lawyer: Arrange through Bar Association**
-• **Court: File urgent application**
+<strong>Legal Emergency:</strong>
+• <strong>Legal Aid: Contact nearest DLSA</strong>
+• <strong>Lawyer: Arrange through Bar Association</strong>
+• <strong>Court: File urgent application</strong>
 
-**Remember:**
+<strong>Remember:</strong>
 • In physical danger - call police first
 • Document everything if safe to do so
 • Contact family/friends for support
 • Seek medical help if injured
 
-**This is general guidance - consult a lawyer for specific advice.**`,
+<strong>This is general guidance - consult a lawyer for specific advice.</strong>`,
         sender: 'bot',
         timestamp: new Date(),
         suggestions: ["Find nearest police station", "Legal aid contacts", "Document evidence", "Safety planning"]
