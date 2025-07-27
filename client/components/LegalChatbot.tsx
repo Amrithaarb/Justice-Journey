@@ -384,6 +384,8 @@ Which feature would you like to explore?`,
 • Seek medical help if injured
 
 **This is general guidance - consult a lawyer for specific advice.**`,
+        sender: 'bot',
+        timestamp: new Date(),
         suggestions: ["Find nearest police station", "Legal aid contacts", "Document evidence", "Safety planning"]
       };
     }
