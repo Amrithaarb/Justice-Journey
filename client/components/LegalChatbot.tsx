@@ -533,7 +533,10 @@ What specific legal topic can I help you with?`,
                             dangerouslySetInnerHTML={{ __html: message.text }}
                           />
                           <div className="text-xs opacity-70 mt-1">
-                            {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                            {message.timestamp && message.timestamp instanceof Date
+                              ? message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+                              : new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+                            }
                           </div>
                         </div>
                       </div>
