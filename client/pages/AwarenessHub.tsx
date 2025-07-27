@@ -1773,27 +1773,27 @@ export function AwarenessHub() {
           <TabsList className="grid w-full grid-cols-6 lg:w-auto lg:grid-cols-6">
             <TabsTrigger value="analyzer" className="flex items-center gap-2 bg-justice-primary/10 text-justice-primary font-semibold">
               <Brain className="h-5 w-5" />
-              <span className="hidden sm:inline">Legal Analyzer</span>
+              <span className="hidden sm:inline">{t('awareness.tabs.analyzer')}</span>
             </TabsTrigger>
             <TabsTrigger value="articles" className="flex items-center gap-2 opacity-70">
               <BookOpen className="h-3 w-3" />
-              <span className="hidden sm:inline text-xs">Articles</span>
+              <span className="hidden sm:inline text-xs">{t('awareness.tabs.articles')}</span>
             </TabsTrigger>
             <TabsTrigger value="rights" className="flex items-center gap-2 opacity-70">
               <Shield className="h-3 w-3" />
-              <span className="hidden sm:inline text-xs">Rights</span>
+              <span className="hidden sm:inline text-xs">{t('awareness.tabs.rights')}</span>
             </TabsTrigger>
             <TabsTrigger value="stories" className="flex items-center gap-2 opacity-70">
               <Eye className="h-3 w-3" />
-              <span className="hidden sm:inline text-xs">Cases</span>
+              <span className="hidden sm:inline text-xs">{t('awareness.tabs.cases')}</span>
             </TabsTrigger>
             <TabsTrigger value="myths" className="flex items-center gap-2 opacity-70">
               <HelpCircle className="h-3 w-3" />
-              <span className="hidden sm:inline text-xs">Quiz</span>
+              <span className="hidden sm:inline text-xs">{t('awareness.tabs.quiz')}</span>
             </TabsTrigger>
             <TabsTrigger value="resources" className="flex items-center gap-2 opacity-70">
               <Phone className="h-3 w-3" />
-              <span className="hidden sm:inline text-xs">Help</span>
+              <span className="hidden sm:inline text-xs">{t('awareness.tabs.help')}</span>
             </TabsTrigger>
           </TabsList>
 
