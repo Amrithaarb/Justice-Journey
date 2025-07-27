@@ -98,27 +98,27 @@ Would you like details about any specific right?`,
 
   arrest_rights: {
     keywords: ["arrested", "arrest rights", "police arrest", "custody", "detention", "miranda rights"],
-    response: `**Your Rights During Arrest (Article 22):**
+    response: `<strong>Your Rights During Arrest (Article 22):</strong>
 
-🚨 **Immediate Rights:**
-• **Right to know** grounds of arrest
-• **Right to remain silent** - don't self-incriminate
-• **Right to lawyer** - demand immediately
-• **Right to inform** family/friends within 24 hours
+🚨 <strong>Immediate Rights:</strong>
+• <strong>Right to know</strong> grounds of arrest
+• <strong>Right to remain silent</strong> - don't self-incriminate
+• <strong>Right to lawyer</strong> - demand immediately
+• <strong>Right to inform</strong> family/friends within 24 hours
 
-⏰ **Time Limits:**
-• **24 hours** maximum without Magistrate
-• **15 days** police custody maximum (in parts)
-• **90 days** total investigation period
+⏰ <strong>Time Limits:</strong>
+• <strong>24 hours</strong> maximum without Magistrate
+• <strong>15 days</strong> police custody maximum (in parts)
+• <strong>90 days</strong> total investigation period
 
-📞 **Essential Actions:**
+📞 <strong>Essential Actions:</strong>
 1. Ask "Why am I being arrested?"
 2. Say "I want my lawyer present"
 3. Don't sign anything without lawyer
 4. Request family notification
 5. Stay calm and don't resist
 
-**Remember:** Even if arrested wrongly, never resist physically. Fight legally!`,
+<strong>Remember:</strong> Even if arrested wrongly, never resist physically. Fight legally!`,
     suggestions: ["What is bail?", "False arrest remedies", "Police harassment", "Legal aid options"]
   },
 
