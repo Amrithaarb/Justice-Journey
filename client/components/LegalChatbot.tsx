@@ -279,17 +279,29 @@ export function LegalChatbot() {
 
   useEffect(() => {
     if (isOpen && messages.length === 0) {
-      // Welcome message when first opened
+      const pageContext = getPageContext();
+      // Context-aware welcome message
       const welcomeMessage: Message = {
         id: Date.now().toString(),
-        text: legalKnowledgeBase.greetings[0],
+        text: `Hello! I'm LegalBot, your AI legal assistant.
+
+📍 **Current Page:** ${pageContext.pageName}
+${pageContext.context}
+
+I can help you with:
+• Legal questions and constitutional rights
+• Navigation and platform features
+• Legal procedures and documentation
+• Emergency legal contacts and guidance
+
+What would you like to know?`,
         sender: 'bot',
         timestamp: new Date(),
-        suggestions: quickReplies.slice(0, 4)
+        suggestions: pageContext.suggestions
       };
       setMessages([welcomeMessage]);
     }
-  }, [isOpen, messages.length]);
+  }, [isOpen, messages.length, location.pathname]);
 
   const generateBotResponse = (userMessage: string): Message => {
     const lowercaseMessage = userMessage.toLowerCase();
