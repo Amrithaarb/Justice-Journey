@@ -311,11 +311,17 @@ export function LegalChatbot() {
 
   const generateBotResponse = (userMessage: string): Message => {
     const lowercaseMessage = userMessage.toLowerCase();
-    
+
+    // Check for navigation commands first
+    const navigationResponse = handleNavigationCommand(userMessage);
+    if (navigationResponse) {
+      return navigationResponse;
+    }
+
     // Check knowledge base
     for (const [key, data] of Object.entries(legalKnowledgeBase)) {
       if (key === 'greetings') continue;
-      
+
       const topicData = data as any;
       if (topicData.keywords.some((keyword: string) => lowercaseMessage.includes(keyword))) {
         return {
