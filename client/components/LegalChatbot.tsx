@@ -444,7 +444,7 @@ This is general guidance for emergency situations. For specific legal advice tai
 
 <strong>Legal Topics I Specialize In:</strong>
 • Constitutional rights and fundamental freedoms under Indian Constitution
-• Criminal law procedures including FIR filing and arrest rights
+�� Criminal law procedures including FIR filing and arrest rights
 • Domestic violence protection under various legal frameworks
 • Cybercrime reporting and IT Act provisions
 • Free legal aid services and eligibility criteria
@@ -560,6 +560,24 @@ Click the chat button anytime to continue our conversation while using the platf
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage();
+    }
+  };
+
+  const handleVoiceToggle = () => {
+    if (isListening) {
+      stopListening();
+    } else {
+      startListening();
+    }
+  };
+
+  const handleSpeakMessage = (text: string) => {
+    if (isSpeaking) {
+      stop();
+    } else {
+      // Clean up text for better speech
+      const cleanText = text.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+      speak(cleanText, { rate: 0.9 });
     }
   };
 
