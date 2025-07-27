@@ -219,12 +219,55 @@ Everyone has right to free legal aid if unable to afford
 };
 
 export function LegalChatbot() {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const getPageContext = () => {
+    const path = location.pathname;
+    switch (path) {
+      case '/':
+        return {
+          pageName: 'Homepage',
+          context: 'Welcome to Justice Journey! This is your starting point for legal education.',
+          suggestions: ['What is Justice Journey?', 'How to get started?', 'Legal rights overview', 'Navigate to Legal Analyzer']
+        };
+      case '/awareness':
+        return {
+          pageName: 'Awareness Hub',
+          context: 'You\'re in the Awareness Hub with our AI Legal Analyzer. Ask me anything about Indian law!',
+          suggestions: ['How to use Legal Analyzer?', 'Constitutional rights help', 'File FIR guidance', 'Cybercrime protection']
+        };
+      case '/scenarios':
+        return {
+          pageName: 'Scenario Simulation',
+          context: 'Practice legal decision-making with interactive scenarios.',
+          suggestions: ['How scenarios work?', 'Tips for scenarios', 'Legal decision making', 'What after scenarios?']
+        };
+      case '/results':
+        return {
+          pageName: 'Results Dashboard',
+          context: 'Track your learning progress and achievements.',
+          suggestions: ['Understanding results', 'Improve scores', 'Next learning steps', 'Certification options']
+        };
+      case '/dashboard':
+        return {
+          pageName: 'Dashboard',
+          context: 'Your personalized learning dashboard with goals and recommendations.',
+          suggestions: ['Set learning goals', 'Track progress', 'Recommended content', 'Legal skill building']
+        };
+      default:
+        return {
+          pageName: 'Justice Journey',
+          context: 'Navigate through our legal education platform.',
+          suggestions: ['Platform overview', 'Legal basics', 'Your rights', 'Get legal help']
+        };
+    }
+  };
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
