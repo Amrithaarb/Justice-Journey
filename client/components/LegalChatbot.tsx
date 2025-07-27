@@ -335,23 +335,35 @@ What would you like to know?`,
 
     // Navigation help
     if (lowercaseMessage.includes('navigate') || lowercaseMessage.includes('use') || lowercaseMessage.includes('feature')) {
+      const pageContext = getPageContext();
       return {
         id: Date.now().toString(),
         text: `**How to Use Justice Journey:**
 
-🎯 **Scenario Simulation** - Practice legal decision-making
-📚 **Awareness Hub** - AI legal analyzer & educational content  
-📊 **Results** - Track your learning progress
-🧠 **Legal Analyzer** - Get instant legal analysis for any situation
+📍 **Currently on:** ${pageContext.pageName}
+
+🎯 **Available Features:**
+• **Awareness Hub** - AI legal analyzer & constitutional rights education
+• **Scenario Simulation** - Interactive legal decision-making practice
+• **Results Dashboard** - Track learning progress and achievements
+• **Legal Resources** - Emergency contacts and legal aid information
 
 **Navigation Tips:**
 • Use the top menu to switch between sections
-• Try the AI Legal Analyzer for specific queries
-• Complete scenarios to build knowledge
-• Check Results to see your progress
+• Try the AI Legal Analyzer for instant legal analysis
+• Complete scenarios to build practical knowledge
+• Check Results to monitor your progress
+
+**Current Page Help:**
+${pageContext.context}
 
 Which feature would you like to explore?`,
-        suggestions: ["Legal Analyzer", "Scenario Simulation", "Awareness Hub", "How to file FIR?"]
+        suggestions: pageContext.suggestions,
+        links: [
+          { title: "Go to Legal Analyzer", url: "/awareness" },
+          { title: "Try Scenarios", url: "/scenarios" },
+          { title: "View Results", url: "/results" }
+        ]
       };
     }
 
