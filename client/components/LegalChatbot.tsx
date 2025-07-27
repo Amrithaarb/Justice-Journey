@@ -50,7 +50,7 @@ const legalKnowledgeBase = {
   ],
   
   constitutional_rights: {
-    keywords: ["constitutional rights", "fundamental rights", "article 14", "article 19", "article 21", "article 22", "rights"],
+    keywords: ["constitutional rights", "fundamental rights", "article 14", "article 19", "article 21", "article 22", "rights", "constitution", "equality", "freedom", "liberty", "speech", "expression", "movement", "assembly"],
     response: `<strong>Your Fundamental Rights under Indian Constitution:</strong>
 
 <strong>Article 14</strong> - Right to Equality before law and equal protection of laws
