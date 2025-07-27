@@ -2243,13 +2243,17 @@ export function AwarenessHub() {
                     <Brain className="h-8 w-8 text-justice-primary" />
                   </div>
                   <span className="bg-gradient-to-r from-justice-primary to-justice-secondary bg-clip-text text-transparent">
-                    AI Legal Scenario Analyzer
+                    {t('awareness.analyzer.title')}
                   </span>
+                  <VoiceReader text={t('awareness.analyzer.title')} variant="icon" />
                 </CardTitle>
                 <div className="space-y-3">
-                  <p className="text-lg text-gray-700 font-medium">
-                    Comprehensive legal analysis according to Indian Constitution, applicable acts, and legal procedures.
-                  </p>
+                  <div className="flex items-center gap-2">
+                    <p className="text-lg text-gray-700 font-medium">
+                      {t('awareness.analyzer.description')}
+                    </p>
+                    <VoiceReader text={t('awareness.analyzer.description')} variant="compact" />
+                  </div>
                   <div className="grid md:grid-cols-3 gap-4 mt-4">
                     <div className="flex items-center space-x-2 text-sm text-gray-600">
                       <CheckCircle className="h-4 w-4 text-green-500" />
