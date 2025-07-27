@@ -9,13 +9,14 @@ import { LanguageSelector, LanguageSelectorMobile } from "./LanguageSelector";
 export function Navigation() {
   const location = useLocation();
   const { isLoggedIn } = useAuth();
+  const { t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/awareness", label: "Awareness Hub" },
-    { href: "/scenarios", label: "Scenario Simulation" },
-    { href: "/results", label: "Results" },
+    { href: "/", label: t('nav.home') },
+    { href: "/awareness", label: t('nav.awareness') },
+    { href: "/scenarios", label: t('nav.scenarios') },
+    { href: "/results", label: t('nav.results') },
   ];
 
   const isActive = (path: string) => location.pathname === path;
