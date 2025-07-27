@@ -16,6 +16,8 @@ import { useLanguage } from "../lib/i18n";
 import { VoiceReader } from "../components/VoiceReader";
 
 export default function Index() {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
