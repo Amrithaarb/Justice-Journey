@@ -99,7 +99,7 @@ Would you like detailed information about any specific fundamental right?`,
   },
 
   arrest_rights: {
-    keywords: ["arrested", "arrest rights", "police arrest", "custody", "detention", "miranda rights"],
+    keywords: ["arrested", "arrest rights", "police arrest", "custody", "detention", "miranda rights", "arrest", "police custody", "bail", "lawyer", "legal representation", "remain silent"],
     response: `<strong>Your Constitutional Rights During Arrest (Article 22):</strong>
 
 <strong>Immediate Fundamental Rights:</strong>
@@ -345,7 +345,7 @@ export function LegalChatbot() {
 • <strong>Awareness Hub</strong> - Advanced AI legal analyzer with constitutional rights education
 • <strong>Scenario Simulation</strong> - Interactive legal decision-making practice modules
 • <strong>Results Dashboard</strong> - Comprehensive learning progress tracking and achievements
-• <strong>Legal Resources</strong> - Emergency contacts, legal aid information, and helplines
+��� <strong>Legal Resources</strong> - Emergency contacts, legal aid information, and helplines
 
 <strong>Navigation and Usage Tips:</strong>
 • Use the main navigation menu to switch between different platform sections
