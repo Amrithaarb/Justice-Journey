@@ -1,17 +1,19 @@
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import { Link } from "react-router-dom";
-import { 
-  Scale, 
-  Users, 
-  BookOpen, 
-  Shield, 
-  ArrowRight, 
+import {
+  Scale,
+  Users,
+  BookOpen,
+  Shield,
+  ArrowRight,
   Play,
   Target,
   Lightbulb,
   Award
 } from "lucide-react";
+import { useLanguage } from "../lib/i18n";
+import { VoiceReader } from "../components/VoiceReader";
 
 export default function Index() {
   return (
