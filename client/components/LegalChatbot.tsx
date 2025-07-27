@@ -5,12 +5,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Input } from "./ui/input";
 import { ScrollArea } from "./ui/scroll-area";
 import { Badge } from "./ui/badge";
-import { 
-  MessageCircle, 
-  X, 
-  Send, 
-  Bot, 
-  User, 
+import {
+  MessageCircle,
+  X,
+  Send,
+  Bot,
+  User,
   Lightbulb,
   Scale,
   BookOpen,
@@ -19,7 +19,10 @@ import {
   CheckCircle,
   ExternalLink,
   Minimize2,
-  Maximize2
+  Maximize2,
+  Brain,
+  Eye,
+  TrendingUp
 } from "lucide-react";
 
 interface Message {
