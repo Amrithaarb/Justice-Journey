@@ -370,25 +370,27 @@ Which specific feature or section would you like to explore in detail?`,
     if (lowercaseMessage.includes('emergency') || lowercaseMessage.includes('urgent') || lowercaseMessage.includes('help immediately')) {
       return {
         id: Date.now().toString(),
-        text: `🚨 <strong>Emergency Legal Contacts:</strong>
+        text: `<strong>Emergency Legal Contacts and Procedures:</strong>
 
-<strong>Immediate Danger:</strong>
-• <strong>Police: 100</strong>
-• <strong>Women Helpline: 181</strong>
-• <strong>Child Helpline: 1098</strong>
+<strong>Immediate Physical Danger:</strong>
+• <strong>Police Emergency: 100</strong> - For immediate law enforcement response
+• <strong>Women Helpline: 181</strong> - 24x7 support for women in distress
+• <strong>Child Helpline: 1098</strong> - Emergency assistance for children at risk
 
-<strong>Legal Emergency:</strong>
-• <strong>Legal Aid: Contact nearest DLSA</strong>
-• <strong>Lawyer: Arrange through Bar Association</strong>
-• <strong>Court: File urgent application</strong>
+<strong>Legal Emergency Assistance:</strong>
+• <strong>Legal Aid Services: Contact nearest District Legal Services Authority (DLSA)</strong>
+• <strong>Advocate Services: Arrange through local Bar Association</strong>
+• <strong>Court Urgency: File urgent application through duty magistrate</strong>
 
-<strong>Remember:</strong>
-• In physical danger - call police first
-• Document everything if safe to do so
-• Contact family/friends for support
-• Seek medical help if injured
+<strong>Important Safety and Legal Guidelines:</strong>
+• If in immediate physical danger, call police emergency services first
+• Document all evidence if it is safe to do so - photographs, witness details, medical records
+• Immediately contact trusted family members or friends for support
+• Seek proper medical examination and treatment if injured
+• Preserve all relevant documents and evidence for legal proceedings
 
-<strong>This is general guidance - consult a lawyer for specific advice.</strong>`,
+<strong>Legal Disclaimer:</strong>
+This is general guidance for emergency situations. For specific legal advice tailored to your case, immediately consult with a qualified advocate or legal expert familiar with applicable laws.`,
         sender: 'bot',
         timestamp: new Date(),
         suggestions: ["Find nearest police station", "Legal aid contacts", "Document evidence", "Safety planning"]
