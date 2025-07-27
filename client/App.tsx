@@ -25,27 +25,29 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <AuthProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/get-started" element={<GetStarted />} />
-          <Route path="/create-account" element={<CreateAccount />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/guest-login" element={<GuestLogin />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/scenarios" element={<ScenarioSimulation />} />
-          <Route path="/awareness" element={<AwarenessHub />} />
-          <Route path="/results" element={<Results />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <LegalChatbot />
-      </BrowserRouter>
-    </AuthProvider>
+    <LanguageProvider>
+      <AuthProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Navigation />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/get-started" element={<GetStarted />} />
+            <Route path="/create-account" element={<CreateAccount />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/guest-login" element={<GuestLogin />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/scenarios" element={<ScenarioSimulation />} />
+            <Route path="/awareness" element={<AwarenessHub />} />
+            <Route path="/results" element={<Results />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <LegalChatbot />
+        </BrowserRouter>
+      </AuthProvider>
+    </LanguageProvider>
   </QueryClientProvider>
 );
 
