@@ -126,32 +126,32 @@ Would you like detailed information about any specific fundamental right?`,
 
   domestic_violence: {
     keywords: ["domestic violence", "dowry", "498a", "domestic abuse", "wife beating", "harassment"],
-    response: `<strong>Legal Help for Domestic Violence:</strong>
+    response: `<strong>Legal Protection Against Domestic Violence:</strong>
 
-🆘 <strong>Immediate Help:</strong>
-• <strong>Women Helpline: 181</strong> (24x7)
-• <strong>Police: 100</strong> for emergency
-• <strong>Childline: 1098</strong> if children involved
+<strong>Immediate Emergency Assistance:</strong>
+• <strong>Women Helpline: 181</strong> - Available 24x7 for immediate help and guidance
+• <strong>Police Emergency: 100</strong> - For immediate physical danger situations
+• <strong>Childline: 1098</strong> - If children are involved or at risk
 
-⚖️ <strong>Legal Protections:</strong>
-• <strong>IPC Section 498A</strong> - Domestic violence (up to 3 years)
-• <strong>Domestic Violence Act 2005</strong> - Protection orders
-• <strong>Dowry Prohibition Act 1961</strong> - Anti-dowry laws
+<strong>Legal Protections Available:</strong>
+• <strong>IPC Section 498A</strong> - Cruelty by husband or relatives (imprisonment up to 3 years)
+• <strong>Protection of Women from Domestic Violence Act 2005</strong> - Comprehensive protection framework
+• <strong>Dowry Prohibition Act 1961</strong> - Legal action against dowry demands
 
-🛡️ <strong>Available Remedies:</strong>
-• <strong>Protection Order</strong> - Immediate safety
-• <strong>Residence Order</strong> - Right to stay
-• <strong>Monetary Relief</strong> - Maintenance/compensation
-• <strong>Custody Order</strong> - Children protection
+<strong>Court Orders You Can Obtain:</strong>
+• <strong>Protection Order</strong> - Immediate safety from abuser, prevents contact
+• <strong>Residence Order</strong> - Legal right to continue living in shared household
+• <strong>Monetary Relief</strong> - Maintenance, compensation for injuries and losses
+• <strong>Custody Order</strong> - Temporary custody of children for safety
 
-📋 <strong>Steps to Take:</strong>
-1. Report to police immediately
-2. Medical examination if injured
-3. Approach Protection Officer
-4. File case in Magistrate Court
-5. Seek legal aid (free available)
+<strong>Legal Steps to Take:</strong>
+1. File police complaint immediately - FIR under IPC Section 498A
+2. Get medical examination done if physically injured - preserve medical evidence
+3. Approach designated Protection Officer in your district
+4. File petition in Magistrate Court under Domestic Violence Act
+5. Apply for free legal aid through District Legal Services Authority
 
-You're not alone - help is available!`,
+Remember: You have constitutional right to live with dignity. Legal help and protection are available through multiple agencies.`,
     suggestions: ["Protection Officer contact", "Free legal aid", "Evidence collection", "Safety planning"]
   },
 
