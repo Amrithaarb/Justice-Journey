@@ -2275,7 +2275,7 @@ export function AwarenessHub() {
                   <Label htmlFor="scenario" className="text-base font-medium text-gray-900">
                     {t('awareness.analyzer.inputLabel')}
                   </Label>
-                  <Textarea
+                  <VoiceTextarea
                     id="scenario"
                     value={scenarioInput}
                     onChange={(e) => setScenarioInput(e.target.value)}
