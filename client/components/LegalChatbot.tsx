@@ -71,7 +71,7 @@ Would you like detailed information about any specific fundamental right?`,
   },
 
   fir_process: {
-    keywords: ["fir", "file fir", "police complaint", "first information report", "crime report"],
+    keywords: ["fir", "file fir", "police complaint", "first information report", "crime report", "report crime", "police station", "complaint", "criminal case", "file case"],
     response: `<strong>How to File an FIR (First Information Report):</strong>
 
 <strong>Step-by-Step Process:</strong>
