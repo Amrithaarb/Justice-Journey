@@ -194,7 +194,7 @@ You're not alone - help is available!`,
 Everyone has right to free legal aid if unable to afford
 
 🏛️ **Where to Get Free Legal Aid:**
-�� **District Legal Services Authority (DLSA)**
+• **District Legal Services Authority (DLSA)**
 • **State Legal Services Authority (SLSA)**
 • **National Legal Services Authority (NALSA)**
 • **Lok Adalat** - Alternative dispute resolution
@@ -480,7 +480,7 @@ What specific legal topic can I help you with?`,
                 <Bot className="h-5 w-5" />
               </div>
               <div>
-                <CardTitle className="text-lg font-semibold">LegalBot</CardTitle>
+                <CardTitle className="text-lg font-semibold">JJBot</CardTitle>
                 <p className="text-xs text-white/80">AI Legal Assistant</p>
               </div>
             </div>
