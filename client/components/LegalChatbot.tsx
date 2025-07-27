@@ -411,7 +411,7 @@ This is general guidance for emergency situations. For specific legal advice tai
 
 <strong>Legal Topics I Specialize In:</strong>
 • Constitutional rights and fundamental freedoms under Indian Constitution
-�� Criminal law procedures including FIR filing and arrest rights
+• Criminal law procedures including FIR filing and arrest rights
 • Domestic violence protection under various legal frameworks
 • Cybercrime reporting and IT Act provisions
 • Free legal aid services and eligibility criteria
@@ -462,6 +462,65 @@ Could you please specify which particular legal topic or area you would like det
   const handleSuggestionClick = (suggestion: string) => {
     setInputValue(suggestion);
     handleSendMessage();
+  };
+
+  const handleNavigationCommand = (command: string) => {
+    const lowerCommand = command.toLowerCase();
+
+    // Navigation commands
+    if (lowerCommand.includes('go to') || lowerCommand.includes('take me to') || lowerCommand.includes('navigate to')) {
+      if (lowerCommand.includes('awareness') || lowerCommand.includes('legal analyzer') || lowerCommand.includes('analyzer')) {
+        navigate('/awareness');
+        setIsMinimized(true); // Minimize chatbot to show the page
+        return generateNavigationResponse('Awareness Hub', '/awareness');
+      } else if (lowerCommand.includes('scenario') || lowerCommand.includes('simulation') || lowerCommand.includes('practice')) {
+        navigate('/scenarios');
+        setIsMinimized(true);
+        return generateNavigationResponse('Scenario Simulation', '/scenarios');
+      } else if (lowerCommand.includes('result') || lowerCommand.includes('progress') || lowerCommand.includes('dashboard')) {
+        navigate('/results');
+        setIsMinimized(true);
+        return generateNavigationResponse('Results Dashboard', '/results');
+      } else if (lowerCommand.includes('home') || lowerCommand.includes('homepage')) {
+        navigate('/');
+        setIsMinimized(true);
+        return generateNavigationResponse('Homepage', '/');
+      }
+    }
+
+    return null;
+  };
+
+  const generateNavigationResponse = (destination: string, path: string) => {
+    return {
+      id: Date.now().toString(),
+      text: `<strong>Navigation Complete!</strong>
+
+I've taken you to the <strong>${destination}</strong>. The chatbot is now minimized so you can explore the page.
+
+<strong>What you can do here:</strong>
+${getPageSpecificInfo(path)}
+
+Click the chat button anytime to continue our conversation while using the platform!`,
+      sender: 'bot' as const,
+      timestamp: new Date(),
+      suggestions: getPageContext().suggestions
+    };
+  };
+
+  const getPageSpecificInfo = (path: string) => {
+    switch (path) {
+      case '/awareness':
+        return '• Use the AI Legal Analyzer for instant legal analysis\n• Read detailed legal articles and guides\n• Learn about constitutional rights\n• Access legal resources and precedents';
+      case '/scenarios':
+        return '• Practice with interactive legal scenarios\n• Make decisions and see consequences\n• Learn from real-world legal situations\n• Build practical legal knowledge';
+      case '/results':
+        return '• View your learning progress and achievements\n• See scenario completion statistics\n• Track knowledge improvement over time\n• Get personalized learning recommendations';
+      case '/':
+        return '• Get started with the platform overview\n• Choose your learning path\n• Access all Justice Journey features\n• Learn about legal rights and procedures';
+      default:
+        return '• Explore the current section\n• Use navigation menu for other areas\n• Ask me for help anytime';
+    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
