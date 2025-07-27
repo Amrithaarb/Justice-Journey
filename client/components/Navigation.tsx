@@ -110,9 +110,9 @@ export function Navigation() {
               ))}
               {isLoggedIn && (
                 <Link to="/profile">
-                  <Button 
+                  <Button
                     variant="ghost"
-                    size="sm" 
+                    size="sm"
                     className="w-full mt-2 justify-start text-gray-600 hover:text-justice-primary"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -121,13 +121,16 @@ export function Navigation() {
                   </Button>
                 </Link>
               )}
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <LanguageSelectorMobile />
+              </div>
               <Link to="/get-started">
-                <Button 
-                  size="sm" 
-                  className="w-full mt-2 bg-gradient-to-r from-justice-primary to-justice-secondary hover:from-justice-primary/90 hover:to-justice-secondary/90"
+                <Button
+                  size="sm"
+                  className="w-full mt-4 bg-gradient-to-r from-justice-primary to-justice-secondary hover:from-justice-primary/90 hover:to-justice-secondary/90"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Get Started
+                  {t('nav.getStarted')}
                 </Button>
               </Link>
             </div>
