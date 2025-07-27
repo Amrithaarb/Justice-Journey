@@ -400,25 +400,25 @@ This is general guidance for emergency situations. For specific legal advice tai
     // Default response with guidance
     return {
       id: Date.now().toString(),
-      text: `I understand you're asking about "${userMessage}". While I don't have specific information on that topic, I can help you with:
+      text: `I understand you're asking about "${userMessage}". While I don't have specific information on that exact topic, I can provide comprehensive assistance with:
 
-🔍 <strong>Legal Topics I Cover:</strong>
-• Constitutional rights and procedures
-• Criminal law and FIR filing
-• Domestic violence protection
-• Cybercrime reporting
-• Legal aid and free services
-• Court procedures and bail
+<strong>Legal Topics I Specialize In:</strong>
+• Constitutional rights and fundamental freedoms under Indian Constitution
+• Criminal law procedures including FIR filing and arrest rights
+• Domestic violence protection under various legal frameworks
+• Cybercrime reporting and IT Act provisions
+• Free legal aid services and eligibility criteria
+• Court procedures, bail applications, and legal remedies
 
-💡 <strong>For Specific Legal Analysis:</strong>
-Use our <strong>AI Legal Analyzer</strong> in the Awareness Hub for detailed analysis of your specific situation.
+<strong>For Detailed Legal Analysis:</strong>
+Use our advanced <strong>AI Legal Analyzer</strong> available in the Awareness Hub section for comprehensive analysis of your specific legal situation with constitutional references and procedural guidance.
 
-<strong>Need immediate help?</strong> Contact:
-• Police: 100 (Emergency)
-• Legal Aid: Nearest DLSA office
-• Women Helpline: 181
+<strong>Need immediate legal assistance?</strong> Contact:
+• Police Emergency: 100 (For immediate danger)
+• Legal Aid Services: Nearest District Legal Services Authority office
+• Women Helpline: 181 (24x7 support for women)
 
-What specific legal topic can I help you with?`,
+Could you please specify which particular legal topic or area you would like detailed information about?`,
       sender: 'bot',
       timestamp: new Date(),
       suggestions: quickReplies.slice(0, 4),
