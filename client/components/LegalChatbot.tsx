@@ -292,15 +292,19 @@ export function LegalChatbot() {
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       const pageContext = getPageContext();
-      // Formatted welcome message with paragraphs
+      // Formatted welcome message with navigation help
       const welcomeMessage: Message = {
         id: Date.now().toString(),
-        text: `<p>Hello! I'm JJBot, your AI legal assistant. Welcome to Justice Journey! This is your starting point for legal education. I can help you with: </p>
-<p>• Legal questions and constitutional rights </p>
-<p>• Navigation and platform features </p>
-<p>• Legal procedures and documentation </p>
-<p>• Emergency legal contacts and guidance</p>
-<p>What would you like to know?</p>`,
+        text: `<p>Hello! I'm JJBot, your AI legal assistant. Welcome to Justice Journey! I can help you with: </p>
+<p>• Legal questions and constitutional rights analysis</p>
+<p>• Navigation between platform features </p>
+<p>• Legal procedures and documentation guidance</p>
+<p>• Emergency legal contacts and immediate assistance</p>
+<p><strong>Navigation Tips:</strong></p>
+<p>• Say "Take me to Legal Analyzer" to get instant legal analysis</p>
+<p>• Say "Go to scenarios" to practice legal decision-making</p>
+<p>• Use the Quick Navigation buttons below to switch sections</p>
+<p>What would you like to do?</p>`,
         sender: 'bot',
         timestamp: new Date(),
         suggestions: pageContext.suggestions
