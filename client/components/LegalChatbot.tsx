@@ -189,7 +189,7 @@ Remember: You have constitutional right to live with dignity. Legal help and pro
   },
 
   legal_aid: {
-    keywords: ["legal aid", "free lawyer", "legal services", "poor person", "unable to afford"],
+    keywords: ["legal aid", "free lawyer", "legal services", "poor person", "unable to afford", "free legal help", "dlsa", "nalsa", "legal assistance", "pro bono", "legal help", "cannot afford lawyer"],
     response: `<strong>Free Legal Aid Services Under Indian Constitution:</strong>
 
 <strong>Constitutional Right (Article 39A):</strong>
