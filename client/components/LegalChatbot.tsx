@@ -193,7 +193,7 @@ You're not alone - help is available!`,
 🆓 <strong>Constitutional Right (Article 39A):</strong>
 Everyone has right to free legal aid if unable to afford
 
-🏛️ <strong>Where to Get Free Legal Aid:</strong>
+����️ <strong>Where to Get Free Legal Aid:</strong>
 • <strong>District Legal Services Authority (DLSA)</strong>
 • <strong>State Legal Services Authority (SLSA)</strong>
 • <strong>National Legal Services Authority (NALSA)</strong>
@@ -332,23 +332,23 @@ export function LegalChatbot() {
       const pageContext = getPageContext();
       return {
         id: Date.now().toString(),
-        text: `**How to Use Justice Journey:**
+        text: `<strong>How to Use Justice Journey:</strong>
 
-📍 **Currently on:** ${pageContext.pageName}
+📍 <strong>Currently on:</strong> ${pageContext.pageName}
 
-🎯 **Available Features:**
-• **Awareness Hub** - AI legal analyzer & constitutional rights education
-• **Scenario Simulation** - Interactive legal decision-making practice
-• **Results Dashboard** - Track learning progress and achievements
-• **Legal Resources** - Emergency contacts and legal aid information
+🎯 <strong>Available Features:</strong>
+• <strong>Awareness Hub</strong> - AI legal analyzer & constitutional rights education
+• <strong>Scenario Simulation</strong> - Interactive legal decision-making practice
+• <strong>Results Dashboard</strong> - Track learning progress and achievements
+• <strong>Legal Resources</strong> - Emergency contacts and legal aid information
 
-**Navigation Tips:**
+<strong>Navigation Tips:</strong>
 • Use the top menu to switch between sections
 • Try the AI Legal Analyzer for instant legal analysis
 • Complete scenarios to build practical knowledge
 • Check Results to monitor your progress
 
-**Current Page Help:**
+<strong>Current Page Help:</strong>
 ${pageContext.context}
 
 Which feature would you like to explore?`,
