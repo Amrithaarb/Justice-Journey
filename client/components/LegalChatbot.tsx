@@ -44,7 +44,7 @@ const quickReplies = [
 
 const legalKnowledgeBase = {
   greetings: [
-    "Hello! I'm LegalBot, your AI legal assistant. I can help you with legal queries, guide you through procedures, and provide information about your rights under Indian law.",
+    "Hello! I'm JJBot, your AI legal assistant. I can help you with legal queries, guide you through procedures, and provide information about your rights under Indian law.",
     "Hi there! I'm here to assist you with legal questions and guide you through Justice Journey's resources. How can I help you today?",
     "Welcome to Justice Journey! I'm your legal AI assistant, trained on Indian constitutional law and legal procedures. What would you like to know?"
   ],
@@ -194,7 +194,7 @@ You're not alone - help is available!`,
 Everyone has right to free legal aid if unable to afford
 
 🏛️ **Where to Get Free Legal Aid:**
-• **District Legal Services Authority (DLSA)**
+�� **District Legal Services Authority (DLSA)**
 • **State Legal Services Authority (SLSA)**
 • **National Legal Services Authority (NALSA)**
 • **Lok Adalat** - Alternative dispute resolution
