@@ -74,6 +74,21 @@ const translations = {
     'chat.scenarios': 'Scenarios',
     'chat.results': 'Results',
     
+    // Awareness Hub
+    'awareness.title': 'Constitutional AI Legal Analyzer',
+    'awareness.subtitle': 'Advanced AI trained on complete Indian Constitutional law, IPC, CrPC, and legal precedents. Get comprehensive legal analysis with constitutional rights, court procedures, and expert guidance.',
+    'awareness.analyzer.title': 'AI Legal Scenario Analyzer',
+    'awareness.analyzer.description': 'Comprehensive legal analysis according to Indian Constitution, applicable acts, and legal procedures.',
+    'awareness.analyzer.inputLabel': 'Describe your legal situation or planned action:',
+    'awareness.analyzer.analyze': 'Get Instant Legal Analysis',
+    'awareness.analyzer.analyzing': 'Analyzing Your Legal Situation...',
+    'awareness.tabs.analyzer': 'Legal Analyzer',
+    'awareness.tabs.articles': 'Articles',
+    'awareness.tabs.rights': 'Rights',
+    'awareness.tabs.cases': 'Cases',
+    'awareness.tabs.quiz': 'Quiz',
+    'awareness.tabs.help': 'Help',
+
     // Common
     'common.loading': 'Loading...',
     'common.error': 'Error occurred',
@@ -97,7 +112,7 @@ const translations = {
     
     // Homepage
     'home.title': 'अपने कानूनी अधिकार जानें',
-    'home.subtitle': 'जस्टिस जर्नी युवाओं और समुदायों को इंटरैक्टिव कानूनी शिक्षा के साथ सशक्त बनाता है। अपने अधिकारों के बारे में जानें, परिणामों को समझें, और आकर्षक परिदृश्यों और विशेषज्ञ मार्गदर्शन के माध्यम से कानूनी स्थितियों को आत्मविश्वास के साथ नेविगेट करें।',
+    'home.subtitle': 'जस्टिस जर्नी युवाओं और समुदायों को इंटरैक्टिव कानूनी शिक्षा के साथ सशक्त बनाता है। अपने अधिकारों के बारे में जानें, परिणामों को समझें, और आकर्षक परिदृश्यों और विशेषज्ञ मार्गदर्शन के माध्य��� से कानूनी स्थितियों को आत्मविश्वास के साथ नेविगेट करें।',
     'home.startJourney': 'अपनी यात्रा शुरू करें',
     'home.exploreResources': 'संसाधन देखें',
     'home.interactiveLearning': 'इंटरैक्टिव सीखना',
@@ -106,13 +121,13 @@ const translations = {
     'home.expertExplanations': 'विशेषज्ञ कानूनी व्याख्याएं',
     'home.trackProgress': 'अपनी प्रगति ट्रैक करें',
     'home.empowerTitle': 'कानूनी ज्ञान के साथ खुद को सशक्त बनाएं',
-    'home.empowerSubtitle': 'पुलिस के साथ बातचीत के दौरान अपने अधिकारों को समझने से लेकर साइबर बुलिंग कानूनों के बारे में सीखने तक, हम कानूनी शिक्षा को सुलभ और आकर्षक बनाते हैं।',
+    'home.empowerSubtitle': 'पुलिस के साथ बातचीत के दौरान अपने अधिकारों को समझने से लेकर साइबर बुलिंग कानूनों के बारे में सीखने तक, हम कानूनी शिक्षा को सुलभ और ���कर्षक बनाते हैं।',
     'home.scenarioSimulation': 'परिस्थिति सिमुलेशन',
     'home.scenarioDesc': 'वास्तविक जीवन की स्थितियों में कदम रखें और देखें कि आपके विकल्प कानूनी परिण��मों को कैसे प्रभावित करते हैं। इंटरैक्टिव निर्णय लेने के माध्यम से सीखें।',
     'home.awarenessHub': 'जागरूकता केंद्र',
     'home.awarenessDesc': 'सरल कानूनी लेख, मिथक-बस्टिंग सामग्री, और आपके अधिकारों और जिम्मेदारियों के बारे में आवश्यक जानकारी तक पहुंच।',
     'home.trackProgressTitle': 'प्रगति ट्रैक करें',
-    'home.trackProgressDesc': 'अपनी सीखने की यात्रा की निगरानी करें, पिछले निर्णयों की समीक्षा करें, और व्यवस्थित रूप से अपना कानूनी ज्ञान बनाएं।',
+    'home.trackProgressDesc': 'अपनी सीखने की यात्रा की निगरानी करें, पिछले निर्णयों की समीक्षा करें, और व्यवस्थित रूप से अपना कानूनी ज्��ान बनाएं।',
     'home.missionTitle': 'हमारा मिशन: सभी के लिए न्याय',
     'home.missionDesc': 'हमारा मानना है कि हर व्यक्ति को अपने कानूनी अधिकारों और अपने कार्यों के परिणामो�� को समझने का अधिकार है। जस्टिस जर्नी कानूनी शिक्षा को सुलभ बनाता है, विशेष रूप से युवाओं और वंचित समुदायों के लिए।',
     'home.communityFocused': 'समुदाय केंद्रित',
@@ -120,7 +135,7 @@ const translations = {
     'home.educationalExcellence': 'शैक्षिक उत्कृष्टता',
     'home.educationalDesc': 'सरल, समझने योग्य भाषा में विशेषज्ञ-समीक्षित सामग्री',
     'home.rightsProtection': 'अधिकार संरक्षण',
-    'home.rightsDesc': 'लोगों को अपने कानूनी अधिकारों को जानने और उनका प्रयोग करने के लिए सशक्त बनाना',
+    'home.rightsDesc': 'लोगों को अपने कान���नी अधिकारों को जानने और उनका प्रयोग करने के लिए सशक्त बनाना',
     'home.quote': 'कानून का ज्ञान न्याय के लिए आवश्यक है। जब लोग अपने अधिकारों को समझते हैं, ���ो वे अपनी और अपने समुदायों की बेहतर सुरक्षा कर सकते हैं।',
     'home.ctaTitle': 'अपनी कानूनी शिक्षा यात्रा शुरू करने के लिए तैयार हैं?',
     'home.ctaSubtitle': 'हजारों शिक्षार्थियों से जुड़ें जो जस्टिस जर्नी के माध्यम से अपना कानूनी ज्ञान बना रहे हैं और अपने अधिकारों की रक्षा कर रहे हैं।',
@@ -171,7 +186,7 @@ const translations = {
     
     // Homepage
     'home.title': 'మీ చట్టపరమైన హక్కులను తెలుసుకోండి',
-    'home.subtitle': 'జస్టిస్ జర్నీ యువకులను మరియు కమ్యూనిటీలను ఇంటరాక్టివ్ చట్టపరమైన విద్యతో శక్తివంతం చేస్తుంది. మీ హక్కుల గురించి తెలుసుకోండి, పరిణామాలను అర్థం చేసుకోండి, మరియు ఆకర్షణీయ దృశ్యాలు మరియు నిపుణుల మార్గదర్శనం ద��వారా చట్టపరమైన పరిస్థితులను విశ్వాసంతో నావిగేట్ చేయండి.',
+    'home.subtitle': 'జస్టిస్ జర్నీ యువకులను మరియు కమ్యూనిటీలను ఇంటరాక్టివ్ చట్టపరమైన విద్యతో శక్తివంతం చేస్తుంది. మీ హక్కుల గురించి తెలుసుకోండి, పరిణామాలను అర్��ం చేసుకోండి, మరియు ఆకర్షణీయ దృశ్యాలు మరియు నిపుణుల మార్గదర్శనం ద��వారా చట్టపరమైన పరిస్థితులను విశ్వాసంతో నావిగేట్ చేయండి.',
     'home.startJourney': 'మీ ప్రయాణాన్ని ప్రారంభించండి',
     'home.exploreResources': 'వనరులను అన్వేషించండి',
     
