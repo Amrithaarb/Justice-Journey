@@ -155,34 +155,34 @@ You're not alone - help is available!`,
 
   cybercrime: {
     keywords: ["cybercrime", "online fraud", "hacking", "cyber harassment", "phishing", "identity theft"],
-    response: `**Cybercrime Reporting & Protection:**
+    response: `<strong>Cybercrime Reporting & Protection:</strong>
 
-🌐 **Report Immediately:**
-• **cybercrime.gov.in** - National portal
-• **Local Cyber Cell** - Nearest police station
-• **I4C helpline: 155260** for assistance
+🌐 <strong>Report Immediately:</strong>
+• <strong>cybercrime.gov.in</strong> - National portal
+• <strong>Local Cyber Cell</strong> - Nearest police station
+• <strong>I4C helpline: 155260</strong> for assistance
 
-⚖️ **IT Act 2000 Protections:**
-• **Section 66** - Computer fraud (3 years + ₹5 lakh)
-• **Section 66C** - Identity theft (3 years + ₹1 lakh)
-• **Section 66D** - Cheating using computer
-• **Section 43A** - Data protection compensation
+⚖️ <strong>IT Act 2000 Protections:</strong>
+• <strong>Section 66</strong> - Computer fraud (3 years + ₹5 lakh)
+• <strong>Section 66C</strong> - Identity theft (3 years + ₹1 lakh)
+• <strong>Section 66D</strong> - Cheating using computer
+• <strong>Section 43A</strong> - Data protection compensation
 
-🔒 **Evidence Preservation:**
+🔒 <strong>Evidence Preservation:</strong>
 • Take screenshots with timestamps
 • Save email headers and logs
 • Document financial losses
 • Collect witness statements
 • Don't delete anything
 
-💡 **Prevention Tips:**
+💡 <strong>Prevention Tips:</strong>
 • Strong, unique passwords
 • Two-factor authentication
 • Verify before clicking links
 • Regular software updates
 • Privacy settings check
 
-**Act fast - digital evidence can disappear!**`,
+<strong>Act fast - digital evidence can disappear!</strong>`,
     suggestions: ["Cyber insurance claims", "Digital forensics", "Online safety tips", "Recovery process"]
   },
 
