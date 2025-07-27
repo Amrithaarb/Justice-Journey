@@ -2286,6 +2286,7 @@ export function AwarenessHub() {
 ��� 'My landlord is forcibly evicting me without notice'
 • 'I witnessed corruption in a government office'"
                     className="mt-2 min-h-[140px]"
+                    language={language}
                   />
                   <p className="text-sm text-gray-500 mt-2">
                     <strong>Confidential & Educational:</strong> Describe your situation clearly. Analysis covers Indian constitutional rights, applicable laws, and legal procedures. This is for educational awareness only - not professional legal advice.
