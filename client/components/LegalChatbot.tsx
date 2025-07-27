@@ -237,6 +237,17 @@ export function LegalChatbot() {
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
+  // Voice functionality
+  const {
+    isListening,
+    transcript,
+    startListening,
+    stopListening,
+    resetTranscript,
+    isSupported: speechRecognitionSupported
+  } = useSpeechRecognition();
+  const { speak, stop, isSpeaking } = useSpeechSynthesis();
+
   const getPageContext = () => {
     const path = location.pathname;
     switch (path) {
