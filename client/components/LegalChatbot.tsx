@@ -156,7 +156,7 @@ Remember: You have constitutional right to live with dignity. Legal help and pro
   },
 
   cybercrime: {
-    keywords: ["cybercrime", "online fraud", "hacking", "cyber harassment", "phishing", "identity theft"],
+    keywords: ["cybercrime", "online fraud", "hacking", "cyber harassment", "phishing", "identity theft", "internet crime", "digital fraud", "online scam", "cyber attack", "data theft", "computer crime", "digital harassment"],
     response: `<strong>Cybercrime Reporting and Legal Protection:</strong>
 
 <strong>Where to Report Cybercrime:</strong>
@@ -345,7 +345,7 @@ export function LegalChatbot() {
 • <strong>Awareness Hub</strong> - Advanced AI legal analyzer with constitutional rights education
 • <strong>Scenario Simulation</strong> - Interactive legal decision-making practice modules
 • <strong>Results Dashboard</strong> - Comprehensive learning progress tracking and achievements
-��� <strong>Legal Resources</strong> - Emergency contacts, legal aid information, and helplines
+• <strong>Legal Resources</strong> - Emergency contacts, legal aid information, and helplines
 
 <strong>Navigation and Usage Tips:</strong>
 • Use the main navigation menu to switch between different platform sections
