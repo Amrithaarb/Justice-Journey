@@ -263,7 +263,7 @@ export function VoiceTextarea({
     <div className="relative">
       <textarea
         value={value + interimTranscript}
-        onChange={(e) => onChange(e.target.value)}
+        onChange={onChange}
         placeholder={placeholder}
         className={`${className} ${error ? 'border-red-500' : ''}`}
         {...props}
