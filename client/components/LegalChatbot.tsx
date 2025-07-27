@@ -225,6 +225,7 @@ Contact your nearest District Legal Services Authority office with income certif
 
 export function LegalChatbot() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
