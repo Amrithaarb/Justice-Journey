@@ -1,5 +1,5 @@
-import { useState, useRef, useCallback, useEffect } from 'react';
-import { useLanguage } from './i18n';
+import { useState, useRef, useCallback, useEffect } from "react";
+import { useLanguage } from "./i18n";
 
 export interface VoiceOptions {
   language?: string;
@@ -16,18 +16,19 @@ export interface SpeechOptions {
 
 export function useSpeechRecognition(options: VoiceOptions = {}) {
   const [isListening, setIsListening] = useState(false);
-  const [transcript, setTranscript] = useState('');
-  const [interimTranscript, setInterimTranscript] = useState('');
+  const [transcript, setTranscript] = useState("");
+  const [interimTranscript, setInterimTranscript] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [isSupported, setIsSupported] = useState(false);
-  
+
   const recognition = useRef<SpeechRecognition | null>(null);
   const { language, t } = useLanguage();
 
   useEffect(() => {
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const SpeechRecognition =
+      window.SpeechRecognition || window.webkitSpeechRecognition;
     setIsSupported(!!SpeechRecognition);
-    
+
     if (SpeechRecognition) {
       recognition.current = new SpeechRecognition();
       recognition.current.continuous = options.continuous ?? true;
@@ -38,18 +39,18 @@ export function useSpeechRecognition(options: VoiceOptions = {}) {
 
   const startListening = useCallback(() => {
     if (!recognition.current || !isSupported) {
-      setError(t('voice.notSupported'));
+      setError(t("voice.notSupported"));
       return;
     }
 
     setError(null);
-    setTranscript('');
-    setInterimTranscript('');
+    setTranscript("");
+    setInterimTranscript("");
     setIsListening(true);
 
     recognition.current.onresult = (event) => {
-      let finalTranscript = '';
-      let interimTranscript = '';
+      let finalTranscript = "";
+      let interimTranscript = "";
 
       for (let i = event.resultIndex; i < event.results.length; i++) {
         const result = event.results[i];
@@ -60,35 +61,35 @@ export function useSpeechRecognition(options: VoiceOptions = {}) {
         }
       }
 
-      setTranscript(prev => prev + finalTranscript);
+      setTranscript((prev) => prev + finalTranscript);
       setInterimTranscript(interimTranscript);
     };
 
     recognition.current.onerror = (event) => {
-      console.error('Speech recognition error:', event.error);
+      console.error("Speech recognition error:", event.error);
       setIsListening(false);
-      
+
       switch (event.error) {
-        case 'not-allowed':
-          setError(t('voice.permissionDenied'));
+        case "not-allowed":
+          setError(t("voice.permissionDenied"));
           break;
-        case 'network':
-          setError(t('voice.networkError'));
+        case "network":
+          setError(t("voice.networkError"));
           break;
         default:
-          setError(t('voice.tryAgain'));
+          setError(t("voice.tryAgain"));
       }
     };
 
     recognition.current.onend = () => {
       setIsListening(false);
-      setInterimTranscript('');
+      setInterimTranscript("");
     };
 
     try {
       recognition.current.start();
     } catch (err) {
-      setError(t('voice.tryAgain'));
+      setError(t("voice.tryAgain"));
       setIsListening(false);
     }
   }, [isSupported, t]);
@@ -100,8 +101,8 @@ export function useSpeechRecognition(options: VoiceOptions = {}) {
   }, [isListening]);
 
   const resetTranscript = useCallback(() => {
-    setTranscript('');
-    setInterimTranscript('');
+    setTranscript("");
+    setInterimTranscript("");
   }, []);
 
   return {
@@ -112,7 +113,7 @@ export function useSpeechRecognition(options: VoiceOptions = {}) {
     isSupported,
     startListening,
     stopListening,
-    resetTranscript
+    resetTranscript,
   };
 }
 
@@ -120,54 +121,58 @@ export function useSpeechSynthesis() {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isSupported, setIsSupported] = useState(false);
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
-  
+
   const { language } = useLanguage();
 
   useEffect(() => {
-    setIsSupported('speechSynthesis' in window);
-    
-    if ('speechSynthesis' in window) {
+    setIsSupported("speechSynthesis" in window);
+
+    if ("speechSynthesis" in window) {
       const updateVoices = () => {
         setVoices(speechSynthesis.getVoices());
       };
-      
+
       updateVoices();
       speechSynthesis.onvoiceschanged = updateVoices;
-      
+
       return () => {
         speechSynthesis.onvoiceschanged = null;
       };
     }
   }, []);
 
-  const speak = useCallback((text: string, options: SpeechOptions = {}) => {
-    if (!isSupported || !text.trim()) return;
+  const speak = useCallback(
+    (text: string, options: SpeechOptions = {}) => {
+      if (!isSupported || !text.trim()) return;
 
-    // Stop any ongoing speech
-    speechSynthesis.cancel();
+      // Stop any ongoing speech
+      speechSynthesis.cancel();
 
-    const utterance = new SpeechSynthesisUtterance(text);
-    
-    // Find appropriate voice for current language
-    const langCode = getLanguageCode(language);
-    const availableVoice = voices.find(voice => 
-      voice.lang.startsWith(langCode) || voice.lang.startsWith(language)
-    );
-    
-    if (availableVoice) {
-      utterance.voice = availableVoice;
-    }
-    
-    utterance.rate = options.rate ?? 1;
-    utterance.pitch = options.pitch ?? 1;
-    utterance.volume = options.volume ?? 1;
-    
-    utterance.onstart = () => setIsSpeaking(true);
-    utterance.onend = () => setIsSpeaking(false);
-    utterance.onerror = () => setIsSpeaking(false);
-    
-    speechSynthesis.speak(utterance);
-  }, [isSupported, language, voices]);
+      const utterance = new SpeechSynthesisUtterance(text);
+
+      // Find appropriate voice for current language
+      const langCode = getLanguageCode(language);
+      const availableVoice = voices.find(
+        (voice) =>
+          voice.lang.startsWith(langCode) || voice.lang.startsWith(language),
+      );
+
+      if (availableVoice) {
+        utterance.voice = availableVoice;
+      }
+
+      utterance.rate = options.rate ?? 1;
+      utterance.pitch = options.pitch ?? 1;
+      utterance.volume = options.volume ?? 1;
+
+      utterance.onstart = () => setIsSpeaking(true);
+      utterance.onend = () => setIsSpeaking(false);
+      utterance.onerror = () => setIsSpeaking(false);
+
+      speechSynthesis.speak(utterance);
+    },
+    [isSupported, language, voices],
+  );
 
   const stop = useCallback(() => {
     if (isSupported) {
@@ -181,27 +186,27 @@ export function useSpeechSynthesis() {
     stop,
     isSpeaking,
     isSupported,
-    voices
+    voices,
   };
 }
 
 function getLanguageCode(language: string): string {
   const languageCodes: Record<string, string> = {
-    'en': 'en-US',
-    'hi': 'hi-IN',
-    'te': 'te-IN',
-    'ta': 'ta-IN',
-    'bn': 'bn-IN',
-    'mr': 'mr-IN',
-    'gu': 'gu-IN',
-    'kn': 'kn-IN',
-    'ml': 'ml-IN',
-    'or': 'or-IN',
-    'pa': 'pa-IN',
-    'ur': 'ur-IN'
+    en: "en-US",
+    hi: "hi-IN",
+    te: "te-IN",
+    ta: "ta-IN",
+    bn: "bn-IN",
+    mr: "mr-IN",
+    gu: "gu-IN",
+    kn: "kn-IN",
+    ml: "ml-IN",
+    or: "or-IN",
+    pa: "pa-IN",
+    ur: "ur-IN",
   };
-  
-  return languageCodes[language] || 'en-US';
+
+  return languageCodes[language] || "en-US";
 }
 
 // Voice-enabled textarea component
@@ -209,7 +214,7 @@ export function VoiceTextarea({
   value,
   onChange,
   placeholder,
-  className = '',
+  className = "",
   ...props
 }: {
   value: string;
@@ -228,7 +233,7 @@ export function VoiceTextarea({
     isSupported: speechSupported,
     startListening,
     stopListening,
-    resetTranscript
+    resetTranscript,
   } = useSpeechRecognition();
 
   useEffect(() => {
@@ -236,7 +241,7 @@ export function VoiceTextarea({
       // Create a synthetic event object that matches textarea onChange signature
       const syntheticEvent = {
         target: { value: value + transcript },
-        currentTarget: { value: value + transcript }
+        currentTarget: { value: value + transcript },
       } as React.ChangeEvent<HTMLTextAreaElement>;
       onChange(syntheticEvent);
       resetTranscript();
@@ -265,37 +270,39 @@ export function VoiceTextarea({
         value={value + interimTranscript}
         onChange={onChange}
         placeholder={placeholder}
-        className={`${className} ${error ? 'border-red-500' : ''}`}
+        className={`${className} ${error ? "border-red-500" : ""}`}
         {...props}
       />
-      
+
       {speechSupported && (
         <div className="absolute bottom-2 right-2 flex space-x-2">
           <button
             type="button"
             onClick={handleVoiceInput}
             className={`p-2 rounded-full text-white transition-colors ${
-              isListening 
-                ? 'bg-red-500 hover:bg-red-600 animate-pulse' 
-                : 'bg-justice-primary hover:bg-justice-primary/90'
+              isListening
+                ? "bg-red-500 hover:bg-red-600 animate-pulse"
+                : "bg-justice-primary hover:bg-justice-primary/90"
             }`}
-            title={isListening ? t('voice.stopListening') : t('voice.startListening')}
+            title={
+              isListening ? t("voice.stopListening") : t("voice.startListening")
+            }
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C13.1 2 14 2.9 14 4V10C14 11.1 13.1 12 12 12C10.9 12 10 11.1 10 10V4C10 2.9 10.9 2 12 2M19 10V12C19 15.3 16.3 18 13 18V20H11V18C7.7 18 5 15.3 5 12V10H7V12C7 14.2 8.8 16 11 16H13C15.2 16 17 14.2 17 12V10H19Z" />
             </svg>
           </button>
-          
+
           {value && (
             <button
               type="button"
               onClick={handleSpeak}
               className={`p-2 rounded-full text-white transition-colors ${
-                isSpeaking 
-                  ? 'bg-red-500 hover:bg-red-600' 
-                  : 'bg-green-500 hover:bg-green-600'
+                isSpeaking
+                  ? "bg-red-500 hover:bg-red-600"
+                  : "bg-green-500 hover:bg-green-600"
               }`}
-              title={isSpeaking ? t('voice.stopSpeaking') : t('voice.speak')}
+              title={isSpeaking ? t("voice.stopSpeaking") : t("voice.speak")}
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 {isSpeaking ? (
@@ -308,17 +315,17 @@ export function VoiceTextarea({
           )}
         </div>
       )}
-      
+
       {error && (
         <div className="absolute -bottom-6 left-0 text-xs text-red-500">
           {error}
         </div>
       )}
-      
+
       {isListening && (
         <div className="absolute -top-6 left-0 text-xs text-blue-500 flex items-center">
           <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse mr-2"></div>
-          {t('voice.listening')}
+          {t("voice.listening")}
         </div>
       )}
     </div>

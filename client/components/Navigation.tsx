@@ -13,10 +13,10 @@ export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { href: "/", label: t('nav.home') },
-    { href: "/awareness", label: t('nav.awareness') },
-    { href: "/scenarios", label: t('nav.scenarios') },
-    { href: "/results", label: t('nav.results') },
+    { href: "/", label: t("nav.home") },
+    { href: "/awareness", label: t("nav.awareness") },
+    { href: "/scenarios", label: t("nav.scenarios") },
+    { href: "/results", label: t("nav.results") },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -68,7 +68,7 @@ export function Navigation() {
                 size="sm"
                 className="bg-gradient-to-r from-justice-primary to-justice-secondary hover:from-justice-primary/90 hover:to-justice-secondary/90"
               >
-                {t('nav.getStarted')}
+                {t("nav.getStarted")}
               </Button>
             </Link>
           </div>
@@ -130,7 +130,7 @@ export function Navigation() {
                   className="w-full mt-4 bg-gradient-to-r from-justice-primary to-justice-secondary hover:from-justice-primary/90 hover:to-justice-secondary/90"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {t('nav.getStarted')}
+                  {t("nav.getStarted")}
                 </Button>
               </Link>
             </div>

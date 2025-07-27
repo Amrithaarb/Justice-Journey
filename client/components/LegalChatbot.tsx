@@ -23,38 +23,54 @@ import {
   Maximize2,
   Brain,
   Eye,
-  TrendingUp
+  TrendingUp,
 } from "lucide-react";
 
 interface Message {
   id: string;
   text: string;
-  sender: 'user' | 'bot';
+  sender: "user" | "bot";
   timestamp: Date;
   suggestions?: string[];
-  links?: { title: string; url: string; }[];
+  links?: { title: string; url: string }[];
 }
 
 const quickReplies = [
   "What are my constitutional rights?",
-  "How do I file an FIR?", 
+  "How do I file an FIR?",
   "What should I do if arrested?",
   "Legal help for domestic violence",
   "Cybercrime reporting process",
   "Consumer rights and protection",
   "How to get legal aid?",
-  "Property dispute guidance"
+  "Property dispute guidance",
 ];
 
 const legalKnowledgeBase = {
   greetings: [
     "Hello! I'm JJBot, your AI legal assistant. I can help you with legal queries, guide you through procedures, and provide information about your rights under Indian law.",
     "Hi there! I'm here to assist you with legal questions and guide you through Justice Journey's resources. How can I help you today?",
-    "Welcome to Justice Journey! I'm your legal AI assistant, trained on Indian constitutional law and legal procedures. What would you like to know?"
+    "Welcome to Justice Journey! I'm your legal AI assistant, trained on Indian constitutional law and legal procedures. What would you like to know?",
   ],
-  
+
   constitutional_rights: {
-    keywords: ["constitutional rights", "fundamental rights", "article 14", "article 19", "article 21", "article 22", "rights", "constitution", "equality", "freedom", "liberty", "speech", "expression", "movement", "assembly"],
+    keywords: [
+      "constitutional rights",
+      "fundamental rights",
+      "article 14",
+      "article 19",
+      "article 21",
+      "article 22",
+      "rights",
+      "constitution",
+      "equality",
+      "freedom",
+      "liberty",
+      "speech",
+      "expression",
+      "movement",
+      "assembly",
+    ],
     response: `<strong>Your Fundamental Rights under Indian Constitution:</strong>
 
 <strong>Article 14</strong> - Right to Equality before law and equal protection of laws
@@ -71,11 +87,27 @@ const legalKnowledgeBase = {
 • Violation of fundamental rights can be challenged in constitutional courts
 
 Would you like detailed information about any specific fundamental right?`,
-    suggestions: ["Article 21 details", "How to enforce rights?", "Emergency provisions", "Article 32 remedies"]
+    suggestions: [
+      "Article 21 details",
+      "How to enforce rights?",
+      "Emergency provisions",
+      "Article 32 remedies",
+    ],
   },
 
   fir_process: {
-    keywords: ["fir", "file fir", "police complaint", "first information report", "crime report", "report crime", "police station", "complaint", "criminal case", "file case"],
+    keywords: [
+      "fir",
+      "file fir",
+      "police complaint",
+      "first information report",
+      "crime report",
+      "report crime",
+      "police station",
+      "complaint",
+      "criminal case",
+      "file case",
+    ],
     response: `<strong>How to File an FIR (First Information Report):</strong>
 
 <strong>Step-by-Step Process:</strong>
@@ -99,11 +131,29 @@ Would you like detailed information about any specific fundamental right?`,
 • If police refuse, you can approach Superintendent of Police or Magistrate
 
 <strong>Important Legal Point:</strong> Keep your FIR copy safe as it serves as primary legal document for all future proceedings in your case.`,
-    suggestions: ["What if police refuse FIR?", "Cognizable vs non-cognizable", "Zero FIR explained", "After filing FIR"]
+    suggestions: [
+      "What if police refuse FIR?",
+      "Cognizable vs non-cognizable",
+      "Zero FIR explained",
+      "After filing FIR",
+    ],
   },
 
   arrest_rights: {
-    keywords: ["arrested", "arrest rights", "police arrest", "custody", "detention", "miranda rights", "arrest", "police custody", "bail", "lawyer", "legal representation", "remain silent"],
+    keywords: [
+      "arrested",
+      "arrest rights",
+      "police arrest",
+      "custody",
+      "detention",
+      "miranda rights",
+      "arrest",
+      "police custody",
+      "bail",
+      "lawyer",
+      "legal representation",
+      "remain silent",
+    ],
     response: `<strong>Your Constitutional Rights During Arrest (Article 22):</strong>
 
 <strong>Immediate Fundamental Rights:</strong>
@@ -125,11 +175,23 @@ Would you like detailed information about any specific fundamental right?`,
 5. Remain calm and do not physically resist even if arrest seems unlawful
 
 <strong>Important Legal Principle:</strong> Even if you believe the arrest is completely wrong or illegal, never resist physically. Challenge the arrest through proper legal channels with help of a competent lawyer.`,
-    suggestions: ["What is bail?", "False arrest remedies", "Police harassment", "Legal aid options"]
+    suggestions: [
+      "What is bail?",
+      "False arrest remedies",
+      "Police harassment",
+      "Legal aid options",
+    ],
   },
 
   domestic_violence: {
-    keywords: ["domestic violence", "dowry", "498a", "domestic abuse", "wife beating", "harassment"],
+    keywords: [
+      "domestic violence",
+      "dowry",
+      "498a",
+      "domestic abuse",
+      "wife beating",
+      "harassment",
+    ],
     response: `<strong>Legal Protection Against Domestic Violence:</strong>
 
 <strong>Immediate Emergency Assistance:</strong>
@@ -156,11 +218,30 @@ Would you like detailed information about any specific fundamental right?`,
 5. Apply for free legal aid through District Legal Services Authority
 
 Remember: You have constitutional right to live with dignity. Legal help and protection are available through multiple agencies.`,
-    suggestions: ["Protection Officer contact", "Free legal aid", "Evidence collection", "Safety planning"]
+    suggestions: [
+      "Protection Officer contact",
+      "Free legal aid",
+      "Evidence collection",
+      "Safety planning",
+    ],
   },
 
   cybercrime: {
-    keywords: ["cybercrime", "online fraud", "hacking", "cyber harassment", "phishing", "identity theft", "internet crime", "digital fraud", "online scam", "cyber attack", "data theft", "computer crime", "digital harassment"],
+    keywords: [
+      "cybercrime",
+      "online fraud",
+      "hacking",
+      "cyber harassment",
+      "phishing",
+      "identity theft",
+      "internet crime",
+      "digital fraud",
+      "online scam",
+      "cyber attack",
+      "data theft",
+      "computer crime",
+      "digital harassment",
+    ],
     response: `<strong>Cybercrime Reporting and Legal Protection:</strong>
 
 <strong>Where to Report Cybercrime:</strong>
@@ -189,11 +270,29 @@ Remember: You have constitutional right to live with dignity. Legal help and pro
 • Review and tighten privacy settings on all social media accounts
 
 <strong>Important:</strong> Time is critical in cybercrime cases as digital evidence can be easily destroyed or tampered with. Report immediately for best chance of recovery and prosecution.`,
-    suggestions: ["Cyber insurance claims", "Digital forensics", "Online safety tips", "Recovery process"]
+    suggestions: [
+      "Cyber insurance claims",
+      "Digital forensics",
+      "Online safety tips",
+      "Recovery process",
+    ],
   },
 
   legal_aid: {
-    keywords: ["legal aid", "free lawyer", "legal services", "poor person", "unable to afford", "free legal help", "dlsa", "nalsa", "legal assistance", "pro bono", "legal help", "cannot afford lawyer"],
+    keywords: [
+      "legal aid",
+      "free lawyer",
+      "legal services",
+      "poor person",
+      "unable to afford",
+      "free legal help",
+      "dlsa",
+      "nalsa",
+      "legal assistance",
+      "pro bono",
+      "legal help",
+      "cannot afford lawyer",
+    ],
     response: `<strong>Free Legal Aid Services Under Indian Constitution:</strong>
 
 <strong>Constitutional Right (Article 39A):</strong>
@@ -223,8 +322,13 @@ Every person has fundamental right to free legal aid if financially unable to af
 
 <strong>How to Apply:</strong>
 Contact your nearest District Legal Services Authority office with income certificate and identity proof. Legal aid is your constitutional right under Article 39A.`,
-    suggestions: ["Find nearest DLSA", "Lok Adalat process", "Legal aid documents", "Women's legal aid"]
-  }
+    suggestions: [
+      "Find nearest DLSA",
+      "Lok Adalat process",
+      "Legal aid documents",
+      "Women's legal aid",
+    ],
+  },
 };
 
 export function LegalChatbot() {
@@ -244,54 +348,111 @@ export function LegalChatbot() {
     startListening,
     stopListening,
     resetTranscript,
-    isSupported: speechRecognitionSupported
+    isSupported: speechRecognitionSupported,
   } = useSpeechRecognition();
   const { speak, stop, isSpeaking } = useSpeechSynthesis();
 
   const getPageContext = () => {
     const path = location.pathname;
     switch (path) {
-      case '/':
+      case "/":
         return {
-          pageName: 'Homepage',
-          context: 'Welcome to Justice Journey! This is your starting point for legal education.',
-          suggestions: ['Take me to Legal Analyzer', 'Start with scenarios', 'Learn about my rights', 'What can this platform do?'],
-          navigationSuggestions: ['Go to Awareness Hub', 'Try Scenario Simulation', 'View my Results']
+          pageName: "Homepage",
+          context:
+            "Welcome to Justice Journey! This is your starting point for legal education.",
+          suggestions: [
+            "Take me to Legal Analyzer",
+            "Start with scenarios",
+            "Learn about my rights",
+            "What can this platform do?",
+          ],
+          navigationSuggestions: [
+            "Go to Awareness Hub",
+            "Try Scenario Simulation",
+            "View my Results",
+          ],
         };
-      case '/awareness':
+      case "/awareness":
         return {
-          pageName: 'Awareness Hub',
-          context: 'You\'re in the Awareness Hub with our AI Legal Analyzer. Ask me anything about Indian law!',
-          suggestions: ['Analyze my legal situation', 'Constitutional rights help', 'How to file FIR', 'Cybercrime protection'],
-          navigationSuggestions: ['Try practice scenarios', 'Check my progress', 'Back to homepage']
+          pageName: "Awareness Hub",
+          context:
+            "You're in the Awareness Hub with our AI Legal Analyzer. Ask me anything about Indian law!",
+          suggestions: [
+            "Analyze my legal situation",
+            "Constitutional rights help",
+            "How to file FIR",
+            "Cybercrime protection",
+          ],
+          navigationSuggestions: [
+            "Try practice scenarios",
+            "Check my progress",
+            "Back to homepage",
+          ],
         };
-      case '/scenarios':
+      case "/scenarios":
         return {
-          pageName: 'Scenario Simulation',
-          context: 'Practice legal decision-making with interactive scenarios.',
-          suggestions: ['How do scenarios work?', 'Tips for better decisions', 'Legal reasoning help', 'What scenarios are available?'],
-          navigationSuggestions: ['Use Legal Analyzer', 'Check my results', 'Get legal help']
+          pageName: "Scenario Simulation",
+          context: "Practice legal decision-making with interactive scenarios.",
+          suggestions: [
+            "How do scenarios work?",
+            "Tips for better decisions",
+            "Legal reasoning help",
+            "What scenarios are available?",
+          ],
+          navigationSuggestions: [
+            "Use Legal Analyzer",
+            "Check my results",
+            "Get legal help",
+          ],
         };
-      case '/results':
+      case "/results":
         return {
-          pageName: 'Results Dashboard',
-          context: 'Track your learning progress and achievements.',
-          suggestions: ['How to improve scores?', 'What do my results mean?', 'Next learning steps', 'Study recommendations'],
-          navigationSuggestions: ['Practice more scenarios', 'Get legal analysis', 'Learn about rights']
+          pageName: "Results Dashboard",
+          context: "Track your learning progress and achievements.",
+          suggestions: [
+            "How to improve scores?",
+            "What do my results mean?",
+            "Next learning steps",
+            "Study recommendations",
+          ],
+          navigationSuggestions: [
+            "Practice more scenarios",
+            "Get legal analysis",
+            "Learn about rights",
+          ],
         };
-      case '/dashboard':
+      case "/dashboard":
         return {
-          pageName: 'Dashboard',
-          context: 'Your personalized learning dashboard with goals and recommendations.',
-          suggestions: ['Set learning goals', 'Track my progress', 'Get recommendations', 'Legal skill building'],
-          navigationSuggestions: ['Analyze legal situation', 'Practice scenarios', 'View detailed results']
+          pageName: "Dashboard",
+          context:
+            "Your personalized learning dashboard with goals and recommendations.",
+          suggestions: [
+            "Set learning goals",
+            "Track my progress",
+            "Get recommendations",
+            "Legal skill building",
+          ],
+          navigationSuggestions: [
+            "Analyze legal situation",
+            "Practice scenarios",
+            "View detailed results",
+          ],
         };
       default:
         return {
-          pageName: 'Justice Journey',
-          context: 'Navigate through our legal education platform.',
-          suggestions: ['Platform overview', 'Legal basics', 'Your rights', 'Get legal help'],
-          navigationSuggestions: ['Go to Awareness Hub', 'Try scenarios', 'View homepage']
+          pageName: "Justice Journey",
+          context: "Navigate through our legal education platform.",
+          suggestions: [
+            "Platform overview",
+            "Legal basics",
+            "Your rights",
+            "Get legal help",
+          ],
+          navigationSuggestions: [
+            "Go to Awareness Hub",
+            "Try scenarios",
+            "View homepage",
+          ],
         };
     }
   };
@@ -328,9 +489,9 @@ export function LegalChatbot() {
 <p>• Say "Go to scenarios" to practice legal decision-making</p>
 <p>• Use the Quick Navigation buttons below to switch sections</p>
 <p>What would you like to do?</p>`,
-        sender: 'bot',
+        sender: "bot",
         timestamp: new Date(),
-        suggestions: pageContext.suggestions
+        suggestions: pageContext.suggestions,
       };
       setMessages([welcomeMessage]);
     }
@@ -347,33 +508,47 @@ export function LegalChatbot() {
 
     // Check knowledge base
     for (const [key, data] of Object.entries(legalKnowledgeBase)) {
-      if (key === 'greetings') continue;
+      if (key === "greetings") continue;
 
       const topicData = data as any;
-      if (topicData.keywords.some((keyword: string) => lowercaseMessage.includes(keyword))) {
+      if (
+        topicData.keywords.some((keyword: string) =>
+          lowercaseMessage.includes(keyword),
+        )
+      ) {
         return {
           id: Date.now().toString(),
           text: topicData.response,
-          sender: 'bot',
+          sender: "bot",
           timestamp: new Date(),
-          suggestions: topicData.suggestions
+          suggestions: topicData.suggestions,
         };
       }
     }
 
     // Greeting responses
-    if (lowercaseMessage.includes('hi') || lowercaseMessage.includes('hello') || lowercaseMessage.includes('hey')) {
+    if (
+      lowercaseMessage.includes("hi") ||
+      lowercaseMessage.includes("hello") ||
+      lowercaseMessage.includes("hey")
+    ) {
       return {
         id: Date.now().toString(),
-        text: legalKnowledgeBase.greetings[Math.floor(Math.random() * legalKnowledgeBase.greetings.length)],
-        sender: 'bot',
+        text: legalKnowledgeBase.greetings[
+          Math.floor(Math.random() * legalKnowledgeBase.greetings.length)
+        ],
+        sender: "bot",
         timestamp: new Date(),
-        suggestions: quickReplies.slice(0, 4)
+        suggestions: quickReplies.slice(0, 4),
       };
     }
 
     // Navigation help
-    if (lowercaseMessage.includes('navigate') || lowercaseMessage.includes('use') || lowercaseMessage.includes('feature')) {
+    if (
+      lowercaseMessage.includes("navigate") ||
+      lowercaseMessage.includes("use") ||
+      lowercaseMessage.includes("feature")
+    ) {
       const pageContext = getPageContext();
       return {
         id: Date.now().toString(),
@@ -401,13 +576,17 @@ Which specific feature or section would you like to explore in detail?`,
         links: [
           { title: "Go to Legal Analyzer", url: "/awareness" },
           { title: "Try Scenarios", url: "/scenarios" },
-          { title: "View Results", url: "/results" }
-        ]
+          { title: "View Results", url: "/results" },
+        ],
       };
     }
 
     // Emergency situations
-    if (lowercaseMessage.includes('emergency') || lowercaseMessage.includes('urgent') || lowercaseMessage.includes('help immediately')) {
+    if (
+      lowercaseMessage.includes("emergency") ||
+      lowercaseMessage.includes("urgent") ||
+      lowercaseMessage.includes("help immediately")
+    ) {
       return {
         id: Date.now().toString(),
         text: `<strong>Emergency Legal Contacts and Procedures:</strong>
@@ -431,9 +610,14 @@ Which specific feature or section would you like to explore in detail?`,
 
 <strong>Legal Disclaimer:</strong>
 This is general guidance for emergency situations. For specific legal advice tailored to your case, immediately consult with a qualified advocate or legal expert familiar with applicable laws.`,
-        sender: 'bot',
+        sender: "bot",
         timestamp: new Date(),
-        suggestions: ["Find nearest police station", "Legal aid contacts", "Document evidence", "Safety planning"]
+        suggestions: [
+          "Find nearest police station",
+          "Legal aid contacts",
+          "Document evidence",
+          "Safety planning",
+        ],
       };
     }
 
@@ -459,14 +643,14 @@ Use our advanced <strong>AI Legal Analyzer</strong> available in the Awareness H
 • Women Helpline: 181 (24x7 support for women)
 
 Could you please specify which particular legal topic or area you would like detailed information about?`,
-      sender: 'bot',
+      sender: "bot",
       timestamp: new Date(),
       suggestions: quickReplies.slice(0, 4),
       links: [
         { title: "AI Legal Analyzer", url: "/awareness" },
         { title: "Legal Scenarios", url: "/scenarios" },
-        { title: "Find Legal Aid", url: "https://nalsa.gov.in" }
-      ]
+        { title: "Find Legal Aid", url: "https://nalsa.gov.in" },
+      ],
     };
   };
 
@@ -476,20 +660,23 @@ Could you please specify which particular legal topic or area you would like det
     const userMessage: Message = {
       id: Date.now().toString(),
       text: inputValue.trim(),
-      sender: 'user',
-      timestamp: new Date()
+      sender: "user",
+      timestamp: new Date(),
     };
 
-    setMessages(prev => [...prev, userMessage]);
+    setMessages((prev) => [...prev, userMessage]);
     setInputValue("");
     setIsTyping(true);
 
     // Simulate typing delay
-    setTimeout(() => {
-      const botResponse = generateBotResponse(userMessage.text);
-      setMessages(prev => [...prev, botResponse]);
-      setIsTyping(false);
-    }, 1000 + Math.random() * 1000);
+    setTimeout(
+      () => {
+        const botResponse = generateBotResponse(userMessage.text);
+        setMessages((prev) => [...prev, botResponse]);
+        setIsTyping(false);
+      },
+      1000 + Math.random() * 1000,
+    );
   };
 
   const handleSuggestionClick = (suggestion: string) => {
@@ -501,23 +688,42 @@ Could you please specify which particular legal topic or area you would like det
     const lowerCommand = command.toLowerCase();
 
     // Navigation commands
-    if (lowerCommand.includes('go to') || lowerCommand.includes('take me to') || lowerCommand.includes('navigate to')) {
-      if (lowerCommand.includes('awareness') || lowerCommand.includes('legal analyzer') || lowerCommand.includes('analyzer')) {
-        navigate('/awareness');
+    if (
+      lowerCommand.includes("go to") ||
+      lowerCommand.includes("take me to") ||
+      lowerCommand.includes("navigate to")
+    ) {
+      if (
+        lowerCommand.includes("awareness") ||
+        lowerCommand.includes("legal analyzer") ||
+        lowerCommand.includes("analyzer")
+      ) {
+        navigate("/awareness");
         setIsMinimized(true); // Minimize chatbot to show the page
-        return generateNavigationResponse('Awareness Hub', '/awareness');
-      } else if (lowerCommand.includes('scenario') || lowerCommand.includes('simulation') || lowerCommand.includes('practice')) {
-        navigate('/scenarios');
+        return generateNavigationResponse("Awareness Hub", "/awareness");
+      } else if (
+        lowerCommand.includes("scenario") ||
+        lowerCommand.includes("simulation") ||
+        lowerCommand.includes("practice")
+      ) {
+        navigate("/scenarios");
         setIsMinimized(true);
-        return generateNavigationResponse('Scenario Simulation', '/scenarios');
-      } else if (lowerCommand.includes('result') || lowerCommand.includes('progress') || lowerCommand.includes('dashboard')) {
-        navigate('/results');
+        return generateNavigationResponse("Scenario Simulation", "/scenarios");
+      } else if (
+        lowerCommand.includes("result") ||
+        lowerCommand.includes("progress") ||
+        lowerCommand.includes("dashboard")
+      ) {
+        navigate("/results");
         setIsMinimized(true);
-        return generateNavigationResponse('Results Dashboard', '/results');
-      } else if (lowerCommand.includes('home') || lowerCommand.includes('homepage')) {
-        navigate('/');
+        return generateNavigationResponse("Results Dashboard", "/results");
+      } else if (
+        lowerCommand.includes("home") ||
+        lowerCommand.includes("homepage")
+      ) {
+        navigate("/");
         setIsMinimized(true);
-        return generateNavigationResponse('Homepage', '/');
+        return generateNavigationResponse("Homepage", "/");
       }
     }
 
@@ -535,29 +741,29 @@ I've taken you to the <strong>${destination}</strong>. The chatbot is now minimi
 ${getPageSpecificInfo(path)}
 
 Click the chat button anytime to continue our conversation while using the platform!`,
-      sender: 'bot' as const,
+      sender: "bot" as const,
       timestamp: new Date(),
-      suggestions: getPageContext().suggestions
+      suggestions: getPageContext().suggestions,
     };
   };
 
   const getPageSpecificInfo = (path: string) => {
     switch (path) {
-      case '/awareness':
-        return '• Use the AI Legal Analyzer for instant legal analysis\n• Read detailed legal articles and guides\n• Learn about constitutional rights\n• Access legal resources and precedents';
-      case '/scenarios':
-        return '• Practice with interactive legal scenarios\n• Make decisions and see consequences\n• Learn from real-world legal situations\n• Build practical legal knowledge';
-      case '/results':
-        return '• View your learning progress and achievements\n• See scenario completion statistics\n• Track knowledge improvement over time\n• Get personalized learning recommendations';
-      case '/':
-        return '• Get started with the platform overview\n• Choose your learning path\n• Access all Justice Journey features\n• Learn about legal rights and procedures';
+      case "/awareness":
+        return "• Use the AI Legal Analyzer for instant legal analysis\n• Read detailed legal articles and guides\n• Learn about constitutional rights\n• Access legal resources and precedents";
+      case "/scenarios":
+        return "• Practice with interactive legal scenarios\n• Make decisions and see consequences\n• Learn from real-world legal situations\n• Build practical legal knowledge";
+      case "/results":
+        return "• View your learning progress and achievements\n• See scenario completion statistics\n• Track knowledge improvement over time\n• Get personalized learning recommendations";
+      case "/":
+        return "• Get started with the platform overview\n• Choose your learning path\n• Access all Justice Journey features\n• Learn about legal rights and procedures";
       default:
-        return '• Explore the current section\n• Use navigation menu for other areas\n• Ask me for help anytime';
+        return "• Explore the current section\n• Use navigation menu for other areas\n• Ask me for help anytime";
     }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage();
     }
@@ -576,7 +782,10 @@ Click the chat button anytime to continue our conversation while using the platf
       stop();
     } else {
       // Clean up text for better speech
-      const cleanText = text.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+      const cleanText = text
+        .replace(/<[^>]*>/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
       speak(cleanText, { rate: 0.9 });
     }
   };
@@ -599,8 +808,12 @@ Click the chat button anytime to continue our conversation while using the platf
   }
 
   return (
-    <div className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ${isMinimized ? 'w-80' : 'w-96'}`}>
-      <Card className={`shadow-2xl border-2 border-justice-primary/20 ${isMinimized ? 'h-16' : 'h-[600px]'} transition-all duration-300`}>
+    <div
+      className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ${isMinimized ? "w-80" : "w-96"}`}
+    >
+      <Card
+        className={`shadow-2xl border-2 border-justice-primary/20 ${isMinimized ? "h-16" : "h-[600px]"} transition-all duration-300`}
+      >
         <CardHeader className="pb-3 bg-gradient-to-r from-justice-primary to-justice-secondary text-white rounded-t-lg">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
@@ -619,7 +832,11 @@ Click the chat button anytime to continue our conversation while using the platf
                 onClick={() => setIsMinimized(!isMinimized)}
                 className="text-white hover:bg-white/20 h-8 w-8 p-0"
               >
-                {isMinimized ? <Maximize2 className="h-4 w-4" /> : <Minimize2 className="h-4 w-4" />}
+                {isMinimized ? (
+                  <Maximize2 className="h-4 w-4" />
+                ) : (
+                  <Minimize2 className="h-4 w-4" />
+                )}
               </Button>
               <Button
                 variant="ghost"
@@ -634,7 +851,9 @@ Click the chat button anytime to continue our conversation while using the platf
           {!isMinimized && (
             <div className="flex items-center space-x-1 mt-2">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              <span className="text-xs text-white/90">Online & Ready to Help</span>
+              <span className="text-xs text-white/90">
+                Online & Ready to Help
+              </span>
             </div>
           )}
         </CardHeader>
@@ -645,50 +864,76 @@ Click the chat button anytime to continue our conversation while using the platf
             <ScrollArea className="flex-1 p-4">
               <div className="space-y-4">
                 {messages.map((message) => (
-                  <div key={message.id} className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-                    <div className={`max-w-[80%] ${message.sender === 'user' ? 'order-2' : 'order-1'}`}>
-                      <div className={`flex items-start space-x-2 ${message.sender === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
-                        <div className={`p-2 rounded-full ${message.sender === 'user' ? 'bg-justice-primary text-white' : 'bg-gray-100'}`}>
-                          {message.sender === 'user' ? <User className="h-4 w-4" /> : <Bot className="h-4 w-4 text-justice-primary" />}
+                  <div
+                    key={message.id}
+                    className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
+                  >
+                    <div
+                      className={`max-w-[80%] ${message.sender === "user" ? "order-2" : "order-1"}`}
+                    >
+                      <div
+                        className={`flex items-start space-x-2 ${message.sender === "user" ? "flex-row-reverse space-x-reverse" : ""}`}
+                      >
+                        <div
+                          className={`p-2 rounded-full ${message.sender === "user" ? "bg-justice-primary text-white" : "bg-gray-100"}`}
+                        >
+                          {message.sender === "user" ? (
+                            <User className="h-4 w-4" />
+                          ) : (
+                            <Bot className="h-4 w-4 text-justice-primary" />
+                          )}
                         </div>
-                        <div className={`rounded-lg p-3 ${
-                          message.sender === 'user'
-                            ? 'bg-justice-primary text-white'
-                            : 'bg-gray-50 text-gray-900'
-                        }`}>
+                        <div
+                          className={`rounded-lg p-3 ${
+                            message.sender === "user"
+                              ? "bg-justice-primary text-white"
+                              : "bg-gray-50 text-gray-900"
+                          }`}
+                        >
                           <div
                             className="text-sm whitespace-pre-wrap"
                             dangerouslySetInnerHTML={{ __html: message.text }}
                           />
                           <div className="text-xs opacity-70 mt-1">
-                            {message.timestamp && message.timestamp instanceof Date
-                              ? message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-                              : new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-                            }
+                            {message.timestamp &&
+                            message.timestamp instanceof Date
+                              ? message.timestamp.toLocaleTimeString([], {
+                                  hour: "2-digit",
+                                  minute: "2-digit",
+                                })
+                              : new Date().toLocaleTimeString([], {
+                                  hour: "2-digit",
+                                  minute: "2-digit",
+                                })}
                           </div>
                         </div>
                       </div>
-                      
+
                       {/* Suggestions */}
-                      {message.suggestions && message.suggestions.length > 0 && (
-                        <div className="mt-2 space-y-2">
-                          <p className="text-xs text-gray-600 ml-10">Quick suggestions:</p>
-                          <div className="grid grid-cols-1 gap-1 ml-10">
-                            {message.suggestions.map((suggestion, index) => (
-                              <Button
-                                key={index}
-                                variant="outline"
-                                size="sm"
-                                onClick={() => handleSuggestionClick(suggestion)}
-                                className="text-xs h-8 justify-start hover:bg-justice-primary/10"
-                              >
-                                <Lightbulb className="h-3 w-3 mr-1" />
-                                {suggestion}
-                              </Button>
-                            ))}
+                      {message.suggestions &&
+                        message.suggestions.length > 0 && (
+                          <div className="mt-2 space-y-2">
+                            <p className="text-xs text-gray-600 ml-10">
+                              Quick suggestions:
+                            </p>
+                            <div className="grid grid-cols-1 gap-1 ml-10">
+                              {message.suggestions.map((suggestion, index) => (
+                                <Button
+                                  key={index}
+                                  variant="outline"
+                                  size="sm"
+                                  onClick={() =>
+                                    handleSuggestionClick(suggestion)
+                                  }
+                                  className="text-xs h-8 justify-start hover:bg-justice-primary/10"
+                                >
+                                  <Lightbulb className="h-3 w-3 mr-1" />
+                                  {suggestion}
+                                </Button>
+                              ))}
+                            </div>
                           </div>
-                        </div>
-                      )}
+                        )}
 
                       {/* Links */}
                       {message.links && message.links.length > 0 && (
@@ -697,8 +942,12 @@ Click the chat button anytime to continue our conversation while using the platf
                             <button
                               key={index}
                               onClick={() => {
-                                if (link.url.startsWith('http')) {
-                                  window.open(link.url, '_blank', 'noopener noreferrer');
+                                if (link.url.startsWith("http")) {
+                                  window.open(
+                                    link.url,
+                                    "_blank",
+                                    "noopener noreferrer",
+                                  );
                                 } else {
                                   navigate(link.url);
                                   setIsMinimized(true);
@@ -715,7 +964,7 @@ Click the chat button anytime to continue our conversation while using the platf
                     </div>
                   </div>
                 ))}
-                
+
                 {/* Typing Indicator */}
                 {isTyping && (
                   <div className="flex justify-start">
@@ -726,8 +975,14 @@ Click the chat button anytime to continue our conversation while using the platf
                       <div className="bg-gray-50 rounded-lg p-3">
                         <div className="flex space-x-1">
                           <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                          <div
+                            className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                            style={{ animationDelay: "0.1s" }}
+                          ></div>
+                          <div
+                            className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                            style={{ animationDelay: "0.2s" }}
+                          ></div>
                         </div>
                       </div>
                     </div>
@@ -740,45 +995,49 @@ Click the chat button anytime to continue our conversation while using the platf
             {/* Quick Navigation Panel */}
             <div className="border-t bg-gray-50 p-3">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-medium text-gray-700">Quick Navigation:</span>
-                <span className="text-xs text-gray-500">Currently on: {getPageContext().pageName}</span>
+                <span className="text-xs font-medium text-gray-700">
+                  Quick Navigation:
+                </span>
+                <span className="text-xs text-gray-500">
+                  Currently on: {getPageContext().pageName}
+                </span>
               </div>
               <div className="grid grid-cols-3 gap-2">
                 <Button
                   onClick={() => {
-                    navigate('/awareness');
+                    navigate("/awareness");
                     setIsMinimized(true);
                   }}
                   variant="outline"
                   size="sm"
                   className="text-xs h-8"
-                  disabled={location.pathname === '/awareness'}
+                  disabled={location.pathname === "/awareness"}
                 >
                   <Brain className="h-3 w-3 mr-1" />
                   Analyzer
                 </Button>
                 <Button
                   onClick={() => {
-                    navigate('/scenarios');
+                    navigate("/scenarios");
                     setIsMinimized(true);
                   }}
                   variant="outline"
                   size="sm"
                   className="text-xs h-8"
-                  disabled={location.pathname === '/scenarios'}
+                  disabled={location.pathname === "/scenarios"}
                 >
                   <Eye className="h-3 w-3 mr-1" />
                   Scenarios
                 </Button>
                 <Button
                   onClick={() => {
-                    navigate('/results');
+                    navigate("/results");
                     setIsMinimized(true);
                   }}
                   variant="outline"
                   size="sm"
                   className="text-xs h-8"
-                  disabled={location.pathname === '/results'}
+                  disabled={location.pathname === "/results"}
                 >
                   <TrendingUp className="h-3 w-3 mr-1" />
                   Results
@@ -806,7 +1065,8 @@ Click the chat button anytime to continue our conversation while using the platf
                 </Button>
               </div>
               <p className="text-xs text-gray-500 mt-2 text-center">
-                Try: "Take me to Legal Analyzer" or ask legal questions • For specific advice, consult a lawyer
+                Try: "Take me to Legal Analyzer" or ask legal questions • For
+                specific advice, consult a lawyer
               </p>
             </div>
           </CardContent>

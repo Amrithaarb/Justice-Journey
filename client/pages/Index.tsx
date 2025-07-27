@@ -10,7 +10,7 @@ import {
   Play,
   Target,
   Lightbulb,
-  Award
+  Award,
 } from "lucide-react";
 import { useLanguage } from "../lib/i18n";
 import { VoiceReader } from "../components/VoiceReader";
@@ -28,15 +28,15 @@ export default function Index() {
             <div className="sm:text-center lg:text-left lg:col-span-6">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
                 <span className="block bg-gradient-to-r from-justice-primary to-justice-secondary bg-clip-text text-transparent">
-                  {t('home.title')}
+                  {t("home.title")}
                 </span>
               </h1>
               <div className="relative">
                 <p className="mt-6 text-xl text-gray-600 max-w-3xl">
-                  {t('home.subtitle')}
+                  {t("home.subtitle")}
                 </p>
                 <VoiceReader
-                  text={t('home.subtitle')}
+                  text={t("home.subtitle")}
                   variant="icon-only"
                   className="absolute -top-2 -right-2 bg-white/80 backdrop-blur-sm shadow-sm border border-gray-200"
                 />
@@ -47,7 +47,7 @@ export default function Index() {
                     size="lg"
                     className="w-full sm:w-auto bg-gradient-to-r from-justice-primary to-justice-secondary hover:from-justice-primary/90 hover:to-justice-secondary/90 text-lg px-8 py-3"
                   >
-                    {t('home.startJourney')}
+                    {t("home.startJourney")}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
@@ -58,7 +58,7 @@ export default function Index() {
                     className="w-full sm:w-auto border-justice-primary text-justice-primary hover:bg-justice-primary hover:text-white text-lg px-8 py-3"
                   >
                     <Play className="mr-2 h-5 w-5" />
-                    {t('home.exploreResources')}
+                    {t("home.exploreResources")}
                   </Button>
                 </Link>
               </div>
@@ -73,22 +73,32 @@ export default function Index() {
                         <Scale className="h-8 w-8 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-900">Interactive Learning</h3>
-                        <p className="text-gray-600">Choose your path, learn from outcomes</p>
+                        <h3 className="text-xl font-semibold text-gray-900">
+                          Interactive Learning
+                        </h3>
+                        <p className="text-gray-600">
+                          Choose your path, learn from outcomes
+                        </p>
                       </div>
                     </div>
                     <div className="space-y-4">
                       <div className="flex items-center space-x-3">
                         <div className="w-3 h-3 bg-justice-success rounded-full"></div>
-                        <span className="text-gray-700">Real-world legal scenarios</span>
+                        <span className="text-gray-700">
+                          Real-world legal scenarios
+                        </span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <div className="w-3 h-3 bg-justice-warning rounded-full"></div>
-                        <span className="text-gray-700">Expert legal explanations</span>
+                        <span className="text-gray-700">
+                          Expert legal explanations
+                        </span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <div className="w-3 h-3 bg-justice-primary rounded-full"></div>
-                        <span className="text-gray-700">Track your progress</span>
+                        <span className="text-gray-700">
+                          Track your progress
+                        </span>
                       </div>
                     </div>
                   </CardContent>
@@ -107,21 +117,25 @@ export default function Index() {
               Empower Yourself with Legal Knowledge
             </h2>
             <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-              From understanding your rights during police interactions to learning about 
-              cyberbullying laws, we make legal education accessible and engaging.
+              From understanding your rights during police interactions to
+              learning about cyberbullying laws, we make legal education
+              accessible and engaging.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <CardContent className="p-8 text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-justice-primary to-justice-secondary rounded-full mb-6">
                   <Target className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Scenario Simulation</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Scenario Simulation
+                </h3>
                 <p className="text-gray-600">
-                  Step into real-world situations and see how your choices affect legal outcomes. 
-                  Learn through interactive decision-making.
+                  Step into real-world situations and see how your choices
+                  affect legal outcomes. Learn through interactive
+                  decision-making.
                 </p>
               </CardContent>
             </Card>
@@ -131,10 +145,12 @@ export default function Index() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-justice-primary to-justice-secondary rounded-full mb-6">
                   <Lightbulb className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Awareness Hub</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Awareness Hub
+                </h3>
                 <p className="text-gray-600">
-                  Access simplified legal articles, myth-busting content, and essential 
-                  information about your rights and responsibilities.
+                  Access simplified legal articles, myth-busting content, and
+                  essential information about your rights and responsibilities.
                 </p>
               </CardContent>
             </Card>
@@ -144,10 +160,12 @@ export default function Index() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-justice-primary to-justice-secondary rounded-full mb-6">
                   <Award className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Track Progress</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Track Progress
+                </h3>
                 <p className="text-gray-600">
-                  Monitor your learning journey, review past decisions, and build your 
-                  legal knowledge systematically.
+                  Monitor your learning journey, review past decisions, and
+                  build your legal knowledge systematically.
                 </p>
               </CardContent>
             </Card>
@@ -164,9 +182,10 @@ export default function Index() {
                 Our Mission: Justice for All
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                We believe that everyone deserves to understand their legal rights and the 
-                consequences of their actions. Justice Journey makes legal education accessible, 
-                especially for youth and underserved communities who need it most.
+                We believe that everyone deserves to understand their legal
+                rights and the consequences of their actions. Justice Journey
+                makes legal education accessible, especially for youth and
+                underserved communities who need it most.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
@@ -174,8 +193,13 @@ export default function Index() {
                     <Users className="h-6 w-6 text-justice-primary mt-1" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Community Focused</h3>
-                    <p className="text-gray-600">Designed specifically for youth and underserved communities</p>
+                    <h3 className="font-semibold text-gray-900">
+                      Community Focused
+                    </h3>
+                    <p className="text-gray-600">
+                      Designed specifically for youth and underserved
+                      communities
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -183,8 +207,12 @@ export default function Index() {
                     <BookOpen className="h-6 w-6 text-justice-primary mt-1" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Educational Excellence</h3>
-                    <p className="text-gray-600">Expert-reviewed content in simple, understandable language</p>
+                    <h3 className="font-semibold text-gray-900">
+                      Educational Excellence
+                    </h3>
+                    <p className="text-gray-600">
+                      Expert-reviewed content in simple, understandable language
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -192,8 +220,12 @@ export default function Index() {
                     <Shield className="h-6 w-6 text-justice-primary mt-1" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Rights Protection</h3>
-                    <p className="text-gray-600">Empowering people to know and exercise their legal rights</p>
+                    <h3 className="font-semibold text-gray-900">
+                      Rights Protection
+                    </h3>
+                    <p className="text-gray-600">
+                      Empowering people to know and exercise their legal rights
+                    </p>
                   </div>
                 </div>
               </div>
@@ -207,10 +239,13 @@ export default function Index() {
                       <Scale className="h-10 w-10 text-white" />
                     </div>
                     <blockquote className="text-lg text-gray-700 italic mb-4">
-                      "Knowledge of the law is essential for justice. When people understand 
-                      their rights, they can better protect themselves and their communities."
+                      "Knowledge of the law is essential for justice. When
+                      people understand their rights, they can better protect
+                      themselves and their communities."
                     </blockquote>
-                    <p className="font-semibold text-gray-900">Justice Journey Team</p>
+                    <p className="font-semibold text-gray-900">
+                      Justice Journey Team
+                    </p>
                   </div>
                 </div>
               </div>
@@ -226,13 +261,13 @@ export default function Index() {
             Ready to Start Your Legal Education Journey?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Join thousands of learners who are building their legal knowledge and 
-            protecting their rights through Justice Journey.
+            Join thousands of learners who are building their legal knowledge
+            and protecting their rights through Justice Journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/scenarios">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="secondary"
                 className="w-full sm:w-auto bg-white text-justice-primary hover:bg-gray-100 text-lg px-8 py-3"
               >
@@ -241,8 +276,8 @@ export default function Index() {
               </Button>
             </Link>
             <Link to="/awareness">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="outline"
                 className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-justice-primary text-lg px-8 py-3"
               >
