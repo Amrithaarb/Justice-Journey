@@ -240,37 +240,43 @@ export function LegalChatbot() {
         return {
           pageName: 'Homepage',
           context: 'Welcome to Justice Journey! This is your starting point for legal education.',
-          suggestions: ['What is Justice Journey?', 'How to get started?', 'Legal rights overview', 'Navigate to Legal Analyzer']
+          suggestions: ['Take me to Legal Analyzer', 'Start with scenarios', 'Learn about my rights', 'What can this platform do?'],
+          navigationSuggestions: ['Go to Awareness Hub', 'Try Scenario Simulation', 'View my Results']
         };
       case '/awareness':
         return {
           pageName: 'Awareness Hub',
           context: 'You\'re in the Awareness Hub with our AI Legal Analyzer. Ask me anything about Indian law!',
-          suggestions: ['How to use Legal Analyzer?', 'Constitutional rights help', 'File FIR guidance', 'Cybercrime protection']
+          suggestions: ['Analyze my legal situation', 'Constitutional rights help', 'How to file FIR', 'Cybercrime protection'],
+          navigationSuggestions: ['Try practice scenarios', 'Check my progress', 'Back to homepage']
         };
       case '/scenarios':
         return {
           pageName: 'Scenario Simulation',
           context: 'Practice legal decision-making with interactive scenarios.',
-          suggestions: ['How scenarios work?', 'Tips for scenarios', 'Legal decision making', 'What after scenarios?']
+          suggestions: ['How do scenarios work?', 'Tips for better decisions', 'Legal reasoning help', 'What scenarios are available?'],
+          navigationSuggestions: ['Use Legal Analyzer', 'Check my results', 'Get legal help']
         };
       case '/results':
         return {
           pageName: 'Results Dashboard',
           context: 'Track your learning progress and achievements.',
-          suggestions: ['Understanding results', 'Improve scores', 'Next learning steps', 'Certification options']
+          suggestions: ['How to improve scores?', 'What do my results mean?', 'Next learning steps', 'Study recommendations'],
+          navigationSuggestions: ['Practice more scenarios', 'Get legal analysis', 'Learn about rights']
         };
       case '/dashboard':
         return {
           pageName: 'Dashboard',
           context: 'Your personalized learning dashboard with goals and recommendations.',
-          suggestions: ['Set learning goals', 'Track progress', 'Recommended content', 'Legal skill building']
+          suggestions: ['Set learning goals', 'Track my progress', 'Get recommendations', 'Legal skill building'],
+          navigationSuggestions: ['Analyze legal situation', 'Practice scenarios', 'View detailed results']
         };
       default:
         return {
           pageName: 'Justice Journey',
           context: 'Navigate through our legal education platform.',
-          suggestions: ['Platform overview', 'Legal basics', 'Your rights', 'Get legal help']
+          suggestions: ['Platform overview', 'Legal basics', 'Your rights', 'Get legal help'],
+          navigationSuggestions: ['Go to Awareness Hub', 'Try scenarios', 'View homepage']
         };
     }
   };
@@ -405,7 +411,7 @@ This is general guidance for emergency situations. For specific legal advice tai
 
 <strong>Legal Topics I Specialize In:</strong>
 • Constitutional rights and fundamental freedoms under Indian Constitution
-• Criminal law procedures including FIR filing and arrest rights
+�� Criminal law procedures including FIR filing and arrest rights
 • Domestic violence protection under various legal frameworks
 • Cybercrime reporting and IT Act provisions
 • Free legal aid services and eligibility criteria
