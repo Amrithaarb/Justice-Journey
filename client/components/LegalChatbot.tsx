@@ -412,6 +412,8 @@ Use our **AI Legal Analyzer** in the Awareness Hub for detailed analysis of your
 • Women Helpline: 181
 
 What specific legal topic can I help you with?`,
+      sender: 'bot',
+      timestamp: new Date(),
       suggestions: quickReplies.slice(0, 4),
       links: [
         { title: "AI Legal Analyzer", url: "/awareness" },
