@@ -524,11 +524,14 @@ What specific legal topic can I help you with?`,
                           {message.sender === 'user' ? <User className="h-4 w-4" /> : <Bot className="h-4 w-4 text-justice-primary" />}
                         </div>
                         <div className={`rounded-lg p-3 ${
-                          message.sender === 'user' 
-                            ? 'bg-justice-primary text-white' 
+                          message.sender === 'user'
+                            ? 'bg-justice-primary text-white'
                             : 'bg-gray-50 text-gray-900'
                         }`}>
-                          <div className="text-sm whitespace-pre-wrap">{message.text}</div>
+                          <div
+                            className="text-sm whitespace-pre-wrap"
+                            dangerouslySetInnerHTML={{ __html: message.text }}
+                          />
                           <div className="text-xs opacity-70 mt-1">
                             {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                           </div>
