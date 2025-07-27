@@ -124,25 +124,25 @@ Would you like details about any specific right?`,
 
   domestic_violence: {
     keywords: ["domestic violence", "dowry", "498a", "domestic abuse", "wife beating", "harassment"],
-    response: `**Legal Help for Domestic Violence:**
+    response: `<strong>Legal Help for Domestic Violence:</strong>
 
-🆘 **Immediate Help:**
-• **Women Helpline: 181** (24x7)
-• **Police: 100** for emergency
-• **Childline: 1098** if children involved
+🆘 <strong>Immediate Help:</strong>
+• <strong>Women Helpline: 181</strong> (24x7)
+• <strong>Police: 100</strong> for emergency
+• <strong>Childline: 1098</strong> if children involved
 
-⚖️ **Legal Protections:**
-• **IPC Section 498A** - Domestic violence (up to 3 years)
-• **Domestic Violence Act 2005** - Protection orders
-• **Dowry Prohibition Act 1961** - Anti-dowry laws
+⚖️ <strong>Legal Protections:</strong>
+• <strong>IPC Section 498A</strong> - Domestic violence (up to 3 years)
+• <strong>Domestic Violence Act 2005</strong> - Protection orders
+• <strong>Dowry Prohibition Act 1961</strong> - Anti-dowry laws
 
-🛡️ **Available Remedies:**
-• **Protection Order** - Immediate safety
-• **Residence Order** - Right to stay
-• **Monetary Relief** - Maintenance/compensation
-• **Custody Order** - Children protection
+🛡️ <strong>Available Remedies:</strong>
+• <strong>Protection Order</strong> - Immediate safety
+• <strong>Residence Order</strong> - Right to stay
+• <strong>Monetary Relief</strong> - Maintenance/compensation
+• <strong>Custody Order</strong> - Children protection
 
-📋 **Steps to Take:**
+📋 <strong>Steps to Take:</strong>
 1. Report to police immediately
 2. Medical examination if injured
 3. Approach Protection Officer
