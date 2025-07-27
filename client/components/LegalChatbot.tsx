@@ -649,16 +649,21 @@ Click the chat button anytime to continue our conversation while using the platf
                       {message.links && message.links.length > 0 && (
                         <div className="mt-2 space-y-1 ml-10">
                           {message.links.map((link, index) => (
-                            <a
+                            <button
                               key={index}
-                              href={link.url}
-                              target={link.url.startsWith('http') ? '_blank' : '_self'}
-                              rel={link.url.startsWith('http') ? 'noopener noreferrer' : ''}
-                              className="flex items-center text-xs text-justice-primary hover:underline"
+                              onClick={() => {
+                                if (link.url.startsWith('http')) {
+                                  window.open(link.url, '_blank', 'noopener noreferrer');
+                                } else {
+                                  navigate(link.url);
+                                  setIsMinimized(true);
+                                }
+                              }}
+                              className="flex items-center text-xs text-justice-primary hover:underline cursor-pointer"
                             >
                               <ExternalLink className="h-3 w-3 mr-1" />
                               {link.title}
-                            </a>
+                            </button>
                           ))}
                         </div>
                       )}
