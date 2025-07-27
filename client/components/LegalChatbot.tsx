@@ -280,21 +280,10 @@ export function LegalChatbot() {
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       const pageContext = getPageContext();
-      // Context-aware welcome message
+      // Simplified welcome message
       const welcomeMessage: Message = {
         id: Date.now().toString(),
-        text: `Hello! I'm LegalBot, your AI legal assistant.
-
-📍 **Current Page:** ${pageContext.pageName}
-${pageContext.context}
-
-I can help you with:
-• Legal questions and constitutional rights
-• Navigation and platform features
-• Legal procedures and documentation
-• Emergency legal contacts and guidance
-
-What would you like to know?`,
+        text: `Hello! I'm LegalBot, your AI legal assistant. Welcome to Justice Journey! This is your starting point for legal education. I can help you with: • Legal questions and constitutional rights • Navigation and platform features • Legal procedures and documentation • Emergency legal contacts and guidance What would you like to know?`,
         sender: 'bot',
         timestamp: new Date(),
         suggestions: pageContext.suggestions
