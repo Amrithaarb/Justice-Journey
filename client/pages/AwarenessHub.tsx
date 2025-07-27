@@ -2257,15 +2257,15 @@ export function AwarenessHub() {
                   <div className="grid md:grid-cols-3 gap-4 mt-4">
                     <div className="flex items-center space-x-2 text-sm text-gray-600">
                       <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span>Constitutional Rights Analysis</span>
+                      <span>{t('awareness.features.constitutional')}</span>
                     </div>
                     <div className="flex items-center space-x-2 text-sm text-gray-600">
                       <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span>IPC & Legal Procedures</span>
+                      <span>{t('awareness.features.precedents')}</span>
                     </div>
                     <div className="flex items-center space-x-2 text-sm text-gray-600">
                       <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span>Step-by-Step Guidance</span>
+                      <span>{t('awareness.features.hierarchy')}</span>
                     </div>
                   </div>
                 </div>
