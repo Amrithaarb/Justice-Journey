@@ -395,7 +395,7 @@ Which feature would you like to explore?`,
       id: Date.now().toString(),
       text: `I understand you're asking about "${userMessage}". While I don't have specific information on that topic, I can help you with:
 
-🔍 **Legal Topics I Cover:**
+🔍 <strong>Legal Topics I Cover:</strong>
 • Constitutional rights and procedures
 • Criminal law and FIR filing
 • Domestic violence protection
@@ -403,10 +403,10 @@ Which feature would you like to explore?`,
 • Legal aid and free services
 • Court procedures and bail
 
-💡 **For Specific Legal Analysis:**
-Use our **AI Legal Analyzer** in the Awareness Hub for detailed analysis of your specific situation.
+💡 <strong>For Specific Legal Analysis:</strong>
+Use our <strong>AI Legal Analyzer</strong> in the Awareness Hub for detailed analysis of your specific situation.
 
-**Need immediate help?** Contact:
+<strong>Need immediate help?</strong> Contact:
 • Police: 100 (Emergency)
 • Legal Aid: Nearest DLSA office
 • Women Helpline: 181
