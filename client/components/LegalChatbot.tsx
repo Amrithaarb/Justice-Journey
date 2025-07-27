@@ -157,34 +157,34 @@ Remember: You have constitutional right to live with dignity. Legal help and pro
 
   cybercrime: {
     keywords: ["cybercrime", "online fraud", "hacking", "cyber harassment", "phishing", "identity theft"],
-    response: `<strong>Cybercrime Reporting & Protection:</strong>
+    response: `<strong>Cybercrime Reporting and Legal Protection:</strong>
 
-🌐 <strong>Report Immediately:</strong>
-• <strong>cybercrime.gov.in</strong> - National portal
-• <strong>Local Cyber Cell</strong> - Nearest police station
-• <strong>I4C helpline: 155260</strong> for assistance
+<strong>Where to Report Cybercrime:</strong>
+• <strong>cybercrime.gov.in</strong> - National Cyber Crime Reporting Portal (24x7 online reporting)
+• <strong>Local Cyber Crime Police Station</strong> - Nearest specialized cyber cell
+• <strong>I4C helpline: 155260</strong> - Indian Cyber Crime Coordination Centre assistance
 
-⚖️ <strong>IT Act 2000 Protections:</strong>
-• <strong>Section 66</strong> - Computer fraud (3 years + ₹5 lakh)
-• <strong>Section 66C</strong> - Identity theft (3 years + ₹1 lakh)
-• <strong>Section 66D</strong> - Cheating using computer
-• <strong>Section 43A</strong> - Data protection compensation
+<strong>Legal Provisions Under IT Act 2000:</strong>
+• <strong>Section 66</strong> - Computer related offenses (imprisonment up to 3 years + fine up to ₹5 lakh)
+• <strong>Section 66C</strong> - Identity theft and impersonation (3 years + ₹1 lakh fine)
+• <strong>Section 66D</strong> - Cheating by personation using computer resources
+• <strong>Section 43A</strong> - Data protection violations and compensation liability
 
-🔒 <strong>Evidence Preservation:</strong>
-• Take screenshots with timestamps
-• Save email headers and logs
-• Document financial losses
-• Collect witness statements
-• Don't delete anything
+<strong>Critical Evidence Preservation Steps:</strong>
+• Take complete screenshots with visible timestamps and URLs
+• Save original email headers and server logs
+• Document all financial losses with bank statements
+• Collect witness statements from people who saw the crime
+• Preserve all digital communications - do not delete anything
 
-💡 <strong>Prevention Tips:</strong>
-• Strong, unique passwords
-• Two-factor authentication
-• Verify before clicking links
-• Regular software updates
-• Privacy settings check
+<strong>Prevention and Security Measures:</strong>
+• Use strong, unique passwords for different accounts
+• Enable two-factor authentication wherever available
+• Verify sender identity before clicking any links or attachments
+• Keep software and antivirus programs regularly updated
+• Review and tighten privacy settings on all social media accounts
 
-<strong>Act fast - digital evidence can disappear!</strong>`,
+<strong>Important:</strong> Time is critical in cybercrime cases as digital evidence can be easily destroyed or tampered with. Report immediately for best chance of recovery and prosecution.`,
     suggestions: ["Cyber insurance claims", "Digital forensics", "Online safety tips", "Recovery process"]
   },
 
