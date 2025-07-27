@@ -2273,7 +2273,7 @@ export function AwarenessHub() {
               <CardContent className="space-y-8 pt-0">
                 <div>
                   <Label htmlFor="scenario" className="text-base font-medium text-gray-900">
-                    Describe your legal situation or planned action:
+                    {t('awareness.analyzer.inputLabel')}
                   </Label>
                   <Textarea
                     id="scenario"
