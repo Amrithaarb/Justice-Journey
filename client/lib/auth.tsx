@@ -22,6 +22,29 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [isGuest, setIsGuest] = useState(false);
 
+  // Initialize auth state from localStorage on component mount
+  useEffect(() => {
+    const authState = localStorage.getItem("justice-journey-auth");
+    const userData = localStorage.getItem("justice-journey-user");
+
+    if (authState === "true" && userData) {
+      try {
+        const parsedUser = JSON.parse(userData);
+        setUser({
+          id: parsedUser.id,
+          name: parsedUser.name,
+          email: parsedUser.email,
+          role: parsedUser.role
+        });
+        setIsGuest(false);
+      } catch (error) {
+        console.error("Error parsing stored user data:", error);
+        localStorage.removeItem("justice-journey-auth");
+        localStorage.removeItem("justice-journey-user");
+      }
+    }
+  }, []);
+
   const login = (userData: User) => {
     setUser(userData);
     setIsGuest(false);
