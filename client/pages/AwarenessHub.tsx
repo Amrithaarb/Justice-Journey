@@ -2600,7 +2600,8 @@ export function AwarenessHub() {
                         }}
                         className="bg-justice-primary hover:bg-justice-primary/90"
                       >
-                        Continue Learning
+                        Continue Learning →<br/>
+                        <span className="text-xs opacity-75">View Legal Articles</span>
                       </Button>
                     </div>
                   </div>
