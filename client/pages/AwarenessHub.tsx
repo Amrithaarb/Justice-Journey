@@ -1935,6 +1935,30 @@ export function AwarenessHub() {
           "Court jurisdiction determination",
           "Limitation period assessment",
         ],
+        courtHierarchy: [
+          "Civil Court for civil matters",
+          "Magistrate Court for summary proceedings",
+          "High Court for appeals and constitutional matters",
+          "Supreme Court as final appellate authority",
+        ],
+        legalPrecedents: [
+          "Relevant Supreme Court judgments",
+          "High Court precedents for similar cases",
+          "Constitutional Bench decisions",
+          "Leading cases in applicable area of law",
+        ],
+        timeframes: {
+          investigation: "30-60 days for initial assessment",
+          legal_notice: "30 days response time typically",
+          court_proceedings: "6 months to 2 years depending on complexity",
+          appeal: "1-3 years depending on court level",
+        },
+        costs: {
+          consultation: "₹5,000-₹25,000 for legal consultation",
+          court_fees: "₹500-₹5,000 depending on case value",
+          lawyer_fees: "₹15,000-₹2,00,000 depending on complexity",
+          miscellaneous: "₹2,000-₹10,000 for documentation and procedures",
+        },
         color: "green",
       };
     }
