@@ -936,7 +936,7 @@ export function AwarenessHub() {
         },
         costs: {
           medical_expenses: "₹2,000-₹25,000 for medical treatment",
-          court_fees: "���500-₹5,000 for court proceedings",
+          court_fees: "₹500-₹5,000 for court proceedings",
           lawyer_fees: "₹10,000-₹1,00,000 depending on severity",
           compensation: "₹5,000-₹2,00,000 victim compensation",
         },
@@ -2590,7 +2590,10 @@ export function AwarenessHub() {
                         Retake Quiz
                       </Button>
                       <Button
-                        onClick={() => setSelectedArticle("arrest-rights")}
+                        onClick={() => {
+                          setActiveTab("articles");
+                          setSelectedArticle("arrest-rights");
+                        }}
                         className="bg-justice-primary hover:bg-justice-primary/90"
                       >
                         Continue Learning
