@@ -2051,7 +2051,11 @@ export function AwarenessHub() {
           </div>
         </div>
 
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-8">
+        <Tabs
+          value={activeTab}
+          onValueChange={setActiveTab}
+          className="space-y-8"
+        >
           <TabsList className="grid w-full grid-cols-6 lg:w-auto lg:grid-cols-6">
             <TabsTrigger
               value="analyzer"
@@ -2595,7 +2599,7 @@ export function AwarenessHub() {
                           setSelectedArticle("arrest-rights");
                           // Scroll to top of articles section after a brief delay
                           setTimeout(() => {
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                            window.scrollTo({ top: 0, behavior: "smooth" });
                           }, 100);
                         }}
                         className="bg-justice-primary hover:bg-justice-primary/90"

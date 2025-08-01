@@ -1,4 +1,10 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from "react";
 
 interface User {
   id: string;
@@ -34,7 +40,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
           id: parsedUser.id,
           name: parsedUser.name,
           email: parsedUser.email,
-          role: parsedUser.role
+          role: parsedUser.role,
         });
         setIsGuest(false);
       } catch (error) {
@@ -61,10 +67,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const loginAsGuest = (name = "Guest") => {
     setUser({
-      id: 'guest',
+      id: "guest",
       name,
-      email: 'guest@example.com',
-      role: 'Guest'
+      email: "guest@example.com",
+      role: "Guest",
     });
     setIsGuest(true);
   };
@@ -77,20 +83,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     login,
     logout,
     loginAsGuest,
-    isGuest
+    isGuest,
   };
 
-  return (
-    <AuthContext.Provider value={value}>
-      {children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
 export function useAuth() {
   const context = useContext(AuthContext);
   if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
 }
