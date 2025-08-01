@@ -1375,6 +1375,29 @@ export function AwarenessHub() {
           "Motor Accident Claims Tribunal for compensation",
           "Criminal Court trial for serious violations",
         ],
+        courtHierarchy: [
+          "Traffic Police enforcement",
+          "Metropolitan Magistrate for traffic violations",
+          "Motor Accident Claims Tribunal for compensation",
+          "Sessions Court for serious vehicular crimes",
+        ],
+        legalPrecedents: [
+          "Gian Singh v. State of Punjab (1979) - Rash driving standards",
+          "Nizam Institute v. State (2005) - Motor accident liability",
+          "New India Assurance v. Shanti Misra (1975) - Insurance claims",
+        ],
+        timeframes: {
+          investigation: "30-60 days for traffic incident investigation",
+          challan: "Immediate for minor violations, 15 days for serious",
+          tribunal: "6-18 months for accident compensation claims",
+          appeal: "30 days to file appeal from magistrate order",
+        },
+        costs: {
+          fines: "₹500-₹25,000 depending on violation severity",
+          court_fees: "₹200-₹2,000 for proceedings",
+          lawyer_fees: "₹5,000-₹50,000 for serious cases",
+          compensation: "₹1-10 lakhs depending on injury/damage",
+        },
         color: "yellow",
       };
 
