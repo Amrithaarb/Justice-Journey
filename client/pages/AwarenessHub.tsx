@@ -916,6 +916,29 @@ export function AwarenessHub() {
           "Sessions Court for grievous hurt cases",
           "Victim compensation under Section 357A CrPC",
         ],
+        courtHierarchy: [
+          "Metropolitan Magistrate for simple assault",
+          "Sessions Court for grievous hurt",
+          "High Court for appeals and bail",
+          "Supreme Court for constitutional issues",
+        ],
+        legalPrecedents: [
+          "State of Karnataka v. Krishnappa (2000) - Assault guidelines",
+          "Rishikesh Singh v. State of Bihar (2003) - Self-defense rights",
+          "Suresh v. State of Haryana (2015) - Grievous hurt standards",
+        ],
+        timeframes: {
+          investigation: "30-60 days for police investigation",
+          medical_report: "7 days for medical examination report",
+          trial: "3-6 months for magistrate court trial",
+          appeal: "30 days to file appeal from conviction",
+        },
+        costs: {
+          medical_expenses: "₹2,000-₹25,000 for medical treatment",
+          court_fees: "₹500-₹5,000 for court proceedings",
+          lawyer_fees: "₹10,000-₹1,00,000 depending on severity",
+          compensation: "₹5,000-₹2,00,000 victim compensation",
+        },
         color: "red",
       };
 
