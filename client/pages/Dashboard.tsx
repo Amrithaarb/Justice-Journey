@@ -101,7 +101,7 @@ export function Dashboard() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-3xl font-bold text-gray-900">
-                Welcome back, {user.name}! 
+                Welcome back!!
               </h1>
               <p className="text-gray-600 mt-2">
                 Ready to continue your justice journey? You're on a {user.streak}-day streak! 🔥
