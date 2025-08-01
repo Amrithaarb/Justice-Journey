@@ -154,27 +154,38 @@ export function CreateAccount() {
         // Handle account creation
         console.log("Creating account:", formData);
 
-        // Store user data (in a real app, this would call an API)
-        localStorage.setItem("justice-journey-user", JSON.stringify({
-          ...formData,
-          password: undefined, // Don't store password in localStorage
+        const userData = {
           id: Date.now().toString(),
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          role: formData.role,
+          organization: formData.organization,
+          ageRange: formData.ageRange,
           createdAt: new Date().toISOString()
-        }));
+        };
 
-        // Set authentication state
+        // Store user data (in a real app, this would call an API)
+        localStorage.setItem("justice-journey-user", JSON.stringify(userData));
         localStorage.setItem("justice-journey-auth", "true");
+
+        // Set authentication state in context
+        login({
+          id: userData.id,
+          name: userData.name,
+          email: userData.email,
+          role: userData.role
+        });
 
         // Show success message briefly
         alert("Account created successfully! Welcome to Justice Journey!");
 
         // Redirect based on selected path or to dashboard
         if (selectedPath === "scenarios") {
-          window.location.href = "/scenarios";
+          navigate("/scenarios");
         } else if (selectedPath === "awareness") {
-          window.location.href = "/awareness";
+          navigate("/awareness");
         } else {
-          window.location.href = "/dashboard";
+          navigate("/dashboard");
         }
       } catch (error) {
         console.error("Error creating account:", error);
