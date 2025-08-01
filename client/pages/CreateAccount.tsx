@@ -65,6 +65,8 @@ const passwordRequirements = [
 
 export function CreateAccount() {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { login } = useAuth();
   const selectedPath = location.state?.selectedPath;
   
   const [formData, setFormData] = useState({
