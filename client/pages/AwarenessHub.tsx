@@ -936,7 +936,7 @@ export function AwarenessHub() {
         },
         costs: {
           medical_expenses: "₹2,000-₹25,000 for medical treatment",
-          court_fees: "₹500-₹5,000 for court proceedings",
+          court_fees: "���500-₹5,000 for court proceedings",
           lawyer_fees: "₹10,000-₹1,00,000 depending on severity",
           compensation: "₹5,000-₹2,00,000 victim compensation",
         },
@@ -2051,7 +2051,7 @@ export function AwarenessHub() {
           </div>
         </div>
 
-        <Tabs defaultValue="analyzer" className="space-y-8">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-8">
           <TabsList className="grid w-full grid-cols-6 lg:w-auto lg:grid-cols-6">
             <TabsTrigger
               value="analyzer"
