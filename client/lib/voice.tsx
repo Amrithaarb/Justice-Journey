@@ -270,7 +270,8 @@ export function VoiceTextarea({
         value={value + interimTranscript}
         onChange={onChange}
         placeholder={placeholder}
-        className={`${className} ${error ? "border-red-500" : ""}`}
+        className={`${className} ${error ? "border-red-500" : ""} pr-20`}
+        style={{ paddingRight: "70px" }}
         {...props}
       />
 
