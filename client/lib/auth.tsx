@@ -48,11 +48,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const login = (userData: User) => {
     setUser(userData);
     setIsGuest(false);
+    localStorage.setItem("justice-journey-auth", "true");
+    localStorage.setItem("justice-journey-user", JSON.stringify(userData));
   };
 
   const logout = () => {
     setUser(null);
     setIsGuest(false);
+    localStorage.removeItem("justice-journey-auth");
+    localStorage.removeItem("justice-journey-user");
   };
 
   const loginAsGuest = (name = "Guest") => {
