@@ -144,12 +144,39 @@ export function CreateAccount() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateStep2()) {
-      // Handle account creation
-      console.log("Creating account:", formData);
-      // Redirect to dashboard or scenarios
+      try {
+        // Handle account creation
+        console.log("Creating account:", formData);
+
+        // Store user data (in a real app, this would call an API)
+        localStorage.setItem("justice-journey-user", JSON.stringify({
+          ...formData,
+          password: undefined, // Don't store password in localStorage
+          id: Date.now().toString(),
+          createdAt: new Date().toISOString()
+        }));
+
+        // Set authentication state
+        localStorage.setItem("justice-journey-auth", "true");
+
+        // Show success message briefly
+        alert("Account created successfully! Welcome to Justice Journey!");
+
+        // Redirect based on selected path or to dashboard
+        if (selectedPath === "scenarios") {
+          window.location.href = "/scenarios";
+        } else if (selectedPath === "awareness") {
+          window.location.href = "/awareness";
+        } else {
+          window.location.href = "/dashboard";
+        }
+      } catch (error) {
+        console.error("Error creating account:", error);
+        alert("There was an error creating your account. Please try again.");
+      }
     }
   };
 
