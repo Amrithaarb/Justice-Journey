@@ -2593,6 +2593,10 @@ export function AwarenessHub() {
                         onClick={() => {
                           setActiveTab("articles");
                           setSelectedArticle("arrest-rights");
+                          // Scroll to top of articles section after a brief delay
+                          setTimeout(() => {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                          }, 100);
                         }}
                         className="bg-justice-primary hover:bg-justice-primary/90"
                       >
