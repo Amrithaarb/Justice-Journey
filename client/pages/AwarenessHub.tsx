@@ -636,6 +636,7 @@ export function AwarenessHub() {
   const { t, language } = useLanguage();
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [selectedStory, setSelectedStory] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState("analyzer");
   const [quizStarted, setQuizStarted] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
