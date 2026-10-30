@@ -50,6 +50,9 @@ Start the development server:
 ```bash
 npm run dev
 ```
+Once the server starts, access Justice Journey using:
+
+Local: http://localhost:8080/
 
 Open the local URL displayed in your terminal.
 
